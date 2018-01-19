@@ -12,7 +12,7 @@ HackCU Live Page
 ## Local 
 
 1. `git clone https://github.com/hackcu/live && cd live`
-2. `python -m http.server`
+2. `python3 -m http.server`
 
 # Want to contribute?
 
