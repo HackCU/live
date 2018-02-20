@@ -3,46 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Kiosk Event Schedule — A Concept</title>
-  
-  
-  
-      <link rel="stylesheet" href="/assets/css/schedule.css">
-
-  
+  <title>Schedule</title>
+	<script src="assets/vendor/js/jquery.min.js"></script>
+	<!-- <script src="assets/js/countdown.js"></script> -->
+	<script src="assets/js/liveSchedule.js"></script>
+  <!-- <link rel="stylesheet" href="/assets/css/schedule.css"> -->
 </head>
 
 <body>
-  <main>
 
-  <section v-for="(day, index) in schedule">
-    
-    <ul>
-      <li class="date"><h3>{{day.date | date}}</h3></li>
-      <li v-for="slot in day.agenda" v-bind:class="{ current: checkTime(slot.range[0], slot.range[1], day.date) }">
-        <h3><b>{{slot.display.h}}</b>{{slot.display.m}}{{slot.display.a}}</h3>
-        <div v-html="slot.desc"></div>
-        <div><small v-html="slot.location"></small></div>
-      </li>
-      
-    </ul>
-  </section>
-</main>
-<aside>
-  <div class="clock">
-    <h3>{{time}}</h3>
+	<div id="scheduleTable" style="text-align:center">    
   </div>
-  <h1>HackCU<br />Episode IV</h1>
-</aside>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js'></script>
-
-  
-
-    <script  src="/assets/js/schedule.js"></script>
-
-
-
 
 </body>
 
