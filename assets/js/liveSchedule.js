@@ -28,32 +28,38 @@ liveSchedule = function() {
 setInterval(liveSchedule, 10000);
 
 updateTable = function(jsonData) {
-	var lines = jsonData.split("\n")
-	var agenda = [];
-	var output = [];
+	var days = jsonData.split("Day 2");
+	for (var i = 0; i < days.length; i++) {
+		var lines = days[i].split("\n")
+		var agenda = [];
+		var output = [];
 
-	for (var i = 0; i < lines.length; i++) {
-	
-		var contents = lines[i].split(",");
-		output.push("<tr><td>" + contents.join("</td><td>") + "</td></tr>");
-
-		// creates a JSON object after some parsing
-		if (i != 0) {
-			var item = {};
-			item.startTime = contents[0].split(" ")[0];
-			item.startMeridiem = contents[0].split(" ")[1];
-			item.endTime = contents[1].split(" ")[0];
-			item.endMeridiem = contents[1].split(" ")[1];
-			item.event = contents[2];
-			item.location = contents[3];
-			agenda.push(item);
+		for (var j = 0; j < lines.length; j++) {
+			
+			if (lines[j][0] == ",") {
+				continue;
+			}
+			var contents = lines[j].split(",");
+			output.push("<tr><td>" + contents.join("</td><td>") + "</td></tr>");
+			
+			// // creates a JSON object after some parsing
+			// if (j != 0) {
+			// 	var item = {};
+			// 	item.startTime = contents[0].split(" ")[0];
+			// 	item.startMeridiem = contents[0].split(" ")[1];
+			// 	item.endTime = contents[1].split(" ")[0];
+			// 	item.endMeridiem = contents[1].split(" ")[1];
+			// 	item.event = contents[2];
+			// 	item.location = contents[3];
+			// 	agenda.push(item);
+			// }
 		}
-	}
 
-	// update the table
-	var div = document.getElementById('scheduleTable');
-	output = "<table>" + output.join("") + "</table>";
-	div.innerHTML = output;
+		// update the table
+		var div = document.getElementById('scheduleTable' + i);
+		output = "<table>" + output.join("") + "</table>";
+		div.innerHTML = output;
+	}
 
 	return agenda;
 }
