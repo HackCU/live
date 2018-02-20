@@ -1,4 +1,11 @@
-original_repo: https://github.com/hackcu/hackcu
+original_repo: https://github.com/hackcu/live
+title: HackCU Pages
+color: "#22292c"
+
+collections:
+  sections:
+    output: true
+    permalink: /:path/
 
 sass:
     sass_dir: assets/_sass

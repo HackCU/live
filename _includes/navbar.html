@@ -1,0 +1,11 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+		{% for item in site.sections %}
+			<p><a href="{{ item.url }}">{{ item.title }}</a></p>
+		{% endfor %}
+      <a class="navbar-brand" target="_blank" href="https://hackcu.org"><img alt="HackCU Pages" src="/assets/img/logo_white.png"></a>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
