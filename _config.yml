@@ -1,6 +1,7 @@
 original_repo: https://github.com/hackcu/live
 title: HackCU Pages
 color: "#22292c"
+secondary_color: "#22b573"
 
 collections:
   sections:

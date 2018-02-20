@@ -37,7 +37,11 @@
     <!-- Our own CSS, yay! -->
     <link rel="stylesheet" href="/assets/css/main.css?_={{ site.time |  date: '%s' }}">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -45,9 +49,9 @@
 
 <div class="wrapper">
     {% include navbar.html %}
-    <div class="container ">    
+    <div class="container">    
         <div class="row">
-            <div class="col-md-12 content">
+            <div class="col s12 content">
                 {{content}}
             </div>
         </div>
@@ -56,8 +60,16 @@
 </div>
 {% include footer.html %}
 
+<script src="/assets/vendor/js/jquery.min.js"></script>
+<script src="assets/js/countdown.js"></script>
 
 
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+          
+<script type="text/javascript">
+    $(".button-collapse").sideNav();
+</script>
 <!-- Make links target _blank -->
 <script>
 (function() {

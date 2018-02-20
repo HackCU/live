@@ -1,96 +1,38 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>Live | HackCU IV</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/test.css" />
-</head>
+---
+layout: base
+title: Home
+description: Live webpage for HackCU IV
+---
 
-<body data-spy="scroll" data-target=".navbar" data-offset="0">
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">HackCU IV Live</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="#schedule">Schedule</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#maps">Maps</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#prizes">Prizes</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
 
-	<div class="pt-5"></div>
-
-	<!-- Header -->
-	<div class="container text-center pt-5" id="header">
-		<h1>HackCU IV</h1>
-		<h2>Live</h2>
-	</div>
-
-	<!-- Countdown timer -->
-	<div class="container text-center clock p-2">
-		<div id="countdown-timer">
-		  <span class="timer" id="hours"></span> :
-		  <span class="timer" id="minutes"></span> :
-		  <span class="timer" id="seconds"></span>
-		</div>
-	</div>
-	
-	<!-- Quick Access Links -->
-	<div class="container p-5" id="general-info">
-		<h2 class="text-center">General Information</h2>
-		<div class="row p-3">
-			<div class="col-md-6">
-				<div class="card" style="height: 100%;">
-					<div class="card-body">
-						<p>Slack</p>
-						<p>Devpost</p>
-						<p>Mentor</p>
-						<p>HackCU Hackers</p>
-						<p>Social Media</p>
-					</div>
+<!-- Quick Access Links -->
+<div class="container p-5" id="general-info">
+	<h2 class="text-center">General Information</h2>
+	<div class="row p-3">
+		<div class="col-md-6">
+			<div class="card" style="height: 100%;">
+				<div class="card-body">
+					<p>Slack</p>
+					<p>Devpost</p>
+					<p>Mentor</p>
+					<p>HackCU Hackers</p>
+					<p>Social Media</p>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="card" style="height: 100%;">
-					<div class="card-body">
-						<p>Wifi</p>
-						<p>Let's make #hackcu trending again!</p>
-					</div>
+		</div>
+		<div class="col-md-6">
+			<div class="card" style="height: 100%;">
+				<div class="card-body">
+					<p>Wifi</p>
+					<p>Let's make #hackcu trending again!</p>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
-	<!-- Schedule -->
-	<div id="scheduleTable" style="text-align:center">    
-	 </div>
-	<!-- Maps -->
+<!-- Schedule -->
+<div id="scheduleTable" style="text-align:center">    
+ </div>
+<script src="assets/js/liveSchedule.js"></script>
 
-	<!-- Juding -->
-
-	<!-- Prizes -->
-
-	<!-- Hardware -->
-
-	<!-- Rules -->
-
-	<!-- Footer -->
-
-	<!-- Scripts -->
-	<script src="assets/vendor/js/jquery.min.js"></script>
-	<script src="assets/js/countdown.js"></script>
-	<script src="assets/js/liveSchedule.js"></script>
-	<!--<script src="assets/js/schedule.js"></script>-->
-</body>
-</html>

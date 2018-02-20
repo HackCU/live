@@ -1,11 +1,42 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
+<nav>
+<div class="nav-wrapper">
+  <div class="brand-logo center">
+  	<p id="countdown-timer">
 
-		{% for item in site.sections %}
-			<p><a href="{{ item.url }}">{{ item.title }}</a></p>
-		{% endfor %}
-      <a class="navbar-brand" target="_blank" href="https://hackcu.org"><img alt="HackCU Pages" src="/assets/img/logo_white.png"></a>
-    </div>
-  </div><!-- /.container-fluid -->
+	  	<span class="timer" id="hours"></span> :
+	  	<span class="timer" id="minutes"></span> :
+	  	<span class="timer" id="seconds"></span>
+	</p>
+  </div>
+  <ul id="nav-mobile" class="left hide-on-med-and-down">
+  	<li><a href="/">Home</a></li>
+
+  	{% for item in site.sections %}
+		<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+	{% endfor %}
+  </ul>
+  <ul id="slide-out" class="side-nav">
+  	<li>
+  		<div class="user-view">
+	      <div class="background">
+	        <img src="assets/img/flatirons.jpg">
+	      </div>
+	      <span class="white-text name">
+	      	<div id="countdown-timer-mobile">
+			  <span class="timer" id="hours"></span> :
+			  <span class="timer" id="minutes"></span> :
+			  <span class="timer" id="seconds"></span>
+			</div>
+	      </span>
+	    </div>
+	</li>
+  	<li><a href="/">Home</a></li>
+  	{% for item in site.sections %}
+		<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+	{% endfor %}
+</ul>
+<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+</div>
 </nav>
+
