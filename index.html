@@ -3,36 +3,30 @@ layout: base
 title: Home
 description: Live webpage for HackCU IV
 ---
-
-
-<!-- Quick Access Links -->
-<div class="container p-5" id="general-info">
-	<h2 class="text-center">General Information</h2>
-	<div class="row p-3">
-		<div class="col-md-6">
-			<div class="card" style="height: 100%;">
-				<div class="card-body">
-					<p>Slack</p>
-					<p>Devpost</p>
-					<p>Mentor</p>
-					<p>HackCU Hackers</p>
-					<p>Social Media</p>
-				</div>
+<div class="row center">
+	<h1>HackCU IV Live webpage</h1>
+</div>
+<div class="row">
+	{% for card in site.data.home_cards %}
+	<div class="col s12 m6">
+		<div class="card">
+			<div class="card-content">
+				<span class="card-title">
+					<i aria-hidden="true" class="fa fa-{{card.icon}}"></i>
+					{{card.title}}
+				</span>
+				<p>{{card.description}}</p>
 			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="card" style="height: 100%;">
-				<div class="card-body">
-					<p>Wifi</p>
-					<p>Let's make #hackcu trending again!</p>
-				</div>
+			{% if card.actions %}
+			<div class="card-action">
+				<dl>
+				{% for action in card.actions %}
+					<a target="_blank" href="{{action.url}}"><i aria-hidden="true" class="fa fa-{{action.icon}}"></i>{{action.name}}</a><br>
+				{% endfor %}
+				</dl>
 			</div>
+			{% endif %}
 		</div>
 	</div>
+	{% endfor %}
 </div>
-
-<!-- Schedule -->
-<div id="scheduleTable" style="text-align:center">    
- </div>
-<script src="assets/js/liveSchedule.js"></script>
-

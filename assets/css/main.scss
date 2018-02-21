@@ -80,6 +80,18 @@ body {
   }
 }
 
+.card {
+  .card-action a{
+    color: $secondary-color !important;
+    &:hover {
+      color: lighten($secondary-color,20%) !important;
+    }
+    i {
+      width: 30px;
+    }
+  }
+}
+
 footer,
 .push {
   height: 170px;
