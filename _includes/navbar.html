@@ -1,4 +1,4 @@
-<div class="navbar-<!-- fixed -->">
+<div class="navbar-fixed">
 
 <nav>
 <div class="nav-wrapper">
@@ -17,12 +17,16 @@
 		<li {%if item.url==page.url %}class="active"{%endif%}><a href="{{ item.url }}">{{ item.title }}</a></li>
 	{% endfor %}
   </ul>
-  <ul id="slide-out" class="side-nav">
+  
+<a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-lg"></i></a>
+
+</div>
+</nav>
+</div>
+<ul id="slide-out" class="side-nav">
   	<li>
-  		<div class="user-view">
-	      <div class="background">
-	       
-	      </div>
+  		<div class="user-view accent-color white-text">
+	      
 	      <h2>
 	      	<div id="countdown-timer-mobile">
 			  <span class="timer" id="hours"></span> :
@@ -37,8 +41,3 @@
 		<li><a href="{{ item.url }}">{{ item.title }}</a></li>
 	{% endfor %}
 </ul>
-<a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-lg"></i></a>
-
-</div>
-</nav>
-<!-- </div> -->
