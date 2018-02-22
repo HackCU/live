@@ -2,6 +2,7 @@ original_repo: https://github.com/hackcu/live
 title: HackCU LIVE
 color: "#22292c"
 secondary_color: "#22b573"
+devpost: https://hackcu4.devpost.com
 
 collections:
   sections:

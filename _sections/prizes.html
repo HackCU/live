@@ -1,0 +1,29 @@
+---
+layout: base
+title: Prizes
+description: Prizes at HackCU IV
+---
+<div class="row">
+	<p class="text-flow">Check out <a target="_blank" href="{{site.devpost}}">our Devpost</a> for the most up to date prizes</p>
+	{% for card in site.data.prizes %}
+	<div class="col s12 m12">
+
+		<div class="card accent-color white-text">
+			<div class="card-content">
+				<span class="card-title">
+					
+					{{card.title}}
+				</span>
+				<p>{{card.description}}</p>
+				
+				<p><b>Award:</b> <br>{{card.award}}</p>
+			</div>
+			{% if card.url %}
+			<div class="card-action">
+				<a target="_blank" href="{{card.url}}"><i aria-hidden="true" class="fa fa-plus"></i>More info</a><br>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	{% endfor %}
+</div>

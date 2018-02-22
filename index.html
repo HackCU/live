@@ -1,32 +1,59 @@
 ---
 layout: base
-title: Home
 description: Live webpage for HackCU IV
 ---
 <div class="row center">
-	<h1>HackCU IV Live webpage</h1>
+	<h1>Welcome to HackCU IV</h1>
 </div>
 <div class="row">
-	{% for card in site.data.home_cards %}
-	<div class="col s12 m6">
-		<div class="card">
+	<div class="col s12 m8">
+		<div class="card accent-color white-text">
 			<div class="card-content">
 				<span class="card-title">
-					<i aria-hidden="true" class="fa fa-{{card.icon}}"></i>
-					{{card.title}}
+					General Info
 				</span>
-				<p>{{card.description}}</p>
+                    <p><b><i aria-hidden="true" class="fa fa-chevron-right"></i> Slack: <a href="http://slack.hackcu.org/" target="_blank">slack.hackcu.org</a></b><br>Join our Slack to talk with other hackers and keep up to date with announcements.</p><br>
+                    <p><b><i aria-hidden="true" class="fa fa-upload"></i> Devpost: <a href="{{site.devpost}}" target="_blank">{{site.devpost}}</a></b><br>Register for HackCU on Devpost, and submit your hack here on Sunday by 12 noon <b>(submit early, you can edit your submission!)</b></p><br>
+                    <p><b><i aria-hidden="true" class="fa fa-question"></i> Mentor queue: <a href="https://mentors.hackcu.org" target="_blank">mentors.hackcu.org</a></b><br>Request one of our mentors using our ticketing system.</p><br>
+                
 			</div>
-			{% if card.actions %}
-			<div class="card-action">
-				<dl>
-				{% for action in card.actions %}
-					<a target="_blank" href="{{action.url}}"><i aria-hidden="true" class="fa fa-{{action.icon}}"></i>{{action.name}}</a><br>
-				{% endfor %}
-				</dl>
-			</div>
-			{% endif %}
+			
 		</div>
 	</div>
-	{% endfor %}
+	
+	<div class="col s12 m4">
+		<div class="card accent-color white-text">
+			<div class="card-content">
+				<span class="card-title">
+					<i aria-hidden="true" class="fa fa-"></i>
+					#hackcu
+				</span>
+				
+                    <p>
+                        Get <a href="https://twitter.com/search?src=typd&amp;q=%23hackcu" target="_blank">#hackcu</a> trending!
+                    </p>
+                    <h4><b><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/HackCU" target="_blank">@hackcu</a></b></h4>
+                    <h4><b><i class="fa fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/hackcu/" target="_blank">@hackcu</a></b></h4>
+                    <h4><b><i class="fa fa-facebook-official" aria-hidden="true"></i> <a href="https://www.facebook.com/HackCU/" target="_blank">/hackcu</a></b></h4>
+                
+			</div>
+			
+			
+			
+		</div>
+	</div>
+	
+	<div class="col s12 m4">
+		<div class="card">
+			<div class="card-content accent-color white-text">
+				<span class="card-title">
+					<i aria-hidden="true" class="fa fa-wifi"></i>
+					Wireless network
+				</span>
+				<p>Open your browser and go to <a href="http://cuwireless.int.colorado.edu">cuwireless.int.colorado.edu</a>, to accept the usage agreement.</p>
+			</div>
+			
+		</div>
+	</div>
+	
 </div>

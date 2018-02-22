@@ -1,18 +1,20 @@
+<div class="navbar-<!-- fixed -->">
+
 <nav>
 <div class="nav-wrapper">
   <div class="brand-logo center hide-on-med-and-down">
-  	<h2 id="countdown-timer" >
+  	<h3 id="countdown-timer" >
 
 	  	<span class="timer" id="hours"></span> :
 	  	<span class="timer" id="minutes"></span> :
 	  	<span class="timer" id="seconds"></span>
-	</h2>
+	</h3>
   </div>
-  <ul id="nav-mobile" class="left hide-on-med-and-down">
+  <ul id="nav-mobile" class="center hide-on-med-and-down">
   	<li><a href="/">Home</a></li>
 
   	{% for item in site.sections %}
-		<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+		<li {%if item.url==page.url %}class="active"{%endif%}><a href="{{ item.url }}">{{ item.title }}</a></li>
 	{% endfor %}
   </ul>
   <ul id="slide-out" class="side-nav">
@@ -39,4 +41,4 @@
 
 </div>
 </nav>
-
+<!-- </div> -->
