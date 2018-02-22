@@ -6,7 +6,8 @@
 
 // URLs for google sheet and CORS
 var scheduleUrl = "https://docs.google.com/spreadsheets/d/1MkLve58YjYuJdRrmG8-7rpTCaa7v9mspzmMninApx5g";
-var corsUrl = "http://cors-proxy.htmldriven.com/?url=" + scheduleUrl + "/export?format=csv";
+// var corsUrl = "http://cors-proxy.htmldriven.com/?url=" + scheduleUrl + "/export?format=csv";
+var corsUrl = "https://cors-anywhere.herokuapp.com/" + scheduleUrl + "/export?format=csv";
 
 
 
@@ -48,7 +49,8 @@ updateTable = function(jsonData) {
 liveSchedule = function() {
 	// Get data from CORS
 	$.get(corsUrl, function(data) {
-		var timetable = updateTable(data.body);
+		// var timetable = updateTable(data.body);
+		var timetable = updateTable(data);
 		console.log("Schedule updated!")
 	});
 }
