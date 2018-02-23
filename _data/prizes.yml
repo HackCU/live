@@ -10,13 +10,36 @@
   description: 3rd best hack of HackCU IV
   award: Backpack filled with swag and goodies (WD 1TB Hard Drive, Anker portable charger, Anker Soundcore 2, GitHub promo codes, stickers and more!) / teammate
 
+- title: "Sponsor Prize: Oppenheimer Funds/Beacon.io Business Challenge"
+  description: "Sentiment Analysis Challenge - Students should find correlations between societal/emotional trends and financial trends. The Oppenheimer team will provide a paper detailing more specific requirements about the Catastrophe Bond challenge. "
+  award: "Winning teams will get priority admission to Leeds Wall Street and $100 scholarships"
+
+- title: "Sponsor Prize: NEO"
+  description: Prize for the most creative and novel Dapp built on the Neo Blockchain
+  award: "500 GAS, the native cryptoasset on the Neo blockchain goes to the winning team - worth roughly $20,000USD"
+
+- title: "Sponsor Prize: Twitter"
+  description: Prize for the best use of the public Twitter API.
+  award: "Special Twitter swag"
+
+- title: "Sponsor Prize: Dish Network"
+  description: "Tracking assets with sticker labels enabling GPS and connectivity through wireless now, and develop the project further to use NB-IOT."
+  award: To be determined
+
+- title: "Sponsor Prize: Alteryx"
+  description: Hackers will be given an unexplained data set and will need to get through a series of different challenges, in Alteryx, to determine a specific event that they will need to tell us the attendance of.
+  award: "1st Place: AppleTV, 2nd Place: Echo Dot, 3rd Place: $50 Amazon Card, All: Interview with Alteryx"
+
+- title: "Sponsor Prize: Freewave"
+  description: Create an application to process remote sensor data from a hypothetical edge environment. 
+  award: "The team that demonstrates the best use of Freewave Technologies Programmable Platform and develops a working application, wins. The members of the winning team receive $200 worth VISA cards each. The runner-up team will receive Raspberry Pi's and Raspberry Pi kits"
+
 - title: Most Unique
   description: Judges will decide what's the most unique hack they have seen
   award: Hue Color Starter Kit
 
-
 - title: Judge's Favorite
-  description: Judge's favourite hack
+  description: Judge's favorite hack
   award: Amazon Echo 2
 
 - title: Most Random
@@ -30,29 +53,3 @@
 - title: Most Devpost Likes
   description: Get the most likes on Devpost by other participants
   award: Amazon Fire TV Stick
-
-- title:  NEO dApp Challenge
-  description: Competition on who can make the best and most innovative NEO Dapp. All documentation and support will be provided by two NEO lead developers.
-  award: 500 $GAS
-
-- title: FREEWAVE IoT App Challenge
-  description: Create an application to process remote sensor data from a hypothetical edge environment. The team that demonstrates the best use of Freewave Technologies Programmable Platform and develops a working application, wins. 
-  award: The members of the winning team receive $200 worth VISA cards each. The runner-up team will receive Raspberry Pi's and Raspberry Pi kits
-
-- title: Oppenheimer Funds/Beacon.io Business Challenge
-  description: Sentiment Analysis Challenge - Students should find correlations between societal/emotional trends and financial trends. The Oppenheimer team will provide a paper detailing more specific requirements about the Catastrophe Bond challenge. 
-  award: Winning teams will get priority admission to Leeds Wall Street and $100 scholarships
-
-
-- title: Alteryx Data Challenge
-  description: What's the attendance of a specific event? Hackers will be given an unexplained data set and will need to get through a series of different challenges, in Alteryx, to determine a specific event that they will need to tell us the attendance of.
-  award:  "1st Place: AppleTV, 2nd Place: Echo Dot, 3rd Place: $50 Amazon Card, All: Interview with Alteryx"
-
-
-- title: Twitter - Best use of Public API
-  description: Best hack that uses Twitter's Public API. 
-  award: Special Twitter Swag
-
-- title: Dish Network - GPS Sticker Labels
-  description: Tracking assets with sticker labels enabling GPS and connectivity through wireless now, and develop the project further to use NB-IOT.
-  award: TBD
