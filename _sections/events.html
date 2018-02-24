@@ -17,7 +17,9 @@ description: Intro workshops and side events at HackCU IV
 				<span class="card-title">
 					
 					{{card.title}}
+
 				</span>
+				{% if card.author %}<small>by {{card.author}}</small>{%endif%}
 				<p>{{card.description}}</p>
 			</div>
 			
