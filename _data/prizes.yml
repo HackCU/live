@@ -18,6 +18,10 @@
   description: Prize for the most creative and novel Dapp built on the Neo Blockchain
   award: "500 GAS, the native cryptoasset on the Neo blockchain goes to the winning team - worth roughly $20,000USD"
 
+- title: "Sponsor Prize: AUVSI"
+  description: Autonomous systems, like drones, self-driving cars, and submersibles, are taking on new importance every day, and we want to see your ideas for the future. Build the best hack involving an unmanned system - land, sea, or air - and win $500 in Amazon gift cards for your team. Your hack does not have to be hardware-based; ideas could be computer vision systems, sonar sensors, or more - anything that could help an autonomous system or involve it in some way.
+  award: "$500 in Amazon gift cards plus automatic acceptance and VIP treatment at XBuild, including travel if not from colorado"
+
 - title: "Sponsor Prize: Twitter"
   description: Prize for the best use of the public Twitter API.
   award: "Special Twitter swag"
