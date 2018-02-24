@@ -14,19 +14,19 @@ Remember that hackathons are like marathons. Some people go to compete but most 
 
 ## The rules of the competition
 
-1. The maximum number of hackers per team is limited to 4. 
-2. Teams should be made up exclusively of students (or recent graduates within one year of having graduated) who are not organizers, volunteers, judges, sponsors, or in any other privileged position at the event. 
-3. All team members should be present at the event. Leaving the venue for some time to hack elsewhere is fine.
-4. Teams can of course gain advice and support from organizers, volunteers, sponsors, and others.
-5. All work on a project should be done at the hackathon.
-6. Teams can use an idea they had before the event.
-7. Teams can work on ideas that have already been done. Hacks do not have to be “innovative”. If somebody wants to work on a common idea they should be allowed to do so and should be judged on the quality of their hack. These days it’s hard to find something that’s fully original and teams might not know an idea has been done before anyway.
-8. Teams can work on an idea that they have worked on before (as long as they do not re-use code).
-9. Teams can use libraries, frameworks, or open-source code in their projects. Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed.
-10. Adding new features to existing projects is allowed. Judges will only consider new functionality introduced or new features added during the hackathon in determining the winners.
-11. Teams must stop hacking once the time is up. However, teams are allowed to debug and make small fixes to their programs after time is up. e.g. If during demoing your hack you find a bug that breaks your application and the fix is only a few lines of code, it's okay to fix that. Making large changes or adding new features is not allowed.
-12. Projects that violate the [MLH's Code of Conduct](http://static.mlh.io/docs/mlh-code-of-conduct.pdf) or [HackCU's Code of Conduct](https://my.hackcu.org/code-conduct/) are not allowed. 
-13. Teams can be disqualified from the competition at the organizers' discretion. Reasons might include but are not limited to breaking the Competition Rules, breaking [MLH's Code of Conduct](http://static.mlh.io/docs/mlh-code-of-conduct.pdf), breaking [HackCU's Code of Conduct](https://my.hackcu.org/code-conduct/), or other unsporting behaviour.
+- The maximum number of hackers per team is limited to 4. 
+- Teams should be made up exclusively of students (or recent graduates within one year of having graduated) who are not organizers, volunteers, judges, sponsors, or in any other privileged position at the event. 
+- All team members should be present at the event. Leaving the venue for some time to hack elsewhere is fine.
+- Teams can of course gain advice and support from organizers, volunteers, sponsors, and others.
+- All work on a project should be done at the hackathon.
+- Teams can use an idea they had before the event.
+- Teams can work on ideas that have already been done. Hacks do not have to be “innovative”. If somebody wants to work on a common idea they should be allowed to do so and should be judged on the quality of their hack. These days it’s hard to find something that’s fully original and teams might not know an idea has been done before anyway.
+- Teams can work on an idea that they have worked on before (as long as they do not re-use code).
+- Teams can use libraries, frameworks, or open-source code in their projects. Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed.
+- Adding new features to existing projects is allowed. Judges will only consider new functionality introduced or new features added during the hackathon in determining the winners.
+- Teams must stop hacking once the time is up. However, teams are allowed to debug and make small fixes to their programs after time is up. e.g. If during demoing your hack you find a bug that breaks your application and the fix is only a few lines of code, it's okay to fix that. Making large changes or adding new features is not allowed.
+- Projects that violate the [MLH's Code of Conduct](http://static.mlh.io/docs/mlh-code-of-conduct.pdf) or [HackCU's Code of Conduct](https://my.hackcu.org/code-conduct/) are not allowed. 
+- Teams can be disqualified from the competition at the organizers' discretion. Reasons might include but are not limited to breaking the Competition Rules, breaking [MLH's Code of Conduct](http://static.mlh.io/docs/mlh-code-of-conduct.pdf), breaking [HackCU's Code of Conduct](https://my.hackcu.org/code-conduct/), or other unsporting behaviour.
 
 
 ## Demos
