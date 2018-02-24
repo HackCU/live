@@ -67,8 +67,8 @@ function initializeClock(id, startTime, endTime) {
 } // end of setting up clock
 
 window.onload = function() {
-	let hackingBegins = "February 24 2018 12:00:00 GMT-0600";
-	let hackingEnds = "February 25 2018 11:59:59 GMT-0600";
+	let hackingBegins = "February 24 2018 12:00:00 GMT-0700";
+	let hackingEnds = "February 25 2018 11:59:59 GMT-0700";
 	initializeClock('countdown-timer', hackingBegins, hackingEnds);
 	initializeClock('countdown-timer-mobile', hackingBegins, hackingEnds);
 };
