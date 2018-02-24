@@ -1,0 +1,40 @@
+---
+layout: base
+title: Events
+description: Intro workshops and side events at HackCU IV
+---
+<div class="row">
+	<h4>Workshops</h4>
+	{% for card in site.data.workshops %}
+	<div class="col s12 m12">
+
+		<div class="card accent-color white-text">
+			<div class="card-content">
+				<span class="card-title">
+					
+					{{card.title}}
+				</span>
+				<p>{{card.description}}</p>
+			</div>
+			
+		</div>
+	</div>
+	{% endfor %}
+	<hr>
+	<h4>Side events</h4>
+	{% for card in site.data.side_events %}
+	<div class="col s12 m12">
+
+		<div class="card accent-color white-text">
+			<div class="card-content">
+				<span class="card-title">
+					
+					{{card.title}}
+				</span>
+				<p>{{card.description}}</p>
+			</div>
+			
+		</div>
+	</div>
+	{% endfor %}
+</div>
