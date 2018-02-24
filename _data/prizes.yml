@@ -9,8 +9,8 @@
 - title: 3rd Prize
   description: 3rd best hack of HackCU IV
   award: Backpack filled with swag and goodies (WD 1TB Hard Drive, Anker portable charger, Anker Soundcore 2, GitHub promo codes, stickers and more!) / teammate
-
-- title: "Sponsor Prize: Oppenheimer Funds/Beacon.io Business Challenge"
+ 
+- title: "Sponsor Prize: Oppenheimer Funds - Business Challenge"
   description: "Sentiment Analysis Challenge - Students should find correlations between societal/emotional trends and financial trends. The Oppenheimer team will provide a paper detailing more specific requirements about the Catastrophe Bond challenge. "
   award: "Winning teams will get priority admission to Leeds Wall Street and $100 scholarships"
 
@@ -33,7 +33,11 @@
 - title: "Sponsor Prize: Freewave"
   description: Create an application to process remote sensor data from a hypothetical edge environment. 
   award: "The team that demonstrates the best use of Freewave Technologies Programmable Platform and develops a working application, wins. The members of the winning team receive $200 worth VISA cards each. The runner-up team will receive Raspberry Pi's and Raspberry Pi kits"
-
+  
+- title: "Sponsor Prize: Beacon.io - Volatility Cockpit"
+  description: "Hackers will be given access to the Beacon Platform which is designed to accelerate development of cloud based solutions in finance. They will be challenged to learn the platform and build a web application that lets users explore various aspects of option pricing to get a deeper understanding of volatility."
+  award: "Winning teams get $100 in Amazon gift certificates"
+  
 - title: Most Unique
   description: Judges will decide what's the most unique hack they have seen
   award: Hue Color Starter Kit
