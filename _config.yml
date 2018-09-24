@@ -12,3 +12,10 @@ collections:
 sass:
     sass_dir: assets/_sass
     style: compressed
+
+
+# Countdown Timer
+# Time format: "MONTH DAY YEAR HH:MM:SS TIMEZONE"
+timer_enable: false
+start_time: "September 23 2018 12:00:00 GMT-0700"
+end_time: "September 24 2018 11:59:59 GMT-0700"

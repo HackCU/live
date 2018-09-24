@@ -2,14 +2,15 @@
 
 <nav>
 <div class="nav-wrapper">
+  {% if site.timer_enable %}
   <div class="brand-logo center hide-on-med-and-down">
   	<h3 id="countdown-timer" >
-
 	  	<span class="timer" id="hours"></span> :
 	  	<span class="timer" id="minutes"></span> :
 	  	<span class="timer" id="seconds"></span>
 	</h3>
   </div>
+  {% endif %}
   <ul id="nav-mobile" class="center hide-on-med-and-down">
   	<li><a href="/">Home</a></li>
 
