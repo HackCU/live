@@ -12,7 +12,8 @@ HackCU Live Page
 ## Local 
 
 1. `git clone https://github.com/hackcu/live && cd live`
-2. `jekyll serve`
+2. `gem install jekyll`
+3. `jekyll serve --watch`
 
 # Want to contribute?
 
