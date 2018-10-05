@@ -71,8 +71,8 @@ function initializeClock(id, startTime, endTime) {
 } // end of setting up clock
 
 window.onload = function() {
-	let hackingBegins = "{{ site.start_time }}";
-	let hackingEnds = "{{ site.end_time }}";
+	let hackingBegins = "{{ site.start_time | date_to_xmlschema }}";
+	let hackingEnds = "{{ site.end_time  | date_to_xmlschema}}";
 	initializeClock('countdown-timer', hackingBegins, hackingEnds);
 	initializeClock('countdown-timer-mobile', hackingBegins, hackingEnds);
 };

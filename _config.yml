@@ -16,6 +16,6 @@ sass:
 
 # Countdown Timer
 # Time format: "MONTH DAY YEAR HH:MM:SS TIMEZONE"
-timer_enable: false
-start_time: "September 23 2018 12:00:00 GMT-0700"
-end_time: "September 24 2018 11:59:59 GMT-0700"
+timer_enable: true
+start_time: "October 5 2018 12:00:00 GMT-0700"
+end_time: "October 6 2018 11:59:59 GMT-0700"
