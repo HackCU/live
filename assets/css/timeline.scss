@@ -107,6 +107,7 @@ $secondary-color: {{site.secondary_color}};
     p, h5 {
         margin:0;
         line-height: 1em;
+        white-space: pre-line;
         padding-right: 20px;
     }
 
