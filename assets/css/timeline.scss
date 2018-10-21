@@ -31,7 +31,7 @@ $secondary-color: {{site.secondary_color}};
 
 /* Container around content */
 .item {
-    padding: 10px 40px;
+    padding: 10px 30px;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -61,7 +61,7 @@ $secondary-color: {{site.secondary_color}};
             top: 22px;
             width: 0;
             z-index: 1;
-            right: 30px;
+            right: 20px;
             border: medium solid $accent-color;
             border-width: 10px 0 10px 10px;
             border-color: transparent transparent transparent $accent-color;
@@ -79,7 +79,7 @@ $secondary-color: {{site.secondary_color}};
             top: 22px;
             width: 0;
             z-index: 1;
-            left: 30px;
+            left: 20px;
             border: medium solid $accent-color;
             border-width: 10px 10px 10px 0;
             border-color: transparent $accent-color transparent transparent;
@@ -122,7 +122,7 @@ $secondary-color: {{site.secondary_color}};
 @media screen and (max-width: 600px) {
 /* Place the timelime to the left */
     .timeline::after {
-        left: 31px;
+        left: 0px;
     }
 
     .inner-item {
@@ -141,13 +141,13 @@ $secondary-color: {{site.secondary_color}};
 /* Full-width items */
     .item {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
+        padding-left: 20px;
+        padding-right: 0;
         margin-bottom: 0;
 
         /* Make sure that all arrows are pointing leftwards */
         &::before, &:nth-child(even)::before, &:nth-child(odd)::before {
-            left: 60px;
+            left: 10px;
             border: medium solid $accent-color;
             border-width: 10px 10px 10px 0;
             border-color: transparent $accent-color transparent transparent;
