@@ -37,18 +37,6 @@ $secondary-color: {{site.secondary_color}};
     width: 50%;
     margin-bottom: -50px;
 
-    /* The circles on the timeline */
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     width: 29px;
-    //     height: 29px;
-    //     right: -14px;
-    //     background-color: $accent-color;
-    //     top: 15px;
-    //     border-radius: 50%;
-    //     z-index: 1;
-    // }
 
     &:nth-child(even) {
         left: 0;
@@ -85,10 +73,6 @@ $secondary-color: {{site.secondary_color}};
             border-color: transparent $accent-color transparent transparent;
         }
 
-        /* Fix the circle for items on the right side */
-        &::after {
-            left: -14px;
-        }
     }
 }
 
