@@ -9,17 +9,6 @@ function getTimeRemaining(startTime, endTime) {
 
 	let today = new Date();
 
-	// Before hackathon
-	if (Date.parse(today) < Date.parse(startTime)) {
-		return {
-		'total': 0,
-		'days': 0,
-		'hours': 24,
-		'minutes': 0,
-		'seconds': 0
-		};
-	}
-
 	// After hackathon
 	if (Date.parse(today) > Date.parse(endTime)) {
 		return {
@@ -31,8 +20,18 @@ function getTimeRemaining(startTime, endTime) {
 		};
 	}
 
-	// During hackathon
-	let t = Date.parse(endTime) - Date.parse(today);
+        let t = 0;
+
+	// Before hackathon
+	if (Date.parse(today) < Date.parse(startTime)) {
+                t = Date.parse(endTime) - Date.parse(startTime);
+        }
+
+        // During hackathon
+        else {
+                t = Date.parse(endTime) - Date.parse(today);
+        }
+
 	let seconds = Math.floor( (t/1000) % 60 );
 	let minutes = Math.floor( (t/1000/60) % 60 );
 	let hours = Math.floor( (t/(1000*60*60)) % 24 );
