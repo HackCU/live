@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Rules
-description: Rules at HackCU IV
+description: Rules at Phase
 ---
 
 These rules are based on the standard competition rules used at MLH Member Hackathons.

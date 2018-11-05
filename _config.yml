@@ -1,8 +1,8 @@
 original_repo: https://github.com/hackcu/live
 title: HackCU LIVE
-color: "#22292c"
-secondary_color: "#22b573"
-devpost: https://hackcu4.devpost.com
+color: "#011627"
+secondary_color: "#ff9f1c"
+devpost: https://phase.devpost.com
 
 collections:
   sections:
@@ -17,5 +17,5 @@ sass:
 # Countdown Timer
 # Time format: "MONTH DAY YEAR HH:MM:SS TIMEZONE"
 timer_enable: true
-start_time: "October 5 2018 12:00:00 GMT-0700"
-end_time: "October 6 2018 11:59:59 GMT-0700"
+start_time: "November 10 2018 08:00:00 GMT-0700"
+end_time: "November 10 2018 23:00:00 GMT-0700"
