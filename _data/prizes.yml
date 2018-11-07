@@ -1,86 +1,92 @@
-- title: 1st Prize
+- title: "Sponsor prize: Particle.io"
   type: hackathon
-  description: Best hack of HackCU IV
-  award: 1 Nintendo Switch / teammate
+  description: Best hack using a Particle.io Photon board
+  award: 1 Particle.io Sensor Kit / teammate
 
-- title: 2nd Prize
-  type: hackathon
-  description: 2nd best hack of HackCU IV
-  award: 1 Beats Solo Wireless / teammate
 
-- title: 3rd Prize
-  type: hackathon
-  description: 3rd best hack of HackCU IV
-  award: Backpack filled with swag and goodies (WD 1TB Hard Drive, Anker portable charger, Anker Soundcore 2, GitHub promo codes, stickers and more!) / teammate
+# - title: 1st Prize
+#   type: hackathon
+#   description: Best hack of HackCU IV
+#   award: 1 Nintendo Switch / teammate
+
+# - title: 2nd Prize
+#   type: hackathon
+#   description: 2nd best hack of HackCU IV
+#   award: 1 Beats Solo Wireless / teammate
+
+# - title: 3rd Prize
+#   type: hackathon
+#   description: 3rd best hack of HackCU IV
+#   award: Backpack filled with swag and goodies (WD 1TB Hard Drive, Anker portable charger, Anker Soundcore 2, GitHub promo codes, stickers and more!) / teammate
  
-- title: "Sponsor Prize: Oppenheimer Funds - Business Challenge"
-  type: sponsor
-  description: "Sentiment Analysis Challenge - Students should find correlations between societal/emotional trends and financial trends. The Oppenheimer team will provide a paper detailing more specific requirements about the Catastrophe Bond challenge. "
-  award: "Winning teams will get priority admission to Leeds Wall Street and $100 scholarships"
+# - title: "Sponsor Prize: Oppenheimer Funds - Business Challenge"
+#   type: sponsor
+#   description: "Sentiment Analysis Challenge - Students should find correlations between societal/emotional trends and financial trends. The Oppenheimer team will provide a paper detailing more specific requirements about the Catastrophe Bond challenge. "
+#   award: "Winning teams will get priority admission to Leeds Wall Street and $100 scholarships"
 
-- title: "Sponsor Prize: NEO"
-  type: sponsor
-  description: Prize for the most creative and novel Dapp built on the Neo Blockchain
-  award: "500 GAS, the native cryptoasset on the Neo blockchain goes to the winning team - worth roughly $20,000USD"
+# - title: "Sponsor Prize: NEO"
+#   type: sponsor
+#   description: Prize for the most creative and novel Dapp built on the Neo Blockchain
+#   award: "500 GAS, the native cryptoasset on the Neo blockchain goes to the winning team - worth roughly $20,000USD"
 
-- title: "Sponsor Prize: AUVSI"
-  type: sponsor
-  description: Autonomous systems, like drones, self-driving cars, and submersibles, are taking on new importance every day, and we want to see your ideas for the future. Build the best hack involving an unmanned system - land, sea, or air - and win $500 in Amazon gift cards for your team. Your hack does not have to be hardware-based; ideas could be computer vision systems, sonar sensors, or more - anything that could help an autonomous system or involve it in some way.
-  award: "$500 in Amazon gift cards plus automatic acceptance and VIP treatment at XBuild, including travel if not from colorado"
+# - title: "Sponsor Prize: AUVSI"
+#   type: sponsor
+#   description: Autonomous systems, like drones, self-driving cars, and submersibles, are taking on new importance every day, and we want to see your ideas for the future. Build the best hack involving an unmanned system - land, sea, or air - and win $500 in Amazon gift cards for your team. Your hack does not have to be hardware-based; ideas could be computer vision systems, sonar sensors, or more - anything that could help an autonomous system or involve it in some way.
+#   award: "$500 in Amazon gift cards plus automatic acceptance and VIP treatment at XBuild, including travel if not from colorado"
 
-- title: "Sponsor Prize: Twitter"
-  type: sponsor
-  description: Prize for the best use of the public Twitter API.
-  award: "Special Twitter swag"
+# - title: "Sponsor Prize: Twitter"
+#   type: sponsor
+#   description: Prize for the best use of the public Twitter API.
+#   award: "Special Twitter swag"
 
-- title: "Sponsor Prize: Dish Network"
-  type: sponsor
-  description: "Tracking assets with sticker labels enabling GPS and connectivity through wireless now, and develop the project further to use NB-IOT."
-  award: "Certificate for free Sling TV. Winners also get to present their idea to the executives at Dish Network."
-  url: https://drive.google.com/file/d/1B0tcA-IBeJx39dPutMmz1wkgIL68OVDn/view?usp=sharing
+# - title: "Sponsor Prize: Dish Network"
+#   type: sponsor
+#   description: "Tracking assets with sticker labels enabling GPS and connectivity through wireless now, and develop the project further to use NB-IOT."
+#   award: "Certificate for free Sling TV. Winners also get to present their idea to the executives at Dish Network."
+#   url: https://drive.google.com/file/d/1B0tcA-IBeJx39dPutMmz1wkgIL68OVDn/view?usp=sharing
 
-- title: "Sponsor Prize: Alteryx"
-  type: sponsor
-  description: Hackers will be given an unexplained data set and will need to get through a series of different challenges, in Alteryx, to determine a specific event that they will need to tell us the attendance of.
-  award: "1st Place: AppleTV, 2nd Place: Echo Dot, 3rd Place: $50 Amazon Card, All: Interview with Alteryx"
-  url: https://drive.google.com/drive/folders/1zxfhDWPdcbIuyT9-xFWtLIhauCJzE7hs
+# - title: "Sponsor Prize: Alteryx"
+#   type: sponsor
+#   description: Hackers will be given an unexplained data set and will need to get through a series of different challenges, in Alteryx, to determine a specific event that they will need to tell us the attendance of.
+#   award: "1st Place: AppleTV, 2nd Place: Echo Dot, 3rd Place: $50 Amazon Card, All: Interview with Alteryx"
+#   url: https://drive.google.com/drive/folders/1zxfhDWPdcbIuyT9-xFWtLIhauCJzE7hs
 
-- title: "Sponsor Prize: Freewave"
-  type: sponsor
-  description: Create an application to process remote sensor data from a hypothetical edge environment. 
-  award: "The team that demonstrates the best use of Freewave Technologies Programmable Platform and develops a working application, wins. The members of the winning team receive $200 worth VISA cards each. The runner-up team will receive Raspberry Pi's and Raspberry Pi kits"
+# - title: "Sponsor Prize: Freewave"
+#   type: sponsor
+#   description: Create an application to process remote sensor data from a hypothetical edge environment. 
+#   award: "The team that demonstrates the best use of Freewave Technologies Programmable Platform and develops a working application, wins. The members of the winning team receive $200 worth VISA cards each. The runner-up team will receive Raspberry Pi's and Raspberry Pi kits"
   
-- title: "Sponsor Prize: Beacon.io - Volatility Cockpit"
-  type: sponsor
-  description: "Hackers will be given access to the Beacon Platform which is designed to accelerate development of cloud based solutions in finance. They will be challenged to learn the platform and build a web application that lets users explore various aspects of option pricing to get a deeper understanding of volatility."
-  award: "Winning teams get $100 in Amazon gift certificates"
+# - title: "Sponsor Prize: Beacon.io - Volatility Cockpit"
+#   type: sponsor
+#   description: "Hackers will be given access to the Beacon Platform which is designed to accelerate development of cloud based solutions in finance. They will be challenged to learn the platform and build a web application that lets users explore various aspects of option pricing to get a deeper understanding of volatility."
+#   award: "Winning teams get $100 in Amazon gift certificates"
 
-- title: "Sponsor Prize: HackDFW/AUVSI"
-  type: sponsor
-  description: "Autonomous systems, like drones, self-driving cars, and submersibles, are taking on new importance every day, and we want to see your ideas for the future. Build the best hack involving an unmanned system - land, sea, or air. Build the best hack involving an unmanned system - land, sea, or air."
-  award: "Win $500 in Amazon gift cards for your team."
+# - title: "Sponsor Prize: HackDFW/AUVSI"
+#   type: sponsor
+#   description: "Autonomous systems, like drones, self-driving cars, and submersibles, are taking on new importance every day, and we want to see your ideas for the future. Build the best hack involving an unmanned system - land, sea, or air. Build the best hack involving an unmanned system - land, sea, or air."
+#   award: "Win $500 in Amazon gift cards for your team."
   
-- title: Most Unique
-  type: hackathon
-  description: Judges will decide what's the most unique hack they have seen
-  award: Hue Color Starter Kit
+# - title: Most Unique
+#   type: hackathon
+#   description: Judges will decide what's the most unique hack they have seen
+#   award: Hue Color Starter Kit
 
-- title: Judge's Favorite
-  type: hackathon
-  description: Judge's favorite hack
-  award: Amazon Echo 2
+# - title: Judge's Favorite
+#   type: hackathon
+#   description: Judge's favorite hack
+#   award: Amazon Echo 2
 
-- title: Most Random
-  type: hackathon
-  description: To the most random hack
-  award: Insignia WiFi Smart Plugs / teammate
+# - title: Most Random
+#   type: hackathon
+#   description: To the most random hack
+#   award: Insignia WiFi Smart Plugs / teammate
 
-- title: Best Beginner Hack
-  type: hackathon
-  description: Your team is eligible if more than half of your team is a first-timer during HackCU IV
-  award: Raspberry PI / teammate
+# - title: Best Beginner Hack
+#   type: hackathon
+#   description: Your team is eligible if more than half of your team is a first-timer during HackCU IV
+#   award: Raspberry PI / teammate
 
-- title: Most Devpost Likes
-  type: hackathon
-  description: Get the most likes on Devpost by other participants
-  award: Amazon Fire TV Stick
+# - title: Most Devpost Likes
+#   type: hackathon
+#   description: Get the most likes on Devpost by other participants
+#   award: Amazon Fire TV Stick
