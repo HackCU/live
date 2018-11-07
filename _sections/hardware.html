@@ -3,6 +3,40 @@ layout: base
 title: Hardware
 description: Live webpage for Phase
 ---
-<div class="col s12 m12">
-<p class="text-flow">You can find Hardware Lab next to the Check in table. Head to <a target="_blank" href="https://hardware.mlh.io/events/hackcu-iv">MLH Hardware Lab</a> website to request hardware to borrow before you arrive at the desk. Here's the items available/existing:</p>
+<div class="row">
+    <div class="col s12 m12">
+        <p class="text-flow">You can find Hardware Lab next to the Check in table. Head to <a target="_blank" href="https://my.hackcu.org/hardware/">Hardware Lab</a> website to request hardware to borrow before you arrive at the desk. Here's the items available/existing:</p>
+    </div>
+    {%raw%}
+    <div class="col s12 m12" id="app">
+        <ul class="collection">
+        
+            <li class="collection-item" v-for="item in items">
+                <h5 class="title">{{item.name}}</h5>
+                <small><b>{{item.available}}</b> available out of {{item.total}}</small>
+                <p>{{item.description}}</p>
+            </li>
+        </ul>   
+    </div>
+    {%endraw%}
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="/assets/vendor/js/jquery.min.js"></script>
+
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    items: [{"available": 19, "name": "Photon boards", "description": "A tiny, reprogrammable Wi-Fi development kit for prototyping and scaling your Internet of Things product.", "total": 19},]
+  },
+})
+
+function refresh() {
+    $.get('https://my.hackcu.org/hardware/api/').success(function(data){
+        app.items = data.items
+    });
+}
+refresh();
+setInterval(refresh, 60000);
+
+</script>
