@@ -1,13 +1,14 @@
-- title: "Sponsor prize: Particle.io"
+- title: "Sponsor prize: The best #ParticlePowered creation"
   type: sponsor
-  description: Best hack using a Particle.io Photon board
+  description: Build a hack using any Particle.io project. Creativity is key! For more details on judging criteria, see URL.
   award: 1 Particle.io Sensor Kit / teammate
+  url: https://offers.particle.io/win
 
 - title: Most Random
   type: hackathon
   description: To the most random hack
   award: 60 googly eyes
-  
+
 # - title: 1st Prize
 #   type: hackathon
 #   description: Best hack of HackCU IV
