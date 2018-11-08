@@ -1,0 +1,24 @@
+---
+layout: base
+title: Timeline
+description: Event timeline
+---
+
+<link rel="stylesheet" href="/assets/css/timeline.css?_={{ site.time |  date: '%s' }}">
+{% raw %}
+
+        
+<div id="app">
+    <div class="timeline">
+        <div class="item" v-for="event in events">
+            <div class="inner-item">
+                <div class="hours"><p>{{ event.start }}</p><p><small>{{ event.end }}</small></p></div>
+                <h5>{{ event.description }}<br> <small v-if="event.location != ''">at {{event.location}}</small></h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% endraw %}
+<script src="/assets/vendor/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="/assets/js/liveTimeline.js?_={{ site.time |  date: '%s' }}"></script>
