@@ -1,9 +1,13 @@
 - title: "Sponsor prize: Particle.io"
-  type: hackathon
+  type: sponsor
   description: Best hack using a Particle.io Photon board
   award: 1 Particle.io Sensor Kit / teammate
 
-
+- title: Most Random
+  type: hackathon
+  description: To the most random hack
+  award: 60 googly eyes
+  
 # - title: 1st Prize
 #   type: hackathon
 #   description: Best hack of HackCU IV
@@ -76,10 +80,6 @@
 #   description: Judge's favorite hack
 #   award: Amazon Echo 2
 
-# - title: Most Random
-#   type: hackathon
-#   description: To the most random hack
-#   award: Insignia WiFi Smart Plugs / teammate
 
 # - title: Best Beginner Hack
 #   type: hackathon
