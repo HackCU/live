@@ -3,13 +3,31 @@ layout: base
 title: Schedule
 description: Schedule
 ---
-<div class="row center">
+{%raw %}
+<div class="row center" id="app">
 	<div class="card accent-color white-text">
 		<div class="card-content">
 			<span class="card-title center">
 				Saturday Nov 10
 			</span>
-			<div id="scheduleTable0"></div>
+			<table class="highlight responsive-table">
+				<thead>
+					<tr>
+						<td>Start</td>
+						<td>End</td>
+						<td>Description</td>
+						<td>Location</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="event in day1">
+						<td>{{event.Start}}</td>
+						<td>{{event.End}}</td>
+						<td>{{event.Description}}</td>
+						<td>{{event.Location}}</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	<div class="card accent-color white-text">
@@ -17,9 +35,46 @@ description: Schedule
 			<span class="card-title center">
 				Sunday Nov 11
 			</span>
-			<div id="scheduleTable1"></div>
+			<table class="highlight responsive-table">
+				<thead>
+					<tr>
+						<td>Start</td>
+						<td>End</td>
+						<td>Description</td>
+						<td>Location</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="event in day2">
+						<td>{{event.Start}}</td>
+						<td>{{event.End}}</td>
+						<td>{{event.Description}}</td>
+						<td>{{event.Location}}</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
-	<h5>Due to the amount of traffic to this page, we're experiencing occasional outages.</h5>
-	<h5>If the schedule is not loading, you can also find it <a target="blank" href="https://bit.ly/hackcu-schedule">here.</a></h5>
+	<!-- <h5>Due to the amount of traffic to this page, we're experiencing occasional outages.</h5>
+	<h5>If the schedule is not loading, you can also find it <a target="blank" href="https://bit.ly/hackcu-schedule">here.</a></h5> -->
 </div>
+{%endraw %}
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    day1: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"},],
+    day2: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"},]
+  },
+})
+
+function refresh() {
+    $.get('https://api.hackcu.org/sheets/events.json').success(function(data){
+        app.day1 = data.day1
+        app.day2 = data.day2
+    });
+}
+refresh();
+setInterval(refresh, 60000);
+
+</script>
