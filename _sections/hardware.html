@@ -22,6 +22,7 @@ description: Live webpage for Phase
                 <h5 class="title">{{item.name}}</h5>
                 <small><b>{{item.available}}</b> available out of {{item.total}}</small>
                 <p>{{item.description}}</p>
+                <a v-if="item.url" target="_blank" v-bind:href="item.url"><i aria-hidden="true" class="fa fa-plus"></i> More info</a>
             </li>
         </ul>   
     </div>
@@ -40,7 +41,18 @@ var app = new Vue({
 
 function refresh() {
     $.get('https://my.hackcu.org/hardware/api/').success(function(data){
-        app.items = data.items
+        app.items = data.items.sort(function(a,b) {
+            var aName = a.name.toUpperCase()
+            var bName = b.name.toUpperCase()
+            if (aName < bName) {
+                return -1;
+            }
+            if (aName > bName) {
+                return 1;
+            }
+            return 0;
+
+        })
     });
 }
 refresh();
