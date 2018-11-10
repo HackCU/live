@@ -9,10 +9,20 @@
   description: To the most random hack
   award: 60 googly eyes
 
-# - title: 1st Prize
-#   type: hackathon
-#   description: Best hack of HackCU IV
-#   award: 1 Nintendo Switch / teammate
+- title: 1st Prize
+  type: hackathon
+  description: Best hack of Phase
+  award: 1 Echo Dot / teammate
+
+- title: 2nd Prize
+  type: hackathon
+  description: 2nd best hack of Phase
+  award: 1 Arduino / teammate
+
+- title: 3rd Prize
+  type: hackathon
+  description: 3rd best hack of Phase
+  award: 1 HackCU water bottle / teammate
 
 # - title: 2nd Prize
 #   type: hackathon
