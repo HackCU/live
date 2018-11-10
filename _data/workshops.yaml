@@ -1,46 +1,7 @@
-- title: Rapid prototyping game
-  description: Need ideas for the hack? Come and learn how to do rapid prototyping to come up with new ideas.
-  author: Design For America
+- title: "Xilinx all programmable"
+  description: Join Jayson Bethurem to learn more about hacking with Xilinx hardware during Phase
+  author: Jayson Bethurem
 
-- title: Business Challenge Intro
-  description: Learn more about the Business Challenge at HackCU.
-
-- title: Intro to NEO Blockchain
-  description: Blockchain is trending! Come learn about how to work on the NEO Blockchain.
-  author: NEO developers
-
-- title: Intro to Python
-  description: New to programming? No worries! Come and learn Python in this introductory talk.
-  author: Women in Computing, presented by Quadrocopter Club
-
-- title: A Guided Introduction to iOS Development 
-  description: Because the mobile app market has exploded in the last decade, becoming a developer for the iOS platform could be very rewarding for a burgeoning programmer. Since the breadth of information related to iOS development can be intimidating, check out this overview and guided question and answer session covering the key things you’ll need to get started as an app developer. We’ll cover Xcode, Swift, the Apple SDK, and the general process of app development. 
-  author: InspiringApps
-
-- title: Go Serverless with Amazon Web Services 
-  description: Learn how to develop API architectures without a server using AWS and Serverless Framework. In this session, we will cover the AWS components needed to build a serverless architecture and write code to demonstrate the components in action. 
-  author: InspiringApps
-
-- title: Intro to git/GitHub
-  description: Learn more about git and how to use it to make your project successful. 
-  author: Apara from HackCU
-
-- title: Your first web server
-  description: Introduction to web development with Flask. We will make our first web server during the talk. 
-  author: Gerard from HackCU
-
-- title: Make your own personal website
-  description: Learn how to make your personal website with Github pages.
-  author: Carl & Shubha from HackCU
-
-- title:  vim a robust text editor
-  description: "Vim is a tool that's available virtually everywhere. Come see what makes it worth learning about it. No experience necessary, open to everyone. Repository: https://github.com/keyaa/vim-workshop"
-  author: Kevin from HackCU
-
-- title:  Intro to Unity
-  description: Learn how to make games, VR/AR and more using Unity.
-  author: Justin from VR/AR club
-
-- title: Writing a Resume/Creating a Personal Brand
-  description: Join Career Services on this session about how to format your resume to increase your chances of being hired by a company! 
-  author: Career Services at CU
+- title: Intro to Arduino
+  description: Learn how to make a basic hack on Arduino
+  author: JC & Elliot

@@ -1,20 +1,13 @@
+---
+# Frontmatter needed to take start and end time variables from _config.yml
+---
+
 // Countdown Timer
 
 // Calculate remaining time
 function getTimeRemaining(startTime, endTime) {
 
 	let today = new Date();
-
-	// Before hackathon
-	if (Date.parse(today) < Date.parse(startTime)) {
-		return {
-		'total': 0,
-		'days': 0,
-		'hours': 24,
-		'minutes': 0,
-		'seconds': 0
-		};
-	}
 
 	// After hackathon
 	if (Date.parse(today) > Date.parse(endTime)) {
@@ -27,8 +20,18 @@ function getTimeRemaining(startTime, endTime) {
 		};
 	}
 
-	// During hackathon
-	let t = Date.parse(endTime) - Date.parse(today);
+        let t = 0;
+
+	// Before hackathon
+	if (Date.parse(today) < Date.parse(startTime)) {
+                t = Date.parse(endTime) - Date.parse(startTime);
+        }
+
+        // During hackathon
+        else {
+                t = Date.parse(endTime) - Date.parse(today);
+        }
+
 	let seconds = Math.floor( (t/1000) % 60 );
 	let minutes = Math.floor( (t/1000/60) % 60 );
 	let hours = Math.floor( (t/(1000*60*60)) % 24 );
@@ -67,8 +70,8 @@ function initializeClock(id, startTime, endTime) {
 } // end of setting up clock
 
 window.onload = function() {
-	let hackingBegins = "February 24 2018 12:00:00 GMT-0700";
-	let hackingEnds = "February 25 2018 11:59:59 GMT-0700";
+	let hackingBegins = "{{ site.start_time | date_to_xmlschema }}";
+	let hackingEnds = "{{ site.end_time  | date_to_xmlschema}}";
 	initializeClock('countdown-timer', hackingBegins, hackingEnds);
 	initializeClock('countdown-timer-mobile', hackingBegins, hackingEnds);
 };
