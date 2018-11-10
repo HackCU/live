@@ -13,6 +13,7 @@ sass:
     sass_dir: assets/_sass
     style: compressed
 
+timezone: America/Denver
 
 # Countdown Timer
 # Time format: "MONTH DAY YEAR HH:MM:SS TIMEZONE"
