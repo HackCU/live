@@ -10,15 +10,48 @@ description: Event timeline
         
 <div id="app">
     <div class="timeline">
-        <div class="item" v-for="event in events">
+        <h2 v-if="firstDay">Saturday</h2>
+        <transition-group name="list">
+            <div class="item" v-for="event in day1" v-bind:key="event"> 
+                <div class="inner-item">
+                    <div class="hours"><p>{{ event.Start }}</p><p><small>{{ event.End }}</small></p></div>
+                    <h5>{{ event.Description }}<br> <small v-if="event.Location">at {{event.Location}}</small></h5>
+                </div>
+            </div>
+        </transition-group>
+        <h2>Sunday</h2>
+        <div class="item" v-for="event in day2">
             <div class="inner-item">
-                <div class="hours"><p>{{ event.start }}</p><p><small>{{ event.end }}</small></p></div>
-                <h5>{{ event.description }}<br> <small v-if="event.location != ''">at {{event.location}}</small></h5>
+                <div class="hours"><p>{{ event.Start }}</p><p><small>{{ event.End }}</small></p></div>
+                <h5>{{ event.Description }}<br> <small v-if="event.Location">at {{event.Location}}</small></h5>
             </div>
         </div>
     </div>
 </div>
 {% endraw %}
-<script src="/assets/vendor/js/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="/assets/js/liveTimeline.js?_={{ site.time |  date: '%s' }}"></script>
+<script>
+
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        firstDay: true,
+        day1: [
+            { Description: 'Learn 1', Start:"10:30", End:"11:30", Location:"HERE"},
+            { Description: 'Learn 2', Start:"10:30", End:"11:30", Location:"HERE"},
+            { Description: 'Learn 3', Start:"10:30", End:"11:30", Location:"HERE"},
+        ],
+        day2: []
+    }
+})
+
+function refresh() {
+    $.get('https://api.hackcu.org/sheets/events.json').success(function(data){
+        app.day1 = data.day1
+        app.day2 = data.day2
+    });
+}
+// refresh();
+// setInterval(refresh, 2*60000);
+
+</script>

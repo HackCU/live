@@ -27,6 +27,19 @@ $secondary-color: {{site.secondary_color}};
         margin-left: -3px;
         @include box-shadow(inset 0px 11px 8px -5px #fff, inset 0px -11px 8px -5px #fff); 
     }
+
+    h2 {
+        margin-left: 20px;
+        margin-top: 70px;
+    }
+}
+
+.list-enter-active, .list-leave-active {
+    transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+    opacity: 0;
+    transform: translateY(-30px);
 }
 
 /* Container around content */
