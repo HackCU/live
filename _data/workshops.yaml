@@ -1,7 +1,19 @@
-- title: "Xilinx all programmable"
-  description: Join Jayson Bethurem to learn more about hacking with Xilinx hardware during Phase
-  author: Jayson Bethurem
+- title: Build and Deploy your First Website
+  description: Learn How to Deploy your First Website from Scratch!
+  author: Person
 
-- title: Intro to Arduino
-  description: Learn how to make a basic hack on Arduino
-  author: JC & Elliot
+- title: "!Light"
+  description: Sharpen your frontend development skills with this activity.
+  author: Person
+
+- title: HackerLog
+  description: Build and Deploy Node.js Apps with Microsoft Azure.
+  author: Person
+
+- title: React
+  description: Learn React
+  author: Devon
+
+- title: First Webserver
+  description: Set Up Your very Own Webserver!
+  author: Gerard

@@ -1,28 +1,39 @@
-- title: "Sponsor prize: The best #ParticlePowered creation"
-  type: sponsor
-  description: Build a hack using any Particle.io project. Creativity is key! For more details on judging criteria, see URL.
-  award: 1 Particle.io Maker Kit / teammate
-  url: https://offers.particle.io/win
-
-- title: Most Random
-  type: hackathon
-  description: To the most random hack
-  award: 60 googly eyes
-
 - title: 1st Prize
   type: hackathon
-  description: Best hack of Phase
-  award: 1 Echo Dot / teammate
+  description: Best Hack
+  award: Something Cool / teammate
 
-- title: 2nd Prize
-  type: hackathon
-  description: 2nd best hack of Phase
-  award: 1 Arduino / teammate
 
-- title: 3rd Prize
-  type: hackathon
-  description: 3rd best hack of Phase
-  award: 1 HackCU water bottle / teammate
+- title: Best Use of Prize
+  type: sponsor
+  description: Best Use of
+  award: 1 awesome Laptop / teammate
+
+# - title: "Sponsor prize: The best #ParticlePowered creation"
+#  type: sponsor
+# description: Build a hack using any Particle.io project. Creativity is key! For more details on judging criteria, see URL.
+#  award: 1 Particle.io Maker Kit / teammate
+#  url: https://offers.particle.io/win
+
+# - title: Most Random
+#  type: hackathon
+#  description: To the most random hack
+#  award: 60 googly eyes
+
+# - title: 1st Prize
+#  type: hackathon
+#  description: Best hack of Phase
+#  award: 1 Echo Dot / teammate
+
+# - title: 2nd Prize
+#  type: hackathon
+#  description: 2nd best hack of Phase
+#  award: 1 Arduino / teammate
+
+# - title: 3rd Prize
+#  type: hackathon
+#  description: 3rd best hack of Phase
+#  award: 1 HackCU water bottle / teammate
 
 # - title: 2nd Prize
 #   type: hackathon
