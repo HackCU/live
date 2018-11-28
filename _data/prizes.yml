@@ -22,20 +22,20 @@
 
 - title: "Global Challenge: Best Open Source Hack on GitHub"
   type: sponsor
-  description: "To be described"
-  award: TBD
+  description: "MLH and GitHub are both big believers in the power of Open Source. To enter, all you need to do to enter is upload your app’s code to GitHub and give it an Open Source license of your choice. "
+  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
   url: lhd.mlh.io/devpost
 
 - title: "Global Challenge: Best Microsoft Azure Hack"
   type: sponsor
-  description: "To be described"
-  award: TBD
+  description: "MLH and Microsoft want to see you put your $100 Azure credit to good use, so we’ll be awarding prizes for the best hacks that use Microsoft Azure. To enter, sign up for Azure using the provided link and use an Azure API or service (hosting, machine learning, etc) in your project. "
+  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
   url: lhd.mlh.io/devpost
 
 - title: "Global Challenge: Best Hack Community Project"
   type: sponsor
-  description: "To be described"
-  award: TBD
+  description: "Local Hack Day is all about celebrating your local hacker community and we want you to build projects that make the community better. To enter this challenge, build a project that improves your local (or the global) hacker community. "
+  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
   url: lhd.mlh.io/devpost
 
 # - title: Most Random
