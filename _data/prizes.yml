@@ -1,12 +1,7 @@
 - title: Finalists
   type: hackathon
-  description: "If you present at the end you will get a chance to win various prizes: Octocat plushie, GitHub Shirts, Google Cloud swag..."
+  description: "If you present at the end you will get a chance to win various prizes: Octocat plushie, GitHub Shirts..."
   award: Varied
-
-- title: "Best Hack using Google Cloud"
-  type: sponsor
-  description: "Use Google Cloud in your hack to win cool swag!"
-  award: TBD
 
 - title: "Social Contest: Best Swag Photo Contest!"
   type: sponsor
