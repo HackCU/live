@@ -1,15 +1,23 @@
 - title: Build and Deploy your First Website
   description: Learn How to Deploy your First Website from Scratch!
-  author: Person
-
-- title: HackerLog
-  description: Build and Deploy Node.js Apps with Microsoft Azure.
-  author: Person
-
-- title: React
-  description: Learn React
   author: Devon
 
-- title: First Webserver
-  description: Set Up Your very Own Webserver!
-  author: Gerard
+- title: Introduction Git & GitHub
+  description: How will using a version control system change your life? In this talk, you will learn how to use Git from its basics. Join us to learn more! GitHub stickers will be provided
+  author: Apara
+
+- title: Build Apps for Slack
+  description: create an app for a Slack workspace using the Slack API
+  author: Shubha
+
+- title:  Build and Deploy Node.js Apps with Microsoft Azure
+  description: Learn how to create an app for a Slack workspace using the Slack API
+  author: Elliot
+
+- title:  Introduction to Webapp Security Presentation
+  description: Learn how to secure your web applications with this presentation by Matt at GitHub
+  author: Matt Langois
+
+- title:  Introduction to the Vim Text Editor
+  description: Vim is a tool that's available virtually everywhere. Come see what makes it worth learning about it.
+  author: Suyog Soti
