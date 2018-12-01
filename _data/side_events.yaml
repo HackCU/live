@@ -1,8 +1,20 @@
-- title: Competitive Programming Club Event
-  description: "Participate in 3 different competitions - Halite, Terminal, Coders Strike Back - for the best scores among fellow hackers!"
+- title: "Competitive Programming Club Event: Halite"
+  description: Collect Halite (lit up squares) to build more ships and shipyards
+  url: https://halite.io/learn-programming-challenge/tutorials
+
+- title: "Competitive Programming Club Event: Terminal"
+  description: Build defenses to protect your side
+  url: https://terminal.c1games.com/rules 
+
+
+- title: "Competitive Programming Club Event: Race from checkpoint to checkpoint"
+  description: Race from checkpoint to checkpoint
+  url: https://www.codingame.com/multiplayer/bot-programming/coders-strike-back 
 
 - title: "!Light"
   description: Sharpen your frontend development skills with this activity.
 
 - title: Ultimate Hacker Trivia
   description: Think you are a great hacker? Put your knowledge into test for this chill out trivia game.
+
+
