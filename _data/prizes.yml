@@ -1,42 +1,42 @@
-- title: Finalists
+- title: Coming Soon....
   type: hackathon
-  description: "If you present at the end you will get a chance to win various prizes: Octocat plushies, GitHub shirts, and more!"
-  award: Varied
+  description: ""
+  award: TBD
 
-- title: "Social Contest: Best Swag Photo Contest!"
+- title: Coming Soon....
   type: sponsor
-  description: "There’s lots of awesome swag at your Local Hack Day. Tweet your swag photo at @MLHacks w/ #Swagathon & #LocalHackDay."
-  award: GitHub T-Shirt
-  url: lhd.mlh.io/live
+  description: ""
+  award: TBD
 
-- title: "Social Contest: Draw an Octocat"
-  type: sponsor
-  description: "Everyone loves Octocats, GitHub's adorable mascots. Tweet your drawing at @GitHubEducation & @MLHacks w/ #MyOctocat & #LocalHackDay."
-  award: Octocat statue
-  url: lhd.mlh.io/live
+# - title: "Social Contest: Best Swag Photo Contest!"
+#  type: sponsor
+#  description: "There’s lots of awesome swag at your Local Hack Day. Tweet your swag photo at @MLHacks w/ #Swagathon & #LocalHackDay."
+#  award: GitHub T-Shirt
+#  url: lhd.mlh.io/live
 
-- title: "Global Challenge: Best Open Source Hack on GitHub"
-  type: sponsor
-  description: "MLH and GitHub are both big believers in the power of Open Source. To enter, all you need to do to enter is upload your app’s code to GitHub and give it an Open Source license of your choice. "
-  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
-  url: lhd.mlh.io/devpost
+# - title: "Social Contest: Draw an Octocat"
+#  type: sponsor
+#  description: "Everyone loves Octocats, GitHub's adorable mascots. Tweet your drawing at @GitHubEducation & @MLHacks w/ #MyOctocat & #LocalHackDay."
+#  award: Octocat statue
+#  url: lhd.mlh.io/live
 
-- title: "Global Challenge: Best Microsoft Azure Hack"
-  type: sponsor
-  description: "MLH and Microsoft want to see you put your $100 Azure credit to good use, so we’ll be awarding prizes for the best hacks that use Microsoft Azure. To enter, sign up for Azure using the provided link and use an Azure API or service (hosting, machine learning, etc) in your project. "
-  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
-  url: lhd.mlh.io/devpost
+# - title: "Global Challenge: Best Open Source Hack on GitHub"
+#  type: sponsor
+#  description: "MLH and GitHub are both big believers in the power of Open Source. To enter, all you need to do to enter is upload your app’s code to GitHub and give it an Open Source license of your choice. "
+#  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
+#  url: lhd.mlh.io/devpost
 
-- title: "Global Challenge: Best Hack Community Project"
-  type: sponsor
-  description: "Local Hack Day is all about celebrating your local hacker community and we want you to build projects that make the community better. To enter this challenge, build a project that improves your local (or the global) hacker community. "
-  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
-  url: lhd.mlh.io/devpost
+#- title: "Global Challenge: Best Microsoft Azure Hack"
+#  type: sponsor
+#  description: "MLH and Microsoft want to see you put your $100 Azure credit to good use, so we’ll be awarding prizes for the best hacks that use Microsoft Azure. To enter, sign up for Azure using the provided link and use an Azure API or service (hosting, machine learning, etc) in your project. "
+#  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
+#  url: lhd.mlh.io/devpost
 
-- title: Most Random
-  type: hackathon
-  description: To the most random hack.
-  award: 60 googly eyes
+# - title: "Global Challenge: Best Hack Community Project"
+#  type: sponsor
+#  description: "Local Hack Day is all about celebrating your local hacker community and we want you to build projects that make the community better. To enter this challenge, build a project that improves your local (or the global) hacker community. "
+#  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
+#  url: lhd.mlh.io/devpost
 
 # - title: 1st Prize
 #  type: hackathon

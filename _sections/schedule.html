@@ -8,7 +8,7 @@ description: Schedule
 	<div class="card accent-color white-text">
 		<div class="card-content">
 			<span class="card-title center">
-				Saturday Dec 1
+				Saturday Feb 23
 			</span>
 			<table class="highlight responsive-table">
 				<thead>
@@ -30,10 +30,11 @@ description: Schedule
 			</table>
 		</div>
 	</div>
-<!--	<div class="card accent-color white-text">
+
+	<div class="card accent-color white-text">
 		<div class="card-content">
 			<span class="card-title center">
-				Sunday Dec 2
+				Sunday Feb 24
 			</span>
 			<table class="highlight responsive-table">
 				<thead>
@@ -54,7 +55,7 @@ description: Schedule
 				</tbody>
 			</table>
 		</div>
-	</div> -->
+	</div>
 	<!-- <h5>Due to the amount of traffic to this page, we're experiencing occasional outages.</h5>
 	<h5>If the schedule is not loading, you can also find it <a target="blank" href="https://bit.ly/hackcu-schedule">here.</a></h5> -->
 </div>
@@ -64,14 +65,14 @@ var app = new Vue({
   el: '#app',
   data: {
     day1: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"},],
-    //day2: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"},]
+    day2: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"},]
   },
 })
 
 function refresh() {
     $.get('https://api.hackcu.org/sheets/events.json').success(function(data){
         app.day1 = data.day1
-        //app.day2 = data.day2
+        app.day2 = data.day2
     });
 }
 refresh();
