@@ -18,7 +18,7 @@ timezone: America/Denver
 # Countdown Timer
 # Time format: "MONTH DAY YEAR HH:MM:SS TIMEZONE"
 timer_enable: true
-start_time: "February 23 2019 08:00:00 GMT-0700"
+start_time: "February 23 2019 12:00:00 GMT-0700"
 end_time: "February 24 2019 15:00:00 GMT-0700"
 
 
