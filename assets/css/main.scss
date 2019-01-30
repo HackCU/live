@@ -90,8 +90,11 @@ body {
       padding-left: 40px !important;
       padding-right: 40px !important;
       padding-bottom: 10px !important;
+      min-width: 305px;
       @include box-shadow( 0px 0px 4px 4px rgba(0, 0, 0, 0.2));
-
+      h3 {
+        text-align: left;
+      }
     }
   }
 }

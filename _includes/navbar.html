@@ -1,14 +1,15 @@
-<div class="navbar-fixed">
+<div class="countdown">
+<div class="navbar-fixed ">
 
 <nav>
-<div class="nav-wrapper">
+<div class="nav-wrapper ">
   {% if site.timer_enable %}
   <div class="brand-logo center hide-on-med-and-down">
-  	<h3 id="countdown-timer" >
-	  	<span class="timer" id="hours"></span> :
-	  	<span class="timer" id="minutes"></span> :
-	  	<span class="timer" id="seconds"></span>
-	</h3>
+		{%raw%}
+  	<h3>
+			{{hours|twodigits}} : {{minutes|twodigits}} : {{seconds|twodigits}}
+		</h3>
+		{%endraw%}
   </div>
   {% endif %}
   <ul id="nav-mobile" class="center hide-on-med-and-down">
@@ -27,14 +28,11 @@
 <ul id="slide-out" class="side-nav">
   	<li>
   		<div class="user-view accent-color white-text">
-	      
+	      {%raw%}
 	      <h2>
-	      	<div id="countdown-timer-mobile">
-			  <span class="timer" id="hours"></span> :
-			  <span class="timer" id="minutes"></span> :
-			  <span class="timer" id="seconds"></span>
-			</div>
-	      </h2>
+	      	{{hours | twodigits}} : {{minutes| twodigits}} : {{seconds| twodigits}}
+				</h2>
+				{%endraw%}
 	    </div>
 	</li>
   	<li><a href="/">Home</a></li>
@@ -42,3 +40,4 @@
 		<li><a href="{{ item.url }}">{{ item.title }}</a></li>
 	{% endfor %}
 </ul>
+</div>
