@@ -30,6 +30,9 @@ description: Intro workshops and side events at Hack CU V
 			<li class="collection-item">
 				<h5 class="title">{{card.title}}</h5>
 				<p>{{card.description}}</p>
+				{% if card.url %}
+					<a target="_blank" href="{{card.url}}"><i aria-hidden="true" class="fa fa-plus"></i> More info</a>
+				{% endif %}
 			</li>
 		{% endfor %}
 		</ul>

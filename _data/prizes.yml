@@ -38,10 +38,10 @@
 #  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
 #  url: lhd.mlh.io/devpost
 
-# - title: Most Random
-#  type: hackathon
-#  description: To the most random hack
-#  award: 60 googly eyes
+- title: Most Random
+  type: hackathon
+  description: To the most random hack.
+  award: 60 googly eyes
 
 # - title: 1st Prize
 #  type: hackathon
