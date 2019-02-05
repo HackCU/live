@@ -61,7 +61,7 @@ description: Schedule
 </div>
 {%endraw %}
 <script>
-var app = new Vue({
+var schedule = new Vue({
   el: '#app',
   data: {
     day1: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"},],
@@ -71,11 +71,14 @@ var app = new Vue({
 
 function refresh() {
     $.get('https://api.hackcu.org/sheets/events.json').success(function(data){
-        app.day1 = data.day1
-        app.day2 = data.day2
+        schedule.day1 = data.day1
+        schedule.day2 = data.day2
     });
 }
+
 refresh();
 setInterval(refresh, 2*60000);
+
+
 
 </script>
