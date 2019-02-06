@@ -63,11 +63,37 @@
 #   description: "Sentiment Analysis Challenge - Students should find correlations between societal/emotional trends and financial trends. The Oppenheimer team will provide a paper detailing more specific requirements about the Catastrophe Bond challenge. "
 #   award: "Winning teams will get priority admission to Leeds Wall Street and $100 scholarships"
 
-- title: "Twisted hackers"
+- title: "Twisted Hackers"
   type: sponsor
   description: "Use your creativity and our APIs to bring even more features to Twist. Integrate Twist with apps you think will enhance the product experience or be creative and build new features of your own. API: [api.twist.com/api/v3/](https://api.twist.com/api/v3/)"
   award: "One Google home mini + One Todoist lifetime account + $100 in Twist Unlimited credit for each team member"
   url: https://developer.twist.com
+
+
+- title: "MLH: Best Use of Snap Kit"
+  type: sponsor
+  description: "Use Snap Kit's web or mobile SDK in your hack."
+  award: "Each winning team member will receive a pair of Spectacles by Snapchat or another awesome prize."
+  url: https://kit.snapchat.com/
+
+- title: "MLH: Best Use of Google Cloud Platform"
+  type: sponsor
+  description: "Use Google Cloud Platform in your hack. Find a full list of GCP products & services at: [cloud.google.com/products/](https://cloud.google.com/products/). "
+  award: "Each winning team member will receive a Google Home Mini, max 4 per team."
+  url: https://cloud.google.com/?utm_source=MLH&utm_medium=print&utm_campaign=fall2018
+
+- title: "MLH: Best Domain Registered with Domain.com"
+  type: sponsor
+  description: "Register a domain using Domain.com during the weekend. Each team may submit one entry per person on the team."
+  award: "Each winning team member will receive a Raspberry Pi & PiHut Essential Kit."
+  url: https://www.domain.com/mlh
+
+- title: "MLH: Best IoT Hack using a Qualcomm Device"
+  type: sponsor
+  description: "Use a Qualcomm device, like the Dragonboard 410C, in your IoT project."
+  award: "Each winning team member will receive their own DragonBoard 410C."
+  url: https://hardware.mlh.io/
+
 
 
 # - title: "Sponsor Prize: NEO"
