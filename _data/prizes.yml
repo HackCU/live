@@ -3,11 +3,6 @@
   description: ""
   award: TBD
 
-- title: Coming Soon....
-  type: sponsor
-  description: ""
-  award: TBD
-
 # - title: "Social Contest: Best Swag Photo Contest!"
 #  type: sponsor
 #  description: "There’s lots of awesome swag at your Local Hack Day. Tweet your swag photo at @MLHacks w/ #Swagathon & #LocalHackDay."
@@ -67,6 +62,13 @@
 #   type: sponsor
 #   description: "Sentiment Analysis Challenge - Students should find correlations between societal/emotional trends and financial trends. The Oppenheimer team will provide a paper detailing more specific requirements about the Catastrophe Bond challenge. "
 #   award: "Winning teams will get priority admission to Leeds Wall Street and $100 scholarships"
+
+- title: "Twisted hackers"
+  type: sponsor
+  description: "Use your creativity and our APIs to bring even more features to Twist. Integrate Twist with apps you think will enhance the product experience or be creative and build new features of your own. API: [api.twist.com/api/v3/](https://api.twist.com/api/v3/)"
+  award: "One Google home mini + One Todoist lifetime account + $100 in Twist Unlimited credit for each team member"
+  url: https://developer.twist.com
+
 
 # - title: "Sponsor Prize: NEO"
 #   type: sponsor
