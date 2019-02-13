@@ -1,0 +1,147 @@
+---
+layout: base
+title: Upcoming
+description: Displays current and upcoming events, announcements
+---
+{%raw %}
+<div class="row center" id="app">
+	<div class="card accent-color white-text">
+		<div class="card-content">
+			<table class="highlight responsive-table">
+				<thead>
+					<tr>
+                                                <td>Time</td>
+						<td>Start</td>
+						<td>End</td>
+						<td>Description</td>
+						<td>Location</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="event in day1"
+                                            v-if="schedule.timeleft(event.StartXML, event.EndXML) != 'Over'">
+                                                <td>{{schedule.timeleft(event.StartXML, event.EndXML)}}</td>
+						<td>{{event.Start}}</td>
+						<td>{{event.End}}</td>
+						<td>{{event.Description}}</td>
+						<td>{{event.Location}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="card accent-color white-text">
+		<div class="card-content">
+			<table class="highlight responsive-table">
+				<thead>
+					<tr>
+                                                <td>Time</td>
+						<td>Start</td>
+						<td>End</td>
+						<td>Description</td>
+						<td>Location</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="event in day2"
+                                            v-if="schedule.timeleft(event.StartXML, event.EndXML) != 'Over'">
+                                                <td>{{schedule.timeleft(event.StartXML, event.EndXML)}}</td>
+						<td>{{event.Start}}</td>
+						<td>{{event.End}}</td>
+						<td>{{event.Description}}</td>
+						<td>{{event.Location}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{%endraw %}
+<script>
+var schedule = new Vue({
+  el: '#app',
+  data: {
+    day1: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"
+        ,"StartXML":"2019-01-01T00:00:00-0700", "EndXML":"2019-01-01T00:30:00-0700"},],
+    day2: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"
+        ,"StartXML":"2019-01-01T00:00:00-0700", "EndXML":"2019-01-01T00:30:00-0700"},],
+    now: Math.trunc((new Date()).getTime() / 1000)
+  },
+  mounted() {
+      window.setInterval(() => {
+          this.now = Math.trunc((new Date()).getTime() / 1000);
+      },1000);
+  },
+  methods: {
+      seconds: function(remaining){
+          return Math.trunc(remaining) % 60;
+      },
+      minutes: function(remaining) {
+          return Math.trunc((remaining) / 60) % 60;
+      },
+      hours: function(remaining) {
+          return Math.trunc((remaining) / 60 / 60);
+      },
+      twodigits: function(value) {
+          if (value < 0) {
+              return '00';
+          }
+          if (value.toString().length <= 1) {
+                  return `0${value}`;
+          }
+          return value;
+      },
+      timeleft: function(startTime, endTime) {
+          if (endTime === undefined || this.now > Math.trunc(Date.parse(endTime) / 1000)){
+              return "Over";
+          }
+          else if (this.now > Math.trunc(Date.parse(startTime) / 1000)){
+              return "Now";
+          }
+          remaining = Math.trunc(Date.parse(startTime) / 1000) - this.now;
+          seconds = this.twodigits(this.seconds(remaining));
+          minutes = this.twodigits(this.minutes(remaining));
+          hours = this.twodigits(this.hours(remaining));
+          return hours + ":" + minutes + ":" + seconds;
+      },
+  }
+})
+
+function formatDate(formatTime, day) {
+    if (formatTime == ""){
+        return undefined;
+    }
+    eventTime = formatTime.split(/:| /)
+    if (eventTime[2] == "PM" && eventTime[0] != "12"){
+        eventTime[0] = String(parseInt(eventTime[0]) + 12);
+    }
+    else if (eventTime[0] == "12" && eventTime[2] == "AM") { // converts 12 AM to 00
+        eventTime[0] = "00";
+    }
+    if (eventTime[0].length == 1) { // guarantees 2-digit hour
+        eventTime[0] = "0" + eventTime[0];
+    }
+    return day + "T" + eventTime[0] + ":" + eventTime[1] + ":00-0700";
+}
+
+function refresh() {
+    $.get('https://api.hackcu.org/sheets/events.json').success(function(data){
+        schedule.day1 = data.day1;
+        for (x in schedule.day1){
+            // Date Format: YYYY-MM-DD
+            schedule.day1[x].StartXML = formatDate(schedule.day1[x].Start, "2019-02-12");
+            schedule.day1[x].EndXML = formatDate(schedule.day1[x].End, "2019-02-12");
+        }
+        schedule.day2 = data.day2;
+        for (x in schedule.day2){
+            // Date Format: YYYY-MM-DD
+            schedule.day2[x].StartXML = formatDate(schedule.day2[x].Start, "2019-02-24");
+            schedule.day2[x].EndXML = formatDate(schedule.day2[x].End, "2019-02-24");
+        }
+    });
+}
+
+refresh();
+setInterval(refresh, 2*60000);
+
+</script>
