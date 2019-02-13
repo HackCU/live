@@ -3,26 +3,58 @@ layout: base
 title: Upcoming
 description: Displays current and upcoming events, announcements
 ---
-<link rel="stylesheet" href="/assets/css/upcoming.css?_={{ site.time |  date: '%s' }}">
 {%raw %}
-<div id="app">
-    <div class="timeline">
-        <div class="item" v-for="event in day1" v-if="schedule.timeleft(event.StartXML, event.EndXML) == 'Now'">
-            <div class="inner-item bigcard">
-                <div class="hours"><h4 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small><small>to </small>{{ event.End }}</small></h4></div>
-                <h3>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h3>
-            </div>
+<div class="row center" id="app">
+	<div class="card accent-color white-text">
+        <div class="card-content">
+                <table class="highlight responsive-table">
+                        <thead>
+                                <tr>
+                                        <td>Start</td>
+                                        <td>End</td>
+                                        <td>Event</td>
+                                        <td>Location</td>
+                                </tr>
+                        </thead>
+                        <tbody class="currevent">
+                                <tr v-for="event in day1"
+                                    v-if="schedule.timeleft(event.StartXML, event.EndXML) == 'Now'">
+                                        <td style="font-weight:bold">{{schedule.timeleft(event.StartXML, event.EndXML)}}</td>
+                                        <td>{{event.End}}</td>
+                                        <td>{{event.Description}}</td>
+                                        <td>{{event.Location}}</td>
+                                </tr>
+                                <tr v-for="event in day2"
+                                    v-if="schedule.timeleft(event.StartXML, event.EndXML) == 'Now'">
+                                        <td>{{schedule.timeleft(event.StartXML, event.EndXML)}}</td>
+                                        <td>{{event.End}}</td>
+                                        <td>{{event.Description}}</td>
+                                        <td>{{event.Location}}</td>
+                                </tr>
+                        </tbody>
+                </table>
+                <table class="nextevent highlight responsive-table dog">
+                        <tbody>
+                                <tr v-for="event in day1"
+                                    v-if="schedule.timeleft(event.StartXML, event.EndXML).length > 4">
+                                        <td>{{schedule.timeleft(event.StartXML, event.EndXML)}}</td>
+                                        <td>{{event.End}}</td>
+                                        <td>{{event.Description}}</td>
+                                        <td>{{event.Location}}</td>
+                                </tr>
+                                <tr v-for="event in day2"
+                                    v-if="schedule.timeleft(event.StartXML, event.EndXML).length > 4">
+                                        <td>{{schedule.timeleft(event.StartXML, event.EndXML)}}</td>
+                                        <td>{{event.End}}</td>
+                                        <td>{{event.Description}}</td>
+                                        <td>{{event.Location}}</td>
+                                </tr>
+                        </tbody>
+                </table>
         </div>
-        <div class="item" style="width:80%" v-for="event in day1" v-if="schedule.timeleft(event.StartXML, event.EndXML).length > 4">
-            <div class="inner-item smallcard">
-                <div class="hours"><h5 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small><small>to </small>{{ event.End }}</small></h5></div>
-                <h4>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h4>
-            </div>
         </div>
-    </div>
 </div>
 {%endraw %}
-
 <script>
 var schedule = new Vue({
   el: '#app',
