@@ -69,6 +69,11 @@
   award: "One Google home mini + One Todoist lifetime account + $100 in Twist Unlimited credit for each team member"
   url: https://developer.twist.com
 
+- title: "Coolest Hack with Twilio"
+  type: sponsor
+  description: "This prize goes out to the coolest hack with Twilio. Be it by combining various of our own APIs, use our APIs in ways we haven't seen before or by solving a great problem with them. Your creativity sets all the limits in this one. Documentation: [twilio.com/docs](https://twilio.com/docs). Check out Twilio Quest to learn Twilio APIs in a fun and interactive way (plus there will be credit and t-shirt awards): [twilio.com/quest](https://twilio.com/quest)"
+  award: TBA
+  url: https://twilio.com/try-twilio
 
 - title: "MLH: Best Use of Snap Kit"
   type: sponsor
