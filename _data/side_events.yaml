@@ -1,3 +1,21 @@
-- title: Coming Soon....
-  description: ""
+- title: "!Light"
+  description: "Sharpen your frontend development skills with this activity, where you’ll be recreating a website in HTML/CSS using our code editor - all without previewing your code along the way."
+- title: "Tech for good panel"
+  description: "Learn about inicitatives in the tech space that aim to create a positive impact to the world. Non-profits and more in this open panel with several figures from the Boulder tech for good community."
+- title: Slideshare karaoke
+  description: Practice public speaking skills with a fun activity. Presenters are given a random slide deck and must deliver an improvised speech to their audience!
 
+- title: Women in Tech Panel/ Fireside Chat
+  description: 
+
+- title: Amateur radio station KØH
+  description: "KØH is a special event amateur radio station commemorating the HackCU V hackathon. KØH is intended to introduce HackCU participants and visitors to the world of amateur radio."
+  url: https://pages.hackcu.org/guide/5/radio/
+
+
+- title: The Joy of MS Painting
+  description: "Unleash your inner artist in this chill activity where we will be using the amazing, incredible, ultra-accurate Microsoft Paint to create a great artwork. Winners will have their artwork featured in a Connor.fun t-shirt."
+  url: https://jspaint.app/
+
+- title: Neutral vehicle
+  description: "Hack this simulated vehicle to win the challenge. "

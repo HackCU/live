@@ -1,5 +1,15 @@
-- title: Coming Soon....
-  description: ""
-  author: Person
+- title:  Intro to UI/UX
+  description: "Learn about how to design great user interfaces and user experience."
+  author: Kevin Cook
 
+- title:  Intro to APIs
+  description: "Learn how to use APIs for your project from scratch."
+  author: Nicolas Grenié
 
+- title:  How to pitch your project
+  description: "Wondering what's the best way to pitch your project and make sure people understand its value as it is? Join to learn more on product pitching, elevator pitch and more."
+  author: Kyle Judah
+
+- title:  Working on Opensource
+  description: "Ever wondered what is like to work on open source projects? Well, this is your opportunity to learn first-hand experience from HackCU founder Alex Walling!"
+  author: Alex Walling
