@@ -58,10 +58,18 @@
 #   description: 3rd best hack of HackCU IV
 #   award: Backpack filled with swag and goodies (WD 1TB Hard Drive, Anker portable charger, Anker Soundcore 2, GitHub promo codes, stickers and more!) / teammate
  
-# - title: "Sponsor Prize: Oppenheimer Funds - Business Challenge"
-#   type: sponsor
-#   description: "Sentiment Analysis Challenge - Students should find correlations between societal/emotional trends and financial trends. The Oppenheimer team will provide a paper detailing more specific requirements about the Catastrophe Bond challenge. "
-#   award: "Winning teams will get priority admission to Leeds Wall Street and $100 scholarships"
+- title: "Specialized Bikes challenge"
+  type: sponsor
+  description: "At Specialized we believe in peddling the planet forward and that cycling can change lives.  As children we saw the bicycle as a machine for freedom and exploration; today, we are focused on how to improve the lives of riders.  In partnership with The Specialized Foundation we are excited to offer the following challenge:
+  
+  Design a family based app or program that encourages kids to put down their phones & game consoles and throw a leg over their bike to experience the same wonders of the outdoors as we did.  Make sure your solution gives parents the peace of mind that their kids (and their data) is safe."
+  award: "Each team member receives an Ambush Mountain Bike Helmet with ANGi sensor"
+
+- title: "Coolest Hack with Twilio"
+  type: sponsor
+  description: "This prize goes out to the coolest hack with Twilio. Be it by combining various of our own APIs, use our APIs in ways we haven't seen before or by solving a great problem with them. Your creativity sets all the limits in this one. Documentation: [twilio.com/docs](https://twilio.com/docs). Check out Twilio Quest to learn Twilio APIs in a fun and interactive way (plus there will be credit and t-shirt awards): [twilio.com/quest](https://twilio.com/quest)"
+  award: TBA
+  url: https://twilio.com/try-twilio
 
 - title: "Twisted Hackers"
   type: sponsor
@@ -69,11 +77,6 @@
   award: "One Google home mini + One Todoist lifetime account + $100 in Twist Unlimited credit for each team member"
   url: https://developer.twist.com
 
-- title: "Coolest Hack with Twilio"
-  type: sponsor
-  description: "This prize goes out to the coolest hack with Twilio. Be it by combining various of our own APIs, use our APIs in ways we haven't seen before or by solving a great problem with them. Your creativity sets all the limits in this one. Documentation: [twilio.com/docs](https://twilio.com/docs). Check out Twilio Quest to learn Twilio APIs in a fun and interactive way (plus there will be credit and t-shirt awards): [twilio.com/quest](https://twilio.com/quest)"
-  award: TBA
-  url: https://twilio.com/try-twilio
 
 - title: "MLH: Best Use of Snap Kit"
   type: sponsor
