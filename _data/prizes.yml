@@ -1,63 +1,39 @@
-- title: Coming Soon....
+- title: 1st Prize
   type: hackathon
-  description: ""
-  award: TBD
+  description: Best hack of HackCU Episode V
+  award: TBA
 
-# - title: "Social Contest: Best Swag Photo Contest!"
-#  type: sponsor
-#  description: "There’s lots of awesome swag at your Local Hack Day. Tweet your swag photo at @MLHacks w/ #Swagathon & #LocalHackDay."
-#  award: GitHub T-Shirt
-#  url: lhd.mlh.io/live
+- title: 2nd Prize
+  type: hackathon
+  description: 2nd best hack of HackCU Episode V
+  award: TBA
 
-# - title: "Social Contest: Draw an Octocat"
-#  type: sponsor
-#  description: "Everyone loves Octocats, GitHub's adorable mascots. Tweet your drawing at @GitHubEducation & @MLHacks w/ #MyOctocat & #LocalHackDay."
-#  award: Octocat statue
-#  url: lhd.mlh.io/live
+- title: 3rd Prize
+  type: hackathon
+  description: 3rd best hack of HackCU Episode V
+  award: TBA
 
-# - title: "Global Challenge: Best Open Source Hack on GitHub"
-#  type: sponsor
-#  description: "MLH and GitHub are both big believers in the power of Open Source. To enter, all you need to do to enter is upload your app’s code to GitHub and give it an Open Source license of your choice. "
-#  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
-#  url: lhd.mlh.io/devpost
+- title: Best Beginner Hack
+  type: hackathon
+  description: Your team is eligible if more than half of your team is a first-timer during HackCU V.
+  award: TBA
 
-#- title: "Global Challenge: Best Microsoft Azure Hack"
-#  type: sponsor
-#  description: "MLH and Microsoft want to see you put your $100 Azure credit to good use, so we’ll be awarding prizes for the best hacks that use Microsoft Azure. To enter, sign up for Azure using the provided link and use an Azure API or service (hosting, machine learning, etc) in your project. "
-#  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
-#  url: lhd.mlh.io/devpost
 
-# - title: "Global Challenge: Best Hack Community Project"
-#  type: sponsor
-#  description: "Local Hack Day is all about celebrating your local hacker community and we want you to build projects that make the community better. To enter this challenge, build a project that improves your local (or the global) hacker community. "
-#  award: $25 Gift Cards to the GitHub Swag Shop (1 per Team Member, Max 3 per Team).
-#  url: lhd.mlh.io/devpost
+- title: Best Hardware Hack
+  type: hackathon
+  description: Best hack using hardware.
+  award: TBA
 
-# - title: 1st Prize
-#  type: hackathon
-#  description: Best hack of Phase
-#  award: 1 Echo Dot / teammate
+- title: Best User Interface/Experience
+  type: hackathon
+  description: Design the ultimate experience for your project to with this prize. 
+  award: TBA
 
-# - title: 2nd Prize
-#  type: hackathon
-#  description: 2nd best hack of Phase
-#  award: 1 Arduino / teammate
+- title: Most RANDOM hack
+  type: hackathon
+  description: To the most random hack. Get crazy to win! (safety first please)
+  award: Surprise super-random prize (won't be announced until closing ceremony)
 
-# - title: 3rd Prize
-#  type: hackathon
-#  description: 3rd best hack of Phase
-#  award: 1 HackCU water bottle / teammate
-
-# - title: 2nd Prize
-#   type: hackathon
-#   description: 2nd best hack of HackCU IV
-#   award: 1 Beats Solo Wireless / teammate
-
-# - title: 3rd Prize
-#   type: hackathon
-#   description: 3rd best hack of HackCU IV
-#   award: Backpack filled with swag and goodies (WD 1TB Hard Drive, Anker portable charger, Anker Soundcore 2, GitHub promo codes, stickers and more!) / teammate
- 
 - title: "Specialized Bikes challenge"
   type: sponsor
   description: "At Specialized we believe in peddling the planet forward and that cycling can change lives.  As children we saw the bicycle as a machine for freedom and exploration; today, we are focused on how to improve the lives of riders.  In partnership with The Specialized Foundation we are excited to offer the following challenge:
@@ -103,66 +79,3 @@
   url: https://hardware.mlh.io/
 
 
-
-# - title: "Sponsor Prize: NEO"
-#   type: sponsor
-#   description: Prize for the most creative and novel Dapp built on the Neo Blockchain
-#   award: "500 GAS, the native cryptoasset on the Neo blockchain goes to the winning team - worth roughly $20,000USD"
-
-# - title: "Sponsor Prize: AUVSI"
-#   type: sponsor
-#   description: Autonomous systems, like drones, self-driving cars, and submersibles, are taking on new importance every day, and we want to see your ideas for the future. Build the best hack involving an unmanned system - land, sea, or air - and win $500 in Amazon gift cards for your team. Your hack does not have to be hardware-based; ideas could be computer vision systems, sonar sensors, or more - anything that could help an autonomous system or involve it in some way.
-#   award: "$500 in Amazon gift cards plus automatic acceptance and VIP treatment at XBuild, including travel if not from colorado"
-
-# - title: "Sponsor Prize: Twitter"
-#   type: sponsor
-#   description: Prize for the best use of the public Twitter API.
-#   award: "Special Twitter swag"
-
-# - title: "Sponsor Prize: Dish Network"
-#   type: sponsor
-#   description: "Tracking assets with sticker labels enabling GPS and connectivity through wireless now, and develop the project further to use NB-IOT."
-#   award: "Certificate for free Sling TV. Winners also get to present their idea to the executives at Dish Network."
-#   url: https://drive.google.com/file/d/1B0tcA-IBeJx39dPutMmz1wkgIL68OVDn/view?usp=sharing
-
-# - title: "Sponsor Prize: Alteryx"
-#   type: sponsor
-#   description: Hackers will be given an unexplained data set and will need to get through a series of different challenges, in Alteryx, to determine a specific event that they will need to tell us the attendance of.
-#   award: "1st Place: AppleTV, 2nd Place: Echo Dot, 3rd Place: $50 Amazon Card, All: Interview with Alteryx"
-#   url: https://drive.google.com/drive/folders/1zxfhDWPdcbIuyT9-xFWtLIhauCJzE7hs
-
-# - title: "Sponsor Prize: Freewave"
-#   type: sponsor
-#   description: Create an application to process remote sensor data from a hypothetical edge environment. 
-#   award: "The team that demonstrates the best use of Freewave Technologies Programmable Platform and develops a working application, wins. The members of the winning team receive $200 worth VISA cards each. The runner-up team will receive Raspberry Pi's and Raspberry Pi kits"
-  
-# - title: "Sponsor Prize: Beacon.io - Volatility Cockpit"
-#   type: sponsor
-#   description: "Hackers will be given access to the Beacon Platform which is designed to accelerate development of cloud based solutions in finance. They will be challenged to learn the platform and build a web application that lets users explore various aspects of option pricing to get a deeper understanding of volatility."
-#   award: "Winning teams get $100 in Amazon gift certificates"
-
-# - title: "Sponsor Prize: HackDFW/AUVSI"
-#   type: sponsor
-#   description: "Autonomous systems, like drones, self-driving cars, and submersibles, are taking on new importance every day, and we want to see your ideas for the future. Build the best hack involving an unmanned system - land, sea, or air. Build the best hack involving an unmanned system - land, sea, or air."
-#   award: "Win $500 in Amazon gift cards for your team."
-  
-# - title: Most Unique
-#   type: hackathon
-#   description: Judges will decide what's the most unique hack they have seen
-#   award: Hue Color Starter Kit
-
-# - title: Judge's Favorite
-#   type: hackathon
-#   description: Judge's favorite hack
-#   award: Amazon Echo 2
-
-
-# - title: Best Beginner Hack
-#   type: hackathon
-#   description: Your team is eligible if more than half of your team is a first-timer during HackCU IV
-#   award: Raspberry PI / teammate
-
-# - title: Most Devpost Likes
-#   type: hackathon
-#   description: Get the most likes on Devpost by other participants
-#   award: Amazon Fire TV Stick
