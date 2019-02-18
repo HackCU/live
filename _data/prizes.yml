@@ -56,6 +56,11 @@ It’s a pretty simple formula: kids + bikes = happier, more attentive students 
   award: TBA
   url: https://twilio.com/try-twilio
 
+- title: "Dish Device Tracker"
+  type: sponsor
+  description: "Track a device through beacons as it moves through a building. This means for example that you could track a cellphone in someone’s pocket and identify where they are or were in a building through using stationary beacons throughout the building. Questions? Contact us at the #dish - HackCU slack channel"
+  award: AirTV Player | 4K Media Streamer | for each team member
+
 - title: "Twisted Hackers"
   type: sponsor
   description: "Use your creativity and our APIs to bring even more features to Twist. Integrate Twist with apps you think will enhance the product experience or be creative and build new features of your own. API: [api.twist.com/api/v3/](https://api.twist.com/api/v3/)"
