@@ -56,15 +56,13 @@ $secondary-color: {{site.secondary_color}};
     border:  medium solid $accent-color;
     @include box-shadow(10px 10px 18px -12px rgba(0,0,0,0.75)); 
     display: flex;
+    align-items: center;
 
     .hours {
         display: flex;
         flex-direction: column;
+        min-width: 120px;
     }
-
-
-
-
     
     .start {
         color: $secondary-color;
@@ -72,7 +70,6 @@ $secondary-color: {{site.secondary_color}};
     }
 
     .end {
-        padding-right:20px;
     }
 }
 
@@ -95,6 +92,8 @@ $secondary-color: {{site.secondary_color}};
 }
 
 .smallcard{
+    width: 80%;
+
     h5, h4 {
         margin:0;
         line-height: 1em;
