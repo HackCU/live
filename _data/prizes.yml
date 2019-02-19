@@ -74,11 +74,12 @@ It’s a pretty simple formula: kids + bikes = happier, more attentive students 
   url: https://developer.twist.com
 
 
-- title: Best usage of Typeform APIs
+- title: Best use of Typeform APIs
   type: sponsor
-  description: "We will reward the most innovative usage of Typeform webhook to receive answers on a form or of Typeform APIs to create/modify forms on the fly."
-  award: "MakeyMakey collector pack (1 team, 3 total)"
-  url: https://developers.typeform.com
+  description: "Use a Typeform in your hack, retrieve answers using webhooks or with the APIs create and modify forms on the fly.
+The most original hack using Typeform will be awarded. Come to the API 101 workshop. Contact [Michael](https://twitter.com/michaelsolati) or [Nicolas](https://twitter.com/picsoung) if you have any question :)"
+  award: "3 Makeymakey collector edition (1 per team member)"
+  url: https://developer.typeform.com/
 
 - title: "MLH: Best Use of Snap Kit"
   type: sponsor
