@@ -9,25 +9,25 @@ description: Displays current and upcoming events, announcements
     <div class="timeline">
         <div class="item" v-for="event in day1" v-if="schedule.timeleft(event.StartXML, event.EndXML) == 'Now'">
             <div class="inner-item bigcard">
-                <div class="hours"><h4 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small><small>to </small>{{ event.End }}</small></h4></div>
+                <div class="hours"><h4 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h4></div>
                 <h3>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h3>
             </div>
         </div>
         <div class="item" v-for="event in day1" v-if="schedule.timeleft(event.StartXML, event.EndXML).length > 4">
             <div class="inner-item smallcard">
-                <div class="hours"><h5 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small><small>to </small>{{ event.End }}</small></h5></div>
+                <div class="hours"><h5 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h5></div>
                 <h4>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h4>
             </div>
         </div>
         <div class="item" v-for="event in day2" v-if="schedule.timeleft(event.StartXML, event.EndXML) == 'Now'">
             <div class="inner-item bigcard">
-                <div class="hours"><h4 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small><small>to </small>{{ event.End }}</small></h4></div>
+                <div class="hours"><h4 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h4></div>
                 <h3>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h3>
             </div>
         </div>
         <div class="item" v-for="event in day2" v-if="schedule.timeleft(event.StartXML, event.EndXML).length > 4">
             <div class="inner-item smallcard">
-                <div class="hours"><h5 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small><small>to </small>{{ event.End }}</small></h5></div>
+                <div class="hours"><h5 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h5></div>
                 <h4>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h4>
             </div>
         </div>

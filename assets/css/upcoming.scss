@@ -66,11 +66,9 @@ $secondary-color: {{site.secondary_color}};
     
     .start {
         color: $secondary-color;
-        padding-top:5px;
+        padding-top:10px;
     }
 
-    .end {
-    }
 }
 
 .bigcard {
@@ -120,14 +118,33 @@ $secondary-color: {{site.secondary_color}};
 
     .inner-item {
         flex-direction: column;
+        align-items: flex-start;
 
         .hours {
             flex-direction: row;
-            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-bottom: 0px;
         }
 
-        p {
-            text-align: left;
+        .end {
+            .sub {
+                vertical-align: sub;
+            }
+        }
+
+        .start {
+            padding-right: 4px;
+            vertical-align: text-bottom;
+        }
+    }
+
+    .bigcard {
+        .start {
+            margin-top: 2px;
+            padding-right: 5px;
+        }
+        h3 {
+            padding-top: 12px;
         }
     }
 } 
