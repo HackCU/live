@@ -70,6 +70,15 @@
   award: "A Splunk gift bag full of sweet swag."
   url: https://pages.hackcu.org/guide/5/track/cyber/
 
+- title: "Big Data Analytics: Non-Obvious Web Traffic"
+  type: sponsor
+  description: "Oppenheimerfunds.com gets many anonymous visitors to its website. Though we may not know exactly who each visitor is, we would like to
+observe their behavior and group them into clusters, so we can personalize their onsite experience. By analyzing our web behavioral data
+(clickstream) and finding natural-like groupings (clusters) amongst our visitors, we will be able to match the right web content to the right visitor at
+the right time."
+  award: "Bag of Swag with Mystery High Tech Goodies, and Presentation to SVP Marketing & Sales Data"
+  url: https://drive.google.com/open?id=1Bj988aDgtT6eLn54qnwHxvjOREeFsiVy
+
 - title: "Twisted Hackers"
   type: sponsor
   description: "Use your creativity and our APIs to bring even more features to Twist. Integrate Twist with apps you think will enhance the product experience or be creative and build new features of your own. API: [api.twist.com/api/v3/](https://api.twist.com/api/v3/)"
