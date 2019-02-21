@@ -21,3 +21,7 @@
 - title:  Arduino basics
   description: "Get started on the Arduino platform. Learn from scratch to do a small LED project with Arduino!"
   author: Jean-Christophe Owens
+
+- title: Building with the Decentralised Web
+  decription: Learn about how to build web applications based on smart contracts on the Blockchain.
+  author: Scott Street
