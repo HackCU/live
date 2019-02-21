@@ -105,16 +105,17 @@ function formatDate(formatTime, day) {
 function refresh() {
     $.get('https://api.hackcu.org/sheets/events.json').success(function(data){
         schedule.day1 = data.day1;
+        // Date Format: YYYY-MM-DD
+        day1_date = "2019-02-23";
+        day2_date = "2019-02-24";
         for (x in schedule.day1){
-            // Date Format: YYYY-MM-DD
-            schedule.day1[x].StartXML = formatDate(schedule.day1[x].Start, "2019-02-23");
-            schedule.day1[x].EndXML = formatDate(schedule.day1[x].End, "2019-02-23");
+            schedule.day1[x].StartXML = formatDate(schedule.day1[x].Start, day1_date);
+            schedule.day1[x].EndXML = formatDate(schedule.day1[x].End, day1_date);
         }
         schedule.day2 = data.day2;
         for (x in schedule.day2){
-            // Date Format: YYYY-MM-DD
-            schedule.day2[x].StartXML = formatDate(schedule.day2[x].Start, "2019-02-24");
-            schedule.day2[x].EndXML = formatDate(schedule.day2[x].End, "2019-02-24");
+            schedule.day2[x].StartXML = formatDate(schedule.day2[x].Start, day2_date);
+            schedule.day2[x].EndXML = formatDate(schedule.day2[x].End, day2_date);
         }
     });
 }
