@@ -111,7 +111,7 @@ Primary style
   }
   
   .cd-schedule .events .events-group {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   
   .cd-schedule .events .top-info {
@@ -185,12 +185,12 @@ Primary style
     .cd-schedule .events .events-group {
       width: 20%;
       float: left;
-      border: 1px solid #EAEAEA;
+      border: 0px solid #EAEAEA;
       /* reset style */
       margin-bottom: 0;
     }
     .cd-schedule .events .events-group:not(:first-of-type) {
-      border-left-width: 0;
+      border-left-width: 1;
     }
     .cd-schedule .events .top-info {
       /* vertically center its content */
@@ -211,7 +211,7 @@ Primary style
       margin-bottom: 0;
     }
     .cd-schedule .events .events-group > ul {
-      height: 950px;
+      height: 900px;
       /* reset style */
       display: block;
       overflow: visible;
@@ -230,7 +230,7 @@ Primary style
       position: absolute;
       z-index: 3;
       /* top position and height will be set using js */
-      width: calc(100% + 2px);
+      width: calc(100% + 0px);
       left: -1px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 -3px 0 rgba(0, 0, 0, 0.2);
       /* reset style */
@@ -331,6 +331,18 @@ Primary style
     background: #f7bd7f;
   }
   
+
+  .cd-schedule .single-event[data-event="event-5"],
+  .cd-schedule [data-event="event-5"] .header-bg {
+    background: #f8db59;
+  }
+  
+  .cd-schedule .single-event[data-event="event-5"]:hover {
+    background: #f8db59;
+  }
+
+
+
   .cd-schedule .event-modal {
     position: fixed;
     z-index: 3;
@@ -355,7 +367,7 @@ Primary style
   
   .cd-schedule .event-modal .header {
     position: relative;
-    height: 50px;
+    height: 0px;
     /* vertically center its content */
     display: table;
     width: 100%;
@@ -383,12 +395,14 @@ Primary style
     line-height: 1.4;
     height: 100%;
     overflow: hidden;
+    
   }
   
   .cd-schedule .event-modal .event-info > div {
     overflow: auto;
     height: 100%;
-    padding: 1.3em 5%;
+    padding: 1.4em 5%;
+    
   }
   
   .cd-schedule .event-modal .header-bg, .cd-schedule .event-modal .body-bg {
@@ -500,6 +514,7 @@ Primary style
     }
     .cd-schedule .event-modal .event-info > div {
       padding: 2em 3em 2em 2em;
+      
     }
     .cd-schedule .event-modal .body {
       height: 100%;
@@ -532,6 +547,7 @@ Primary style
     }
     .cd-schedule .event-modal .close, .cd-schedule .event-modal .event-info {
       opacity: 0;
+      font-size: 80%;
     }
     .cd-schedule .event-modal .close {
       width: 40px;

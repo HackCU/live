@@ -9,17 +9,24 @@ jQuery(document).ready(function($){
 	function SchedulePlan( element ) {
 		this.element = element;
 		this.timeline = this.element.find('.timeline');
-		this.timelineItems = this.timeline.find('li');
-		this.timelineItemsNumber = this.timelineItems.length;
-        this.timelineStart = getScheduleTimestamp(this.timelineItems.eq(0).text());
-		//need to store delta (in our case half hour) timestamp
-		this.timelineUnitDuration = getScheduleTimestamp(this.timelineItems.eq(1).text()) - getScheduleTimestamp(this.timelineItems.eq(0).text());
+        this.timelineItems = this.timeline.find('li');
+        //console.log("f");
+        this.timelineItemsNumber = this.timelineItems.length;
+        
+        this.timelineStart = getScheduleTimestamp(this.timelineItems.eq(0).text(), "sat");
+        //need to store delta (in our case half hour) timestamp
+        // ye
+        
+        this.timelineUnitDuration = getScheduleTimestamp(this.timelineItems.eq(1).text(), "sat") - this.timelineStart;
+        console.log("Unit is: ");
+        console.log(this.timelineUnitDuration);
+        // will log 30 minutes
 
 		this.eventsWrapper = this.element.find('.events');
 		this.eventsGroup = this.eventsWrapper.find('.events-group');
 		this.singleEvents = this.eventsGroup.find('.single-event');
 		this.eventSlotHeight = this.eventsGroup.eq(0).children('.top-info').outerHeight();
-
+        console.log(this.eventsGroup.eq(0));
 		this.modal = this.element.find('.event-modal');
 		this.modalHeader = this.modal.find('.header');
 		this.modalHeaderBg = this.modal.find('.header-bg');
@@ -27,7 +34,7 @@ jQuery(document).ready(function($){
 		this.modalBodyBg = this.modal.find('.body-bg'); 
 		this.modalMaxWidth = 800;
 		this.modalMaxHeight = 480;
-        console.log(this.timelineItems.eq(3).text());
+        //console.log(this.timelineItems.eq(4).text());
 		this.animating = false;
 
 		this.initSchedule();
@@ -42,7 +49,7 @@ jQuery(document).ready(function($){
 		var mq = this.mq();
 		if( mq == 'desktop' && !this.element.hasClass('js-full') ) {
 			//in this case you are on a desktop version (first load or resize from mobile)
-			this.eventSlotHeight = this.eventsGroup.eq(0).children('.top-info').outerHeight();
+			this.eventSlotHeight = this.eventsGroup.eq(0).children('.top-info').outerHeight()+0.4;
 			this.element.addClass('js-full');
 			this.placeEvents();
 			this.element.hasClass('modal-is-open') && this.checkEventModal();
@@ -69,6 +76,9 @@ jQuery(document).ready(function($){
 			var durationLabel = '<span class="event-date">'+$(this).data('start')+' - '+$(this).data('end')+'</span>';
             $(this).children('a').prepend($(durationLabel));
             console.log(durationLabel)
+            console.log("f");
+            //var e = $(this).data('start');
+            //console.log(e);
 
 			//detect click on the event and open the modal
 			$(this).on('click', 'a', function(event){
@@ -90,13 +100,27 @@ jQuery(document).ready(function($){
 	SchedulePlan.prototype.placeEvents = function() {
 		var self = this;
 		this.singleEvents.each(function(){
-			//place each event in the grid -> need to set top position and height
-			var start = getScheduleTimestamp($(this).attr('data-start')),
-				duration = getScheduleTimestamp($(this).attr('data-end')) - start;
+            //place each event in the grid -> need to set top position and height
+            console.log('test')
+            var first_date = $(this).attr('data-start');
+            var second_date = $(this).attr('data-end');
+            var data_date1 = $(this).attr('data-date');
+            var data_date2 = $(this).attr('data-date');
+            if(first_date.includes('PM') && second_date.includes('AM')){
+                // shift in day!
+                data_date1 = 'sat';
+                data_date2 = 'sun';
 
+            }
+
+            var start = getScheduleTimestamp($(this).attr('data-start'), data_date1),
+				duration = getScheduleTimestamp($(this).attr('data-end'), data_date2) - start;
+            
 			var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
-				eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
-			
+                eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
+            console.log(data_date1);
+            console.log("AND...");
+             
 			$(this).css({
 				top: (eventTop -1) +'px',
 				height: (eventHeight+1)+'px'
@@ -116,7 +140,7 @@ jQuery(document).ready(function($){
 		this.modalHeader.find('.event-date').text(event.find('.event-date').text());
 		this.modal.attr('data-event', event.parent().attr('data-event'));
 
-		//update event content
+        //update event content
 		this.modalBody.find('.event-info').load(event.parent().attr('data-content')+'.html .event-info > *', function(data){
 			//once the event content has been loaded
 			self.element.addClass('content-loaded');
@@ -360,14 +384,37 @@ jQuery(document).ready(function($){
 			element.scheduleReset();
 		});
 		windowResize = false;
-	}
+    }
+    
+    // need to get that time stamp
 
-	function getScheduleTimestamp(time) {
-		//accepts hh:mm format - convert hh:mm to timestamp
-		time = time.replace(/ /g,'');
-		var timeArray = time.split(':');
-		var timeStamp = parseInt(timeArray[0])*60 + parseInt(timeArray[1]);
-		return timeStamp;
+    // 32 hours we need to schedule
+    // 8:00AM, Saturday = 0
+
+	function getScheduleTimestamp(time, day) {
+        //accepts hh:mm format - convert hh:mm to 
+        
+        // first convert to miltary tim
+        var hours = Number(time.match(/^(\d+)/)[1]);
+        var minutes = Number(time.match(/:(\d+)/)[1]);
+        var is_am  = time.includes("AM");
+        if ((!is_am) && hours < 12) hours = hours + 12;
+        if (is_am && hours == 12) hours = hours - 12;
+        var sHours = hours.toString();
+        var sMinutes = minutes.toString();
+        if (hours < 10) sHours = "0" + sHours;
+        if (minutes < 10) sMinutes = "0" + sMinutes;
+        console.log(sHours + ":" + sMinutes);
+        var timeStamp = parseInt(sHours)*60 + parseInt(sMinutes);
+        var amt = 0;
+        if(day != "sat"){
+            amt = 24*60;
+
+        }
+        var res = timeStamp + amt;
+        console.log(res);   
+        
+		return res;
 	}
 
 	function transformElement(element, value) {

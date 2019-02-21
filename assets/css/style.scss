@@ -195,7 +195,7 @@ Main Components
 		.events-group {
 			width: 100%/$columns-number;
 			float: left;
-			border: 1px solid $border-color;
+			border: 0px solid $border-color;
 			/* reset style */
 			margin-bottom: 0;
 
@@ -227,7 +227,7 @@ Main Components
 		.events-group > ul {
 			@include clearfix;
 			// 19 is the number of list items in the .timeline
-			height: $row-height*19;
+			height: $row-height*10;
 			/* reset style */
 			display: block;
 			overflow: visible;
