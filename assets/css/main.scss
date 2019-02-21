@@ -3,6 +3,8 @@
 
 @charset "utf-8";
 @import "../_sass/mixins";
+@import "../_sass/layout";
+@import "../_sass/variables";
 
 $main-color: #fff;
 $footer-text: #fff;
@@ -34,12 +36,13 @@ table.highlight>tbody>tr:hover {
 }
 
 
+
 body {
   height: 100%;
   width: 100%;
 
   background-color: $main-color;
-  font-family: Roboto, sans-serif;
+  //font-family: Roboto, sans-serif;
 
 
 
@@ -48,12 +51,36 @@ body {
     font-size: 17.5px;
     margin-top: 50px;
     padding-bottom: 40px;
-    li {
+    li:not(.events-group):not(.collection-item):not(.single-event):not(.times){
       list-style-type: square !important;
       margin-left: 1em;
       font-weight: 300;
       line-height: 2em;
     }
+    li.collection-item{
+      
+      list-style-type: square !important;
+      font-weight: 300;
+      line-height: 2em;
+    }
+
+    .event-name{
+      font-style: normal;
+      @font-face {
+        font-family: Biko;
+        src: url('../fonts/Biko_Regular.otf');
+      }
+      font-size: 80%;
+    }
+
+    .event-date{
+      font-size: 80%;
+    }
+
+    .times{
+      font-size: 80%;
+    }
+  
 
     a {
       color: $secondary-color;
@@ -110,6 +137,7 @@ body {
     }
   }
 }
+
 
 
 
