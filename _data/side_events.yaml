@@ -6,7 +6,7 @@
   description: Practice public speaking skills with a fun activity. Presenters are given a random slide deck and must deliver an improvised speech to their audience!
 
 - title: Women in Tech Panel/ Fireside Chat
-  description: 
+  description: "Join us for this panel with leaders of the sector talking about the future of technology "
 
 - title: Amateur radio station KØH
   description: "KØH is a special event amateur radio station commemorating the HackCU V hackathon. KØH is intended to introduce HackCU participants and visitors to the world of amateur radio."
@@ -19,3 +19,7 @@
 
 - title: Neutral vehicle
   description: "Hack this simulated vehicle to win the challenge. "
+
+- title: Hackathon Organizers Meetup
+  description: "Join us to discuss and talk about the future of hackathons in the US and to help with tips to organize better hackathons."
+

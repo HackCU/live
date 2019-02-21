@@ -55,14 +55,29 @@
 
 - title: "Dish Device Tracker"
   type: sponsor
-  description: "Track a device through beacons as it moves through a building. This means for example that you could track a cellphone in someone’s pocket and identify where they are or were in a building through using stationary beacons throughout the building. Questions? Contact us at the #dish - HackCU slack channel"
-  award: AirTV Player | 4K Media Streamer | for each team member
+  description: "Track an object (thing) as it moves through any points on the CU Campus.  There are many beneficial use cases for such a solution. It’s also important to be able to visualize or display the data in a meaningful way.  Think about how your solution would  solve a consumer pain-point or create some additional value for society. Think outside the box and don’t feel limited by any technology solution or distance. Questions? Contact us at the #dish - HackCU slack channel"
+  award: "AirTV Player | 4K Media Streamer | for each team member. Winners will have the opportunity to demo their solutions at the Smart Spaces and Things Expo at Dish’s International HQ in Englewood, CO on Thursday May 23rd from 11-2 pm for both corporate executives and other Dish employees."
 
 - title: "Design, Build or Break Cyber Games for K-12 Education"
   type: sponsor
   description: "This challenge asks for your creative ideas in cybersecurity to K-12 students through the use of games. Topics may include encryption, authentication, code hacking, cyber risk, and network analysis and mapping - you are free to choose your own topic related to cybersecurity, as well as topics will be provided."
   award: "First Place – choice of: 1) Free trip to the Pentagon (DoD Headquarters) with the TCP Program with paid airfare, lodging, and custom tour for 3 days, 2 nights, or 2) Nintendo Switch Game Consoles.  Second Place – choice of: 1) Circadence Project Ares Licenses, or 2) Google Home Minis - Smart Speakers with Google Assistant.  Third Place: Tile Mate Item Trackers (2/person).  All Participants: Pride and TCP SWAG."
   url: https://pages.hackcu.org/guide/5/track/cyber/
+
+- title: "Splunk Challenge"
+  type: sponsor
+  description: "The team who processes and makes sense of the most unstructured data will win!"
+  award: "A Splunk gift bag full of sweet swag."
+  url: https://pages.hackcu.org/guide/5/track/cyber/
+
+- title: "Big Data Analytics: Non-Obvious Web Traffic"
+  type: sponsor
+  description: "Oppenheimerfunds.com gets many anonymous visitors to its website. Though we may not know exactly who each visitor is, we would like to
+observe their behavior and group them into clusters, so we can personalize their onsite experience. By analyzing our web behavioral data
+(clickstream) and finding natural-like groupings (clusters) amongst our visitors, we will be able to match the right web content to the right visitor at
+the right time."
+  award: "Bag of Swag with Mystery High Tech Goodies, and Presentation to SVP Marketing & Sales Data"
+  url: https://drive.google.com/open?id=1Bj988aDgtT6eLn54qnwHxvjOREeFsiVy
 
 - title: "Twisted Hackers"
   type: sponsor
