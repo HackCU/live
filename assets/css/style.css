@@ -268,7 +268,8 @@ Primary style
   }
   
   .cd-schedule .event-name,
-  .cd-schedule .event-date {
+  .cd-schedule .event-date,
+  .cd-schedule .event-name-1 {
     display: block;
     color: white;
     /*font-weight: bold;*/
@@ -276,12 +277,11 @@ Primary style
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .cd-schedule .event-name {
-    font-size: 1.8rem;
-  }
+
   
   @media only screen and (min-width: 800px) {
-    .cd-schedule .event-name {
+    .cd-schedule .event-name
+    {
       font-size: 1.3rem;
     }
   }
@@ -354,7 +354,7 @@ Primary style
     /* vertically center inside its parent */
     display: table-cell;
     vertical-align: middle;
-    padding: .6em 5%;
+    padding: 2.6em 5%;
   }
   
   .cd-schedule .event-modal .body {
@@ -407,10 +407,10 @@ Primary style
   .cd-schedule .event-modal .close {
     /* this is the 'X' icon */
     position: absolute;
-    top: 0;
+    top: 7%;
     right: 0;
     z-index: 3;
-    background: rgba(0, 0, 0, 0.1);
+    /*background: rgba(0, 0, 0, 0.1);*/
     /* replace text with icon */
     color: transparent;
     white-space: nowrap;
