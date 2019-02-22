@@ -5,11 +5,7 @@ description: Display upcoming events
 ---
 <link rel="stylesheet" href="/assets/css/upcoming.css?_={{ site.time |  date: '%s' }}">
 {%raw %}
-<div class="countdown center">
-    <h1>
-        {{hours|twodigits}} : {{minutes|twodigits}} : {{seconds|twodigits}}
-    </h1>
-</div>
+
 <div id="app">
     <div class="timeline">
         <div class="item" v-for="event in day1" v-if="timeleft(event.StartXML, event.EndXML) == 'Now'">
