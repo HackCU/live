@@ -78,152 +78,112 @@ description: Schedule
 		</ul>
 	</div> <!-- .timeline -->
 
-	<div class="events">
+	<div class="events" id="app">
 		<ul>
 			<li class="events-group">
-				<div class="top-info"><span>Workshops</span></div>
+				<div class="top-info"><span>Keystone</span></div>
 
 				<ul>
-					<li class="single-event" data-start="09:00AM" data-end="10:30AM" data-content="event-detail" data-event="event-2" data-date="sat">
-						<a href="#0">
-							<em class="event-name">React Workshop</em>
-						</a>
-					</li>
-
+					<div v-for="event in keystone">
+						<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-2" v-bind:data-date="event.Date">
+								<a href="#0">
+									<em class="event-name">{{event.EventName}}</em>
+								</a>
+							</li>
+						</div>
+					<!--
 					<li class="single-event" data-start="11:00AM" data-end="12:30PM" data-content="event-detail" data-event="event-2" data-date="sat">
 						<a href="#0">
 							<em class="event-name">Rowing Workout</em>
 						</a>
 					</li>
-
-					<li class="single-event" data-start="12:30PM" data-end="01:50PM"  data-content="event-detail" data-event="event-2" data-date="sat">
-							<a href="#0">
-								<em class="event-name">Yoga Level 1</em>
-							</a>
-						</li>
-
-					<li class="single-event" data-start="11:00PM" data-end="11:50PM"  data-content="event-detail" data-event="event-2" data-date="sat">
-							<a href="#0">
-								<em class="event-name">Yoga Level 1</em>
-							</a>
-						</li>
-
-						<li class="single-event" data-start="03:00PM" data-end="04:00PM"  data-content="event-detail" data-event="event-2" data-date="sun">
-								<a href="#0">
-									<em class="event-name">Yoga Level 1</em>
-								</a>
-							</li>
+					-->
 				</ul>
 			</li>
 
 			<li class="events-group">
-				<div class="top-info"><span>Side Events</span></div>
+				<div class="top-info"><span>Breck</span></div>
 
 				<ul>
-					<li class="single-event" data-start="10:00AM" data-end="11:00AM"  data-content="event-detail" data-event="event-1" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
-
+						<div v-for="event in breck">
+								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-1" v-bind:data-date="event.Date">
+										<a href="#0">
+											<em class="event-name">{{event.EventName}}</em>
+										</a>
+									</li>
+								</div>
+							<!--
 					<li class="single-event" data-start="11:30AM" data-end="01:00PM"  data-content="event-detail" data-event="event-1" data-date="sat">
 						<a href="#0">
 							<em class="event-name">Restorative Yoga</em>
 						</a>
 					</li>
-
-					<li class="single-event" data-start="01:30PM" data-end="3:00PM" data-content="event-detail" data-event="event-1" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="04:00PM" data-end="05:00PM"  data-content="event-detail" data-event="event-1" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Yoga Level 1</em>
-						</a>
-					</li>
+					-->
 				</ul>
 			</li>
 
 			<li class="events-group">
-				<div class="top-info"><span>Logistics</span></div>
-
+				<div class="top-info"><span>Cafe Area</span></div>
 				<ul>
+						<div v-for="event in cafe_area">
+								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-2" v-bind:data-date="event.Date">
+										<a href="#0">
+											<em class="event-name">{{event.EventName}}</em>
+										</a>
+									</li>
+								</div>
+							<!--
 					<li class="single-event" data-start="09:00AM" data-end="10:15AM" data-content="event-detail" data-event="event-2" data-date="sat">
 						<a href="#0">
 							<em class="event-name">Restorative Yoga</em>
 						</a>
 					</li>
-
-					<li class="single-event" data-start="10:45AM" data-end="11:45AM" data-content="event-detail" data-event="event-2" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Yoga Level 1</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="12:00AM" data-end="01:45AM"  data-content="event-detail" data-event="event-2" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="02:20PM" data-end="04:00PM" data-content="event-detail" data-event="event-2" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Yoga Level 1</em>
-						</a>
-					</li>
+					-->
 				</ul>
 			</li>
 
 			<li class="events-group">
-				<div class="top-info"><span>Food</span></div>
+				<div class="top-info"><span>Main Auditorium</span></div>
 
 				<ul>
-					<li class="single-event" data-start="09:30AM" data-end="10:30AM" data-content="event-detail" data-event="event-1" data-date="sat">
+						<div v-for="event in main_auditorium">
+								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-1" v-bind:data-date="event.Date">
+										<a href="#0">
+											<em class="event-name">{{event.EventName}}</em>
+										</a>
+									</li>
+								</div>
+					<!--
+						<li class="single-event" data-start="09:30AM" data-end="10:00AM" data-content="event-detail" data-event="event-1" data-date="sat">
 						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
+							<em class="event-name">Abs Circuit</em>	
 						</a>
 					</li>
 
-					<li class="single-event" data-start="12:00PM" data-end="01:45PM" data-content="event-detail" data-event="event-1" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Restorative Yoga</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="04:30PM" data-end="05:30PM" data-content="event-detail" data-event="event-1" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="05:00PM" data-end="06:30PM"  data-content="event-detail" data-event="event-1" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
+					-->					
 				</ul>
 			</li>
 
 			<li class="events-group">
 				<div class="top-info"><span>Miscellaneous</span></div>
-
 				<ul>
-					<li class="single-event" data-start="10:00AM" data-end="11:00AM"  data-content="event-detail" data-event="event-2" data-date="sat">
+						<div v-for="event in miscellaneous">
+								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-2" v-bind:data-date="event.Date">
+										<a href="#0">
+											<em class="event-name">{{event.EventName}}</em>
+										</a>
+									</li>
+								</div>
+					<!--
+						<li class="single-event" data-start="10:00AM" data-end="11:00AM"  data-content="event-detail" data-event="event-2" data-date="sat">
 						<a href="#0">
 							<em class="event-name">Rowing Workout</em>
 						</a>
 					</li>
-
-					<li class="single-event" data-start="12:30PM" data-end="02:00PM" data-content="event-detail" data-event="event-2" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
-						</a>
-					</li>
-
+					-->
 				</ul>
 			</li>
+
 		</ul>
 	</div>
 
@@ -248,16 +208,7 @@ description: Schedule
 	<div class="cover-layer"></div>
 </div> <!-- .cd-schedule -->
 
-
-
-
-
-
-
-
-
 <!--
-
 <div class="row center" id="app">
 	<div class="card accent-color white-text">
 		<div class="card-content">
@@ -316,18 +267,100 @@ description: Schedule
 -->
 {%endraw %}
 <script>
+// a little modified code to focus on the location
 var schedule = new Vue({
   el: '#app',
   data: {
-    day1: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"},],
-    day2: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"},]
+		// need: start time, end time, date, event name on the sheets
+    //day1: [{"Location":"","End":"12:30 AM","EventName":"Closing ceremony","Start":"12:00 AM"},],
+		//day2: [{"Location":"","End":"12:30 AM","EventName":"Closing ceremony","Start":"12:00 AM"},],
+		// hardcoded in 
+		keystone: [{"Location":"Keystone","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}],
+		breck: [{"Location":"Breck","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}],
+		cafe_area: [{"Location":"Cafe Area","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}],
+		main_auditorium: [{"Location":"Main Auditorium","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}],
+		miscellaneous: [{"Location":"Miscellaneous","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}]
   },
 })
+//console.log(schedule);
+//console.log("test");
+//debugging
 
+
+/*
+<li class="single-event" data-start="12:30PM" data-end="02:00PM" data-content="event-detail" data-event="event-2" data-date="sat">
+						<a href="#0">
+							<em class="event-name">Abs Circuit</em>
+						</a>
+					</li>
+*/
 function refresh() {
     $.get('https://api.hackcu.org/sheets/events.json').success(function(data){
-        schedule.day1 = data.day1
-        schedule.day2 = data.day2
+				var item;
+				// reset from the 'loading' widgets.
+				schedule.breck = [];
+				schedule.keystone = [];
+				schedule.cafe_area = [];
+				schedule.main_auditorium = [];
+				schedule.miscellaneous = [];
+				for (item in data.day1){
+					// need: start time, end time, date, event name on the sheets
+					//var i
+					var start = Item.Start;
+					var end = Item.End;
+					if(item.Start[1] == ":"){
+						start = "0" + start;
+
+					}
+					if(item.End.length>0){
+						if(item.End[1] == ":"){
+							end = "0" + end;
+
+						}
+					}
+					var entry = {"Location":item.Location,"End":end,"EventName":item.Description,
+						"Start":start, "Date":"sat"};
+					if(item.Location == "Breck"){
+						schedule.breck.push(entry);
+					}
+					else if(item.Location == "Keystone"){
+						schedule.keystone.push(entry);
+					}
+					else if(item.Location == "Cafe Area"){
+						schedule.cafe_area.push(entry);
+					}
+					else if(item.Location == "Main Auditorium"){
+						schedule.main_auditorium.push(entry);
+					}
+					else{	
+						schedule.miscellaneous.push(entry);
+						// miscellaneous case, put it in the last row.
+					}
+				}
+				for (item in data.day2){
+					var entry = {"Location":item.Location,"End":item.End,"EventName":item.Description,
+						"Start":item.Start, "Date":"sun"};
+					if(item.Location == "Breck"){
+						schedule.breck.push(entry);
+					}
+					else if(item.Location == "Keystone"){
+						schedule.keystone.push(entry);
+					}
+					else if(item.Location == "Cafe Area"){
+						schedule.cafe_area.push(entry);
+					}
+					else if(item.Location == "Main Auditorium"){
+						schedule.main_auditorium.push(entry);
+					}
+					else{
+						schedule.miscellaneous.push(entry);
+						// miscellaneous case, put it in the last row.
+					}
+
+				}
+				console.log("Got the data!");
+        //schedule.day1 = data.day1;
+        //schedule.day2 = data.day2;
     });
 }
 

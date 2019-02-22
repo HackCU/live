@@ -18,15 +18,15 @@ jQuery(document).ready(function($){
         // ye
         
         this.timelineUnitDuration = getScheduleTimestamp(this.timelineItems.eq(1).text(), "sat") - this.timelineStart;
-        console.log("Unit is: ");
-        console.log(this.timelineUnitDuration);
+        //console.log("Unit is: ");
+        //console.log(this.timelineUnitDuration);
         // will log 30 minutes
 
 		this.eventsWrapper = this.element.find('.events');
 		this.eventsGroup = this.eventsWrapper.find('.events-group');
 		this.singleEvents = this.eventsGroup.find('.single-event');
 		this.eventSlotHeight = this.eventsGroup.eq(0).children('.top-info').outerHeight();
-        console.log(this.eventsGroup.eq(0));
+        //console.log(this.eventsGroup.eq(0));
 		this.modal = this.element.find('.event-modal');
 		this.modalHeader = this.modal.find('.header');
 		this.modalHeaderBg = this.modal.find('.header-bg');
@@ -75,8 +75,8 @@ jQuery(document).ready(function($){
 			//create the .event-date element for each event
 			var durationLabel = '<span class="event-date">'+$(this).data('start')+' - '+$(this).data('end')+'</span>';
             $(this).children('a').prepend($(durationLabel));
-            console.log(durationLabel)
-            console.log("f");
+            //console.log(durationLabel)
+            //console.log("f");
             //var e = $(this).data('start');
             //console.log(e);
 
@@ -101,7 +101,7 @@ jQuery(document).ready(function($){
 		var self = this;
 		this.singleEvents.each(function(){
             //place each event in the grid -> need to set top position and height
-            console.log('test')
+            //console.log('test')
             var first_date = $(this).attr('data-start');
             var second_date = $(this).attr('data-end');
             var data_date1 = $(this).attr('data-date');
@@ -118,8 +118,7 @@ jQuery(document).ready(function($){
             
 			var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
                 eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
-            console.log(data_date1);
-            console.log("AND...");
+            //console.log(data_date1);
              
 			$(this).css({
 				top: (eventTop -1) +'px',
@@ -147,7 +146,7 @@ jQuery(document).ready(function($){
 		});
 
 		this.element.addClass('modal-is-open');
-
+        ;
 		setTimeout(function(){
 			//fixes a flash when an event is selected - desktop version only
 			event.parent('li').addClass('selected-event');
@@ -193,6 +192,7 @@ jQuery(document).ready(function($){
 			self.modalBody.css({
 				marginLeft: eventWidth+'px',
 			});
+            
 
 			//change modalBodyBg height/width ans scale it
 			self.modalBodyBg.css({
@@ -404,7 +404,8 @@ jQuery(document).ready(function($){
         var sMinutes = minutes.toString();
         if (hours < 10) sHours = "0" + sHours;
         if (minutes < 10) sMinutes = "0" + sMinutes;
-        console.log(sHours + ":" + sMinutes);
+        // some possibly helpful logging statements
+        //console.log(sHours + ":" + sMinutes);
         var timeStamp = parseInt(sHours)*60 + parseInt(sMinutes);
         var amt = 0;
         if(day != "sat"){
@@ -412,7 +413,7 @@ jQuery(document).ready(function($){
 
         }
         var res = timeStamp + amt;
-        console.log(res);   
+        //console.log(res);   
         
 		return res;
 	}
