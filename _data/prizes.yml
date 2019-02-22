@@ -97,7 +97,7 @@ the right time."
   description: "Use a Typeform in your hack, retrieve answers using webhooks or with the APIs create and modify forms on the fly.
 The most original hack using Typeform will be awarded. Come to the API 101 workshop. Contact [Michael](https://twitter.com/michaelsolati) or [Nicolas](https://twitter.com/picsoung) if you have any question :)"
   award: "3 Makeymakey collector edition (1 per team member)"
-  url: https://developer.typeform.com/
+  url: http://bit.ly/TypeformHackCU
 
 - title: RapidAPI Best OctoAPI Hack
   type: sponsor
