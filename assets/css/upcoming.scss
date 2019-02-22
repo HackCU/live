@@ -8,6 +8,27 @@ $footer-text: #fff;
 $accent-color: {{site.color}};
 $secondary-color: {{site.secondary_color}};
 
+body {
+    background-color: $accent-color;
+    color: $main-color;
+    .content {
+        margin-top: 0px;
+    }
+}
+
+.countdown{
+   
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    min-width: 305px;
+   
+    h1 {
+      
+    }
+    
+}
+
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
@@ -20,12 +41,12 @@ $secondary-color: {{site.secondary_color}};
         content: '';
         position: absolute;
         width: 6px;
-        background-color: $accent-color;
+        background-color: $secondary-color;
         top: 0;
         bottom: 0;
         left: 0%;
         margin-left: -3px;
-        @include box-shadow(inset 0px 11px 8px -5px #fff, inset 0px -11px 8px -5px #fff); 
+        @include box-shadow(inset 0px 11px 8px -5px $accent-color, inset 0px -11px 8px -5px $accent-color); 
     }
 }
 
@@ -43,9 +64,7 @@ $secondary-color: {{site.secondary_color}};
         width: 0;
         z-index: 1;
         left: 20px;
-        border: medium solid $accent-color;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent $accent-color transparent transparent;
+        
     }
 }
 
@@ -53,8 +72,6 @@ $secondary-color: {{site.secondary_color}};
 .inner-item {
     padding: 10px 20px;
     position: relative;
-    border:  medium solid $accent-color;
-    @include box-shadow(10px 10px 18px -12px rgba(0,0,0,0.75)); 
     display: flex;
     align-items: center;
 

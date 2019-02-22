@@ -1,33 +1,38 @@
 ---
-layout: base
-title: Upcoming
-description: Displays current and upcoming events, announcements
+layout: reverse
+title: Upcoming events
+description: Display upcoming events
 ---
 <link rel="stylesheet" href="/assets/css/upcoming.css?_={{ site.time |  date: '%s' }}">
 {%raw %}
+<div class="countdown center">
+    <h1>
+        {{hours|twodigits}} : {{minutes|twodigits}} : {{seconds|twodigits}}
+    </h1>
+</div>
 <div id="app">
     <div class="timeline">
-        <div class="item" v-for="event in day1" v-if="schedule.timeleft(event.StartXML, event.EndXML) == 'Now'">
+        <div class="item" v-for="event in day1" v-if="timeleft(event.StartXML, event.EndXML) == 'Now'">
             <div class="inner-item bigcard">
-                <div class="hours"><h4 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h4></div>
+                <div class="hours"><h4 class="start">{{timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h4></div>
                 <h3>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h3>
             </div>
         </div>
-        <div class="item" v-for="event in day1" v-if="schedule.timeleft(event.StartXML, event.EndXML).length > 4">
+        <div class="item" v-for="event in day1" v-if="timeleft(event.StartXML, event.EndXML).length > 4">
             <div class="inner-item smallcard">
-                <div class="hours"><h5 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h5></div>
+                <div class="hours"><h5 class="start">{{timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h5></div>
                 <h4>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h4>
             </div>
         </div>
-        <div class="item" v-for="event in day2" v-if="schedule.timeleft(event.StartXML, event.EndXML) == 'Now'">
+        <div class="item" v-for="event in day2" v-if="timeleft(event.StartXML, event.EndXML) == 'Now'">
             <div class="inner-item bigcard">
-                <div class="hours"><h4 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h4></div>
+                <div class="hours"><h4 class="start">{{timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h4></div>
                 <h3>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h3>
             </div>
         </div>
-        <div class="item" v-for="event in day2" v-if="schedule.timeleft(event.StartXML, event.EndXML).length > 4">
+        <div class="item" v-for="event in day2" v-if="timeleft(event.StartXML, event.EndXML).length > 4">
             <div class="inner-item smallcard">
-                <div class="hours"><h5 class="start">{{schedule.timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h5></div>
+                <div class="hours"><h5 class="start">{{timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small class="sub"><small>to </small>{{ event.End }}</small></h5></div>
                 <h4>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h4>
             </div>
         </div>
@@ -39,10 +44,10 @@ description: Displays current and upcoming events, announcements
 var schedule = new Vue({
   el: '#app',
   data: {
-    day1: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"
-      ,"StartXML":"2019-01-01T00:00:00-0700", "EndXML":"2019-01-01T00:30:00-0700"},],
+    day1: [{"Location":"","End":"5:00 PM","Description":"Closing ceremony","Start":"4:00 PM"
+      ,"StartXML":"2019-02-22T12:18:00-0700", "EndXML":"2019-02-22T12:19:00-0700"},],
     day2: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"
-      ,"StartXML":"2019-01-01T00:00:00-0700", "EndXML":"2019-01-01T00:30:00-0700"},],
+      ,"StartXML":"2019-02-23T00:00:00-0700", "EndXML":"2019-02-23T00:30:00-0700"},],
     now: Math.trunc((new Date()).getTime() / 1000)
   },
   mounted() {
