@@ -79,6 +79,12 @@ the right time."
   award: "Bag of Swag with Mystery High Tech Goodies, and Presentation to SVP Marketing & Sales Data"
   url: https://drive.google.com/open?id=1Bj988aDgtT6eLn54qnwHxvjOREeFsiVy
 
+- title: Best use of Twitter API
+  type: sponsor
+  description: Prize for the best use of the public Twitter API. Make sure to register using the form as soon as possible so you can get approved as a developer on the Twitter developer platform.
+  award: TBA
+  url: https://docs.google.com/forms/d/e/1FAIpQLSdmmOrSMWtqTfYfgndBNtVsQy-1-X967jWSGVXxV0CrbjRlZw/viewform
+
 - title: "Twisted Hackers"
   type: sponsor
   description: "Use your creativity and our APIs to bring even more features to Twist. Integrate Twist with apps you think will enhance the product experience or be creative and build new features of your own. API: [api.twist.com/api/v3/](https://api.twist.com/api/v3/)"
@@ -92,6 +98,12 @@ the right time."
 The most original hack using Typeform will be awarded. Come to the API 101 workshop. Contact [Michael](https://twitter.com/michaelsolati) or [Nicolas](https://twitter.com/picsoung) if you have any question :)"
   award: "3 Makeymakey collector edition (1 per team member)"
   url: https://developer.typeform.com/
+
+- title: RapidAPI Best OctoAPI Hack
+  type: sponsor
+  description: "Don't worry, you don't have to use 8 APIs in your project to be in the running. To be eligible to win this prize is pretty simple. All you have to do is use 2 or more APIs through the RapidAPI platform. It can be any of the 8,000+ APIs on the marketplace, the more APIs you use the better! Bonus points for creating and exposing your API publicly or privately using RapidAPI to add authentication, billing, analytics, and more. Important URLS: [docs.rapidql.com](https://docs.rapidql.com), [docs.rapidapi.com](https://docs.rapidapi.com), [provider.rapidapi.com](https://provider.rapidapi.com)."
+  url: https://bit.ly/rapid-hackcu
+  award: TBA + Exclusive Stickers
 
 - title: "MLH: Best Use of Snap Kit"
   type: sponsor
