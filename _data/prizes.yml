@@ -50,7 +50,7 @@
 - title: "Coolest Hack with Twilio"
   type: sponsor
   description: "This prize goes out to the coolest hack with Twilio. Be it by combining various of our own APIs, use our APIs in ways we haven't seen before or by solving a great problem with them. Your creativity sets all the limits in this one. Documentation: [twilio.com/docs](https://twilio.com/docs). Check out Twilio Quest to learn Twilio APIs in a fun and interactive way (plus there will be credit and t-shirt awards): [twilio.com/quest](https://twilio.com/quest)"
-  award: TBA
+  award: Sonos Play:1 / teammate
   url: https://twilio.com/try-twilio
 
 - title: "Dish Device Tracker"
@@ -109,6 +109,11 @@ The most original hack using Typeform will be awarded. Come to the API 101 works
   description: Create a blockchain based digital academic certificate using smart contract technology.
   award: "$500 for the whole team"
   url: http://bit.ly/blockHackCU5
+
+- title: Best Smart contract usage
+  type: sponsor
+  description: Use smart contracts to be elegible for this prize.
+  award: "$2500 for the whole team"
 
 - title: "MLH: Best Use of Snap Kit"
   type: sponsor
