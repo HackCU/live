@@ -114,7 +114,13 @@ function refresh() {
         day2_date = "2019-02-24";
         for (x in schedule.day1){
             schedule.day1[x].StartXML = formatDate(schedule.day1[x].Start, day1_date);
-            schedule.day1[x].EndXML = formatDate(schedule.day1[x].End, day1_date);
+            // If event overlaps into next day, end time needs to be given day2_date
+            if (schedule.day1[x].Start.includes("PM") && schedule.day1[x].End.includes("AM")) {
+                schedule.day1[x].EndXML = formatDate(schedule.day1[x].End, day2_date);
+            }
+            else {
+                schedule.day1[x].EndXML = formatDate(schedule.day1[x].End, day1_date);
+            }
         }
         schedule.day2 = data.day2;
         for (x in schedule.day2){
