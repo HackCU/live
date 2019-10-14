@@ -73,6 +73,16 @@ body {
       font-size: 80%;
     }
 
+    h3.event-name {
+      font-style: normal;
+      @font-face {
+        font-family: Biko;
+        src: url('../fonts/Biko_Regular.otf');
+      }
+      font-size: 40px;
+    }
+    // event name in mobile
+
 
     .event-date{
       font-size: 70%;
