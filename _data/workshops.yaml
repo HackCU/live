@@ -10,14 +10,27 @@
   description: "Wondering what's the best way to pitch your project and make sure people understand its value as it is? Join to learn more on product pitching, elevator pitch and more."
   author: Kyle Judah
 
-- title:  Working on Opensource
-  description: "Ever wondered what is like to work on open source projects? Well, this is your opportunity to learn first-hand experience from HackCU founder Alex Walling!"
+- title:  Query APIs and Databases with a single querying language
+  description: "In this workshop we'll be using an open source querying language to learn how to querying multiple data sources such as databases and APIs. Data sources can be joined together [through merges or chained requests] into one simple query to combine and enrich data. As a maintainer of this open source technology, I'll also be diving into what it's like to work on open source and tips on making your first pull request."
   author: Alex Walling
 
 - title:  How to find a Tech Job/Internship
   description: "Looking for an internship in a big tech company? Listen to Alex experience as a Facebook intern and now a full-time Microsoft manager. "
   author: Alex Lacey
 
-- title:  Arduino basics
-  description: "Get started on the Arduino platform. Learn from scratch to do a small LED project with Arduino!"
-  author: Jean-Christophe Owens
+# - title:  Arduino basics
+#   description: "Get started on the Arduino platform. Learn from scratch to do a small LED project with Arduino!"
+#   author: Jean-Christophe Owens
+
+- title: Building with the Decentralised Web
+  description: Learn to build decentralised apps using IPFS and the Ethereum blockchain
+  author: Scott Street
+
+- title: Intro to git/GitHub
+  description: Learn more about git and how to use it to make your project successful. 
+  author: Abdulhakim Ajetunmobi
+
+- title: "Neutral Vehicle: Simulated Car Hacking"
+  description: "Hack this simulated vehicle to win the challenge. "
+  author: Cyber Security Club and CU TCP
+  url: https://pages.hackcu.org/guide/5/neutral/

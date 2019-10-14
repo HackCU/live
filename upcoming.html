@@ -1,0 +1,136 @@
+---
+layout: reverse
+title: Upcoming events
+description: Display upcoming events
+---
+<link rel="stylesheet" href="/assets/css/upcoming.css?_={{ site.time |  date: '%s' }}">
+{%raw %}
+
+<div id="app">
+    <div class="timeline">
+        <div class="item" v-for="event in day1" v-if="timeleft(event.StartXML, event.EndXML) == 'Now'">
+            <div class="inner-item bigcard">
+                <div class="hours"><h4 class="start">{{timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small v-if="event.End" class="sub">to {{ event.End }}</small></h4></div>
+                <h3>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h3>
+            </div>
+        </div>
+        <div class="item" v-for="event in day1" v-if="timeleft(event.StartXML, event.EndXML).length > 4">
+            <div class="inner-item smallcard">
+                <div class="hours"><h5 class="start">{{timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small v-if="event.End" class="sub">to {{ event.End }}</small></h5></div>
+                <h4>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h4>
+            </div>
+        </div>
+        <div class="item" v-for="event in day2" v-if="timeleft(event.StartXML, event.EndXML) == 'Now'">
+            <div class="inner-item bigcard">
+                <div class="hours"><h4 class="start">{{timeleft(event.StartXML, event.EndXML)}}</h4><h4 class="end"><small v-if="event.End" class="sub">to {{ event.End }}</small></h4></div>
+                <h3>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h3>
+            </div>
+        </div>
+        <div class="item" v-for="event in day2" v-if="timeleft(event.StartXML, event.EndXML).length > 4">
+            <div class="inner-item smallcard">
+                <div class="hours"><h5 class="start">{{timeleft(event.StartXML, event.EndXML)}}</h5><h5 class="end"><small v-if="event.End" class="sub">to {{ event.End }}</small></h5></div>
+                <h4>{{ event.Description }} <small v-if="event.Location != ''">at {{event.Location}}</small></h4>
+            </div>
+        </div>
+    </div>
+</div>
+{%endraw %}
+
+<script>
+var schedule = new Vue({
+  el: '#app',
+  data: {
+    day1: [{"Location":"","End":"5:00 PM","Description":"Closing ceremony","Start":"4:00 PM"
+      ,"StartXML":"2019-02-22T12:18:00-0700", "EndXML":"2019-02-22T12:19:00-0700"},],
+    day2: [{"Location":"","End":"12:30 AM","Description":"Closing ceremony","Start":"12:00 AM"
+      ,"StartXML":"2019-02-23T00:00:00-0700", "EndXML":"2019-02-23T00:30:00-0700"},],
+    now: Math.trunc((new Date()).getTime() / 1000)
+  },
+  mounted() {
+      window.setInterval(() => {
+          this.now = Math.trunc((new Date()).getTime() / 1000);
+      },1000);
+  },
+  methods: {
+      seconds: function(remaining){
+          return Math.trunc(remaining) % 60;
+      },
+      minutes: function(remaining) {
+          return Math.trunc((remaining) / 60) % 60;
+      },
+      hours: function(remaining) {
+          return Math.trunc((remaining) / 60 / 60);
+      },
+      twodigits: function(value) {
+          if (value < 0) {
+              return '00';
+          }
+          if (value.toString().length <= 1) {
+                  return `0${value}`;
+          }
+          return value;
+      },
+      timeleft: function(startTime, endTime) {
+          if (endTime === undefined && this.now > Math.trunc(Date.parse(startTime) / 1000)) {
+            return "Over";
+          }
+          else if ( this.now > Math.trunc(Date.parse(endTime) / 1000)){
+              return "Over";
+          }
+          else if (this.now > Math.trunc(Date.parse(startTime) / 1000)){
+              return "Now";
+          }
+          remaining = Math.trunc(Date.parse(startTime) / 1000) - this.now;
+          seconds = this.twodigits(this.seconds(remaining));
+          minutes = this.twodigits(this.minutes(remaining));
+          hours = this.twodigits(this.hours(remaining));
+          return hours + ":" + minutes + ":" + seconds;
+      },
+  }
+})
+
+function formatDate(formatTime, day) {
+    if (formatTime == ""){
+        return undefined;
+    }
+    eventTime = formatTime.split(/:| /)
+    if (eventTime[2] == "PM" && eventTime[0] != "12"){
+        eventTime[0] = String(parseInt(eventTime[0]) + 12);
+    }
+    else if (eventTime[0] == "12" && eventTime[2] == "AM") { // converts 12 AM to 00
+        eventTime[0] = "00";
+    }
+    if (eventTime[0].length == 1) { // guarantees 2-digit hour
+        eventTime[0] = "0" + eventTime[0];
+    }
+    return day + "T" + eventTime[0] + ":" + eventTime[1] + ":00-0700";
+}
+
+function refresh() {
+    $.get('https://api.hackcu.org/sheets/events.json').success(function(data){
+        schedule.day1 = data.day1;
+        // Date Format: YYYY-MM-DD
+        day1_date = "2019-02-23";
+        day2_date = "2019-02-24";
+        for (x in schedule.day1){
+            schedule.day1[x].StartXML = formatDate(schedule.day1[x].Start, day1_date);
+            // If event overlaps into next day, end time needs to be given day2_date
+            if (schedule.day1[x].Start.includes("PM") && schedule.day1[x].End.includes("AM")) {
+                schedule.day1[x].EndXML = formatDate(schedule.day1[x].End, day2_date);
+            }
+            else {
+                schedule.day1[x].EndXML = formatDate(schedule.day1[x].End, day1_date);
+            }
+        }
+        schedule.day2 = data.day2;
+        for (x in schedule.day2){
+            schedule.day2[x].StartXML = formatDate(schedule.day2[x].Start, day2_date);
+            schedule.day2[x].EndXML = formatDate(schedule.day2[x].End, day2_date);
+        }
+    });
+}
+
+refresh();
+setInterval(refresh, 2*60000);
+
+</script>

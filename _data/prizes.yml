@@ -34,10 +34,10 @@
   description: To the most random hack. Get crazy to win! (safety first please)
   award: Surprise super-random prize (won't be announced until closing ceremony)
 
-- title: Best pitch/business idea
+- title: CatalyzeCU Golden Ticket
   type: hackathon
   description: "Do you have a great idea? Prepare your pitch and work on your prototype during HackCU for a chance to enter CU's accelerator program: CatalyzeCU"
-  award: Fast pass interview to enter Catalyze
+  award: Fast pass to final interview for CatalyzeCU
 
 - title: "Kids + Bikes = happier, more attentive students in the classroom"
   type: sponsor
@@ -50,7 +50,7 @@
 - title: "Coolest Hack with Twilio"
   type: sponsor
   description: "This prize goes out to the coolest hack with Twilio. Be it by combining various of our own APIs, use our APIs in ways we haven't seen before or by solving a great problem with them. Your creativity sets all the limits in this one. Documentation: [twilio.com/docs](https://twilio.com/docs). Check out Twilio Quest to learn Twilio APIs in a fun and interactive way (plus there will be credit and t-shirt awards): [twilio.com/quest](https://twilio.com/quest)"
-  award: TBA
+  award: Sonos Play:1 / teammate
   url: https://twilio.com/try-twilio
 
 - title: "Dish Device Tracker"
@@ -68,7 +68,6 @@
   type: sponsor
   description: "The team who processes and makes sense of the most unstructured data will win!"
   award: "A Splunk gift bag full of sweet swag."
-  url: https://pages.hackcu.org/guide/5/track/cyber/
 
 - title: "Big Data Analytics: Non-Obvious Web Traffic"
   type: sponsor
@@ -79,10 +78,16 @@ the right time."
   award: "Bag of Swag with Mystery High Tech Goodies, and Presentation to SVP Marketing & Sales Data"
   url: https://drive.google.com/open?id=1Bj988aDgtT6eLn54qnwHxvjOREeFsiVy
 
+- title: Best use of Twitter API
+  type: sponsor
+  description: Prize for the best use of the public Twitter API. Make sure to register using the form as soon as possible so you can get approved as a developer on the Twitter developer platform.
+  award: "Per team member: Twitter Camelback, Twitter beanie, Twitter mug, Twitter notebook. Winning team will get to pitch their hack to management at the Twitter Boulder office over free lunch!"
+  url: https://docs.google.com/forms/d/e/1FAIpQLSdmmOrSMWtqTfYfgndBNtVsQy-1-X967jWSGVXxV0CrbjRlZw/viewform
+
 - title: "Twisted Hackers"
   type: sponsor
-  description: "Use your creativity and our APIs to bring even more features to Twist. Integrate Twist with apps you think will enhance the product experience or be creative and build new features of your own. API: [api.twist.com/api/v3/](https://api.twist.com/api/v3/)"
-  award: "One Google home mini + One Todoist lifetime account + $100 in Twist Unlimited credit for each team member"
+  description: "Use your creativity and our APIs to bring even more features to Twist. Integrate Twist with apps you think will enhance the product experience or be creative and build new features of your own. API: [developer.twist.com](https://developer.twist.com)"
+  award: "One Google Home + One Todoist lifetime account + $100 in Twist Unlimited credit for each team member"
   url: https://developer.twist.com
 
 
@@ -91,7 +96,24 @@ the right time."
   description: "Use a Typeform in your hack, retrieve answers using webhooks or with the APIs create and modify forms on the fly.
 The most original hack using Typeform will be awarded. Come to the API 101 workshop. Contact [Michael](https://twitter.com/michaelsolati) or [Nicolas](https://twitter.com/picsoung) if you have any question :)"
   award: "3 Makeymakey collector edition (1 per team member)"
-  url: https://developer.typeform.com/
+  url: http://bit.ly/TypeformHackCU
+
+- title: RapidAPI Best OctoAPI Hack
+  type: sponsor
+  description: "Don't worry, you don't have to use 8 APIs in your project to be in the running. To be eligible to win this prize is pretty simple. All you have to do is use 2 or more APIs through the RapidAPI platform. It can be any of the 8,000+ APIs on the marketplace, the more APIs you use the better! Bonus points for creating and exposing your API publicly or privately using RapidAPI to add authentication, billing, analytics, and more. Important URLS: [docs.rapidql.com](https://docs.rapidql.com), [docs.rapidapi.com](https://docs.rapidapi.com), [provider.rapidapi.com](https://provider.rapidapi.com)."
+  url: https://bit.ly/rapid-hackcu
+  award: Sony WH-CH700N / teammate + Exclusive Stickers
+
+- title: Creating a Digital Academic Certificate
+  type: sponsor
+  description: Create a blockchain based digital academic certificate using smart contract technology.
+  award: "$500 for the whole team"
+  url: http://bit.ly/blockHackCU5
+
+- title: Best Smart contract usage
+  type: sponsor
+  description: Use smart contracts to be elegible for this prize.
+  award: TBA
 
 - title: "MLH: Best Use of Snap Kit"
   type: sponsor

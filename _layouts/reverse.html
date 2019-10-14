@@ -1,0 +1,118 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <!-- for Google -->
+    <meta name="description" content="{{page.description}}"/>
+    <meta name="author" content="{{site.author}}"/>
+    <meta name="theme-color" content="{{site.color}}">
+    <meta name="copyright" content="{{site.author}}"/>
+    <meta name="application-name" content="{{site.title}}"/>
+
+    <!-- for Facebook -->
+    <meta property="og:title" content="{%if page.title %}{{page.title}} | {%endif%} {{site.title}}"/>
+    <meta property="og:url" content="https://pages.hackcu.org"/>
+    <meta property="og:description" content="{%if page.description %}{{page.description}}{%endif%} "/>
+
+    <!-- for Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{%if page.title %}{{page.title}} | {%endif%} {{site.title}}"/>
+    <meta name="twitter:site" content="@hackcu">
+    <meta name="twitter:creator" content="@hackcu">
+    <meta name="twitter:description" content="{%if page.description %}{{page.description}}{%endif%}">
+
+    <title>{%if page.title %}{{page.title}} | {%endif%} {{site.title}}</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/assets/vendor/css/font-awesome.min.css">
+
+
+    <!-- Our own CSS, yay! -->
+    <link rel="stylesheet" href="/assets/css/main.css?_={{ site.time |  date: '%s' }}">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+</head>
+
+<body>
+
+<script src="/assets/vendor/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+
+<div class="wrapper">
+        <div class="countdown center">
+            {% raw %}
+            <h1>
+                <div class="header">
+                <img src="/assets/img/logo_white.png">    |   
+                <span class="margin-needed">{{hours|twodigits}} : {{minutes|twodigits}} : {{seconds|twodigits}}</span>
+                </div>
+            </h1>
+            {% endraw %}
+        </div>
+    <div class="container">    
+        <div class="row">
+            <div class="col s12 content">
+                {{content}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/assets/js/countdown.js?_={{ site.time |  date: '%s' }}"></script>
+
+
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+          
+<script type="text/javascript">
+    $(".button-collapse").sideNav();
+</script>
+<!-- Make links target _blank -->
+<script>
+(function() {
+  var links = document.links;
+  for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+    // can also be
+    //  links[i].hostname != 'subdomain.example.com'
+    if (links[i].hostname != window.location.hostname) {
+      links[i].target = '_blank';
+      links[i].className += ' externalLink';
+    }
+  }
+})();
+</script>
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128943166-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128943166-1');
+</script>
+
+
+
+</body>
+
+</html>
