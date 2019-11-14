@@ -7,8 +7,7 @@ description: Schedule
 <div class="cd-schedule loading">
 	<div class="timeline">
 		<ul>
-			
-			
+
 			<li class="times sat"><span>08:00AM</span></li>
 			<li class="times sat"><span>08:30AM</span></li>
 			<li class="times sat"><span>09:00AM</span></li>
@@ -79,27 +78,7 @@ description: Schedule
 	</div> <!-- .timeline -->
 
 	<div class="events" id="app">
-		<ul>
-			<li class="events-group">
-				<div class="top-info"><span>Keystone</span></div>
-
-				<ul>
-					<div v-for="event in keystone">
-						<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-2" v-bind:data-date="event.Date">
-								<a href="#0">
-									<em class="event-name">{{event.EventName}}</em>
-								</a>
-							</li>
-						</div>
-					<!--
-					<li class="single-event" data-start="11:00AM" data-end="12:30PM" data-content="event-detail" data-event="event-2" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
-					-->
-				</ul>
-			</li>
+		<ul class="ul_events">
 
 			<li class="events-group">
 				<div class="top-info"><span>Breck</span></div>

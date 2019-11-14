@@ -124,6 +124,10 @@ Main Components
 	position: relative;
 	z-index: 1;
 
+	.ul_events {
+		flex-grow: 1;
+	}
+	
 	.events-group {
 		margin-bottom: 30px;
 	}

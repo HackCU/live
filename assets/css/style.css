@@ -124,6 +124,7 @@ Primary style
     line-height: 1.2;
     margin-bottom: 10px;
     font-weight: bold;
+    padding: 10px;  
   }
   
   .cd-schedule .events .events-group > ul {
@@ -188,7 +189,13 @@ Primary style
       border: 0px solid #EAEAEA;
       /* reset style */
       margin-bottom: 0;
+      margin: auto;
     }
+
+    .cd-schedule .events .ul_events {
+      display: flex;
+    }
+
     .cd-schedule .events .events-group:not(:first-of-type) {
       border-left-width: 1;
     }
