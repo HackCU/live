@@ -30,6 +30,9 @@ Primary style
     position: relative;
     margin: 2em 0;
   }
+  .bold-p {
+    font-size: 25px;
+  }
   
   .cd-schedule::before {
     /* never visible - this is used in js to check the current MQ */
@@ -174,7 +177,7 @@ Primary style
   
   @media only screen and (min-width: 550px) {
     .cd-schedule .events .single-event {
-      width: 40%;
+      /* width: 40%; */
     }
   }
   
@@ -236,8 +239,9 @@ Primary style
     .cd-schedule .events .single-event {
       position: absolute;
       z-index: 3;
+      /*  height: 100px !important; */
       /* top position and height will be set using js */
-      width: calc(100% + 0px);
+      width: calc(100% + 20px);
       left: -1px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 -3px 0 rgba(0, 0, 0, 0.2);
       /* reset style */
@@ -248,7 +252,7 @@ Primary style
       margin-right: 0;
     }
     .cd-schedule .events .single-event a {
-      padding: 1.2em;
+      padding-top: 10px;
     }
     .cd-schedule .events .single-event:last-of-type {
       /* reset style */

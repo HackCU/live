@@ -10,7 +10,6 @@ jQuery(document).ready(function($){
 		this.element = element;
 		this.timeline = this.element.find('.timeline');
         this.timelineItems = this.timeline.find('li');
-        //console.log("f");
         this.timelineItemsNumber = this.timelineItems.length;
         
         this.timelineStart = getScheduleTimestamp(this.timelineItems.eq(0).text(), "sat");
@@ -34,8 +33,8 @@ jQuery(document).ready(function($){
 		this.modalBodyBg = this.modal.find('.body-bg'); 
 		this.modalMaxWidth = 800;
 		this.modalMaxHeight = 480;
-        //console.log(this.timelineItems.eq(4).text());
 		this.animating = false;
+		console.log(this.modal);
 
 		this.initSchedule();
 	}
@@ -76,13 +75,13 @@ jQuery(document).ready(function($){
 			var durationLabel = '<span class="event-date">'+$(this).data('start')+' - '+$(this).data('end')+'</span>';
             $(this).children('a').prepend($(durationLabel));
             //console.log(durationLabel)
-            //console.log("f");
             //var e = $(this).data('start');
             //console.log(e);
 
 			//detect click on the event and open the modal
 			$(this).on('click', 'a', function(event){
 				event.preventDefault();
+				console.log(event);
 				if( !self.animating ) self.openModal($(this));
 			});
 		});
@@ -130,6 +129,7 @@ jQuery(document).ready(function($){
 	};
 
 	SchedulePlan.prototype.openModal = function(event) {
+		console.log('modal opening.')
 		var self = this;
 		var mq = self.mq();
 		this.animating = true;
@@ -218,6 +218,8 @@ jQuery(document).ready(function($){
 
 		//if browser do not support transitions -> no need to wait for the end of it
 		if( !transitionsSupported ) self.modal.add(self.modalHeaderBg).trigger(transitionEnd);
+		var x = document.getElementsByClassName("event-text");
+		x.innerHTML = "testing";
 	};
 
 	SchedulePlan.prototype.closeModal = function(event) {
@@ -428,3 +430,4 @@ jQuery(document).ready(function($){
 		});
 	}
 });
+

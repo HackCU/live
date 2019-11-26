@@ -37,42 +37,6 @@ description: Schedule
 			<li class="times sat"><span>09:00PM</span></li>
 			<li class="times sat"><span>09:30PM</span></li>
 			<li class="times sat"><span>10:00PM</span></li>
-			<li class="times sat"><span>10:30PM</span></li>
-			<li class="times sat"><span>11:00PM</span></li>
-			<li class="times sat"><span>11:30PM</span></li>
-			<li class="times sun"><span>12:00AM</span></li>
-			<li class="times sun"><span>12:30AM</span></li>
-			<li class="times sun"><span>01:00AM</span></li>
-			<li class="times sun"><span>01:30AM</span></li>
-			<li class="times sun"><span>02:00AM</span></li>
-			<li class="times sun"><span>02:30AM</span></li>
-			<li class="times sun"><span>03:00AM</span></li>
-			<li class="times sun"><span>03:30AM</span></li>
-			<li class="times sun"><span>04:00AM</span></li>
-			<li class="times sun"><span>04:30AM</span></li>
-			<li class="times sun"><span>05:00AM</span></li>
-			<li class="times sun"><span>05:30AM</span></li>
-			<li class="times sun"><span>06:00AM</span></li>
-			<li class="times sun"><span>06:30AM</span></li>
-			<li class="times sun"><span>07:00AM</span></li>
-			<li class="times sun"><span>07:30AM</span></li>
-			<li class="times sun"><span>08:00AM</span></li>
-			<li class="times sun"><span>08:30AM</span></li>
-			<li class="times sun"><span>09:00AM</span></li>
-			<li class="times sun"><span>09:30AM</span></li>
-			<li class="times sun"><span>10:00AM</span></li>
-			<li class="times sun"><span>10:30AM</span></li>
-			<li class="times sun"><span>11:00AM</span></li>
-			<li class="times sun"><span>11:30AM</span></li>
-			<li class="times sun"><span>12:00PM</span></li>
-			<li class="times sun"><span>12:30PM</span></li>
-			<li class="times sun"><span>01:00PM</span></li>
-			<li class="times sun"><span>01:30PM</span></li>
-			<li class="times sun"><span>02:00PM</span></li>
-			<li class="times sun"><span>02:30PM</span></li>
-			<li class="times sun"><span>03:00PM</span></li>
-			<li class="times sun"><span>03:30PM</span></li>
-			<li class="times sun"><span>04:00PM</span></li>
 
 		</ul>
 	</div> <!-- .timeline -->
@@ -81,85 +45,29 @@ description: Schedule
 		<ul class="ul_events">
 
 			<li class="events-group">
-				<div class="top-info"><span>Breck</span></div>
+				<div class="top-info"><span>Idea Forge</span></div>
 
 				<ul>
-						<div v-for="event in breck">
-								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-1" v-bind:data-date="event.Date">
-										<a href="#0">
-											<em class="event-name">{{event.EventName}}</em>
-										</a>
+						<div v-for="event in idea_forge">
+								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-event="event-1" v-bind:data-date="event.Date">
+											<a href="#0" v-on:click="changeModalInfo(event.Description, event.Location)"> 
+											<em class="event-name">{{event.Name}}</em>
+											</a>		
 									</li>
 								</div>
-							<!--
-					<li class="single-event" data-start="11:30AM" data-end="01:00PM"  data-content="event-detail" data-event="event-1" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Restorative Yoga</em>
-						</a>
-					</li>
-					-->
 				</ul>
 			</li>
 
 			<li class="events-group">
-				<div class="top-info"><span>Cafe Area</span></div>
+				<div class="top-info"><span>Workshop Space</span></div>
 				<ul>
-						<div v-for="event in cafe_area">
-								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-2" v-bind:data-date="event.Date">
-										<a href="#0">
-											<em class="event-name">{{event.EventName}}</em>
+						<div v-for="event in workshop_space">
+								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-event="event-2" v-bind:data-date="event.Date">
+										<a href="#0" v-on:click="changeModalInfo(event.Description, event.Location)"> 
+											<em class="event-name">{{event.Name}}</em>
 										</a>
 									</li>
 								</div>
-							<!--
-					<li class="single-event" data-start="09:00AM" data-end="10:15AM" data-content="event-detail" data-event="event-2" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Restorative Yoga</em>
-						</a>
-					</li>
-					-->
-				</ul>
-			</li>
-
-			<li class="events-group">
-				<div class="top-info"><span>Main Auditorium</span></div>
-
-				<ul>
-						<div v-for="event in main_auditorium">
-								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-1" v-bind:data-date="event.Date">
-										<a href="#0">
-											<em class="event-name">{{event.EventName}}</em>
-										</a>
-									</li>
-								</div>
-					<!--
-						<li class="single-event" data-start="09:30AM" data-end="10:00AM" data-content="event-detail" data-event="event-1" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>	
-						</a>
-					</li>
-
-					-->					
-				</ul>
-			</li>
-
-			<li class="events-group">
-				<div class="top-info"><span>Miscellaneous</span></div>
-				<ul>
-						<div v-for="event in miscellaneous">
-								<li class="single-event" v-bind:data-start="event.Start" v-bind:data-end="event.End" data-content="event-detail" data-event="event-2" v-bind:data-date="event.Date">
-										<a href="#0">
-											<em class="event-name">{{event.EventName}}</em>
-										</a>
-									</li>
-								</div>
-					<!--
-						<li class="single-event" data-start="10:00AM" data-end="11:00AM"  data-content="event-detail" data-event="event-2" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
-					-->
 				</ul>
 			</li>
 
@@ -169,16 +77,24 @@ description: Schedule
 	<div class="event-modal">
 		<header class="header">
 			<div class="content">
+
 				<h3 class="event-name"></h3>
 				<span class="event-date"></span>
-
 			</div>
 
 			<div class="header-bg"></div>
 		</header>
 
+		
 		<div class="body">
-			<div class="event-info"></div>
+			<div class="event-info">
+				<div class="event-text">
+					<p id="desc" class="bold-p">Description:</p>
+					<br>
+					<p id="loc" class="bold-p">Location:</p>
+				</div>
+				<br>					
+			</div>
 			<div class="body-bg"></div>
 		</div>
 
@@ -252,31 +168,30 @@ var schedule = new Vue({
   el: '#app',
   data: {
 		// need: start time, end time, date, event name on the sheets
-    //day1: [{"Location":"","End":"12:30 AM","EventName":"Closing ceremony","Start":"12:00 AM"},],
+    	//day1: [{"Location":"","End":"12:30 AM","EventName":"Closing ceremony","Start":"12:00 AM"},],
 		//day2: [{"Location":"","End":"12:30 AM","EventName":"Closing ceremony","Start":"12:00 AM"},],
-		// hardcoded in 
-		keystone: [{"Location":"Keystone","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}],
-		breck: [{"Location":"Breck","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}],
-		cafe_area: [{"Location":"Cafe Area","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}],
-		main_auditorium: [{"Location":"Main Auditorium","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}],
-		miscellaneous: [{"Location":"Miscellaneous","End":"09:00 AM","EventName":"Loading..","Start":"08:00 AM", "Date":"sat"}]
+
+		idea_forge: [{"Location":"Idea Forge","End":"09:00 AM","Name":"Loading..","Start":"08:00 AM", "Date":"sat", "Description":"free"}],
+		workshop_space: [{"Location":"Workshop Space","End":"09:00 AM","Name":"Loading..","Start":"08:00 AM", "Date":"sat", "Description":"family"}],
+		// cafe_area: [{"Location":"Cafe Area","End":"09:00 AM","Name":"Loading..","Start":"08:00 AM", "Date":"sat", "Description":"fan"}],
+		// main_auditorium: [{"Location":"Main Auditorium","End":"09:00 AM","Name":"Loading..","Start":"08:00 AM", "Date":"sat", "Description":"focus"}],
+		// miscellaneous: [{"Location":"Miscellaneous","End":"09:00 AM","Name":"Workshop #3","Start":"08:00 AM", "Date":"sat", "Description":"fun"}],
+
   },
 })
-//console.log(schedule);
-//console.log("test");
-//debugging
 
-/*
-<li class="single-event" data-start="12:30PM" data-end="02:00PM" data-content="event-detail" data-event="event-2" data-date="sat">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
-						</a>
-					</li>
-*/
+function changeModalInfo(description, location) {
+	// change event modal content based on event from api
+	document.getElementById("desc").innerHTML = '<b>Description</b>: ' + description;
+	document.getElementById("loc").innerHTML = '<b>Location</b>: ' + location;
+}
 function refresh() {
+
     $.get('https://api.hackcu.org/sheets/events.json').success(function(data){
 				var item;
 				// reset from the 'loading' widgets.
+				schedule.idea_forge = [];
+				schedule.workshop_space = []
 				schedule.breck = [];
 				schedule.keystone = [];
 				schedule.cafe_area = [];
@@ -284,9 +199,8 @@ function refresh() {
 				schedule.miscellaneous = [];
 				for (item in data.day1){
 					// need: start time, end time, date, event name on the sheets
-					//var i
-					var start = Item.Start;
-					var end = Item.End;
+					var start = item.Start;
+					var end = item.End;
 					if(item.Start[1] == ":"){
 						start = "0" + start;
 
@@ -342,7 +256,7 @@ function refresh() {
     });
 }
 
-refresh();
+// refresh();
 setInterval(refresh, 2*60000);
 
 
