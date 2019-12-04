@@ -1,36 +1,30 @@
-- title:  Intro to UI/UX
-  description: "Learn about how to design great user interfaces and user experience."
-  author: Kevin Cook
 
-- title:  API 101
-  description: "Learn how to use APIs for your project from scratch."
-  author: Nicolas Grenié
+# - title: "Neutral Vehicle: Simulated Car Hacking"
+#   description: "Hack this simulated vehicle to win the challenge. "
+#   author: Cyber Security Club and CU TCP
+#   url: https://pages.hackcu.org/guide/5/neutral/
 
-- title:  How to pitch your project
-  description: "Wondering what's the best way to pitch your project and make sure people understand its value as it is? Join to learn more on product pitching, elevator pitch and more."
-  author: Kyle Judah
+- title: AI Arena Tutorial and Setup
+  description: Learn about an awesome new development with testing out AI in real games.
+  author: Tristan Neate
+  url: https://aiarena.app/index.html
 
-- title:  Query APIs and Databases with a single querying language
-  description: "In this workshop we'll be using an open source querying language to learn how to querying multiple data sources such as databases and APIs. Data sources can be joined together [through merges or chained requests] into one simple query to combine and enrich data. As a maintainer of this open source technology, I'll also be diving into what it's like to work on open source and tips on making your first pull request."
-  author: Alex Walling
+- title: "Git: Get Crackin' with Git using GitKraken"
+  description: Ace working with Git with this awesome application.
+  author: Zahraa
 
-- title:  How to find a Tech Job/Internship
-  description: "Looking for an internship in a big tech company? Listen to Alex experience as a Facebook intern and now a full-time Microsoft manager. "
-  author: Alex Lacey
+- title: "Python: Basic Training: Intro to Python Skills for AI (Part 1)"
+  description: Learn critical Python skills that will serve you well.
+  author: Aren
 
-# - title:  Arduino basics
-#   description: "Get started on the Arduino platform. Learn from scratch to do a small LED project with Arduino!"
-#   author: Jean-Christophe Owens
+- title: Combat Bots Hardware Workshop
+  description: Delve deep into working with awesome Combat Bots!
+  author: Combat Bots
 
-- title: Building with the Decentralised Web
-  description: Learn to build decentralised apps using IPFS and the Ethereum blockchain
-  author: Scott Street
+- title: "Microsoft: Analyze and Index Videos with Microsoft Azure"
+  description: Call powerful APIs to work magic on videos.
+  author: Matt
 
-- title: Intro to git/GitHub
-  description: Learn more about git and how to use it to make your project successful. 
-  author: Abdulhakim Ajetunmobi
-
-- title: "Neutral Vehicle: Simulated Car Hacking"
-  description: "Hack this simulated vehicle to win the challenge. "
-  author: Cyber Security Club and CU TCP
-  url: https://pages.hackcu.org/guide/5/neutral/
+- title: "Algorithms: Hack the Technical Interview: Algorithms Practice"
+  description: Develop key skills for getting jobs from tech companies in this immersive practice.
+  author: Cathleen
