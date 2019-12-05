@@ -1,8 +1,8 @@
 original_repo: https://github.com/hackcu/live
-title: HackCU V Live
-color: "#22292c"
-secondary_color: "#1AA8FF"
-devpost: https://hackcuv.devpost.com/
+title: Local Hack Day Live
+color: "#23415a"
+secondary_color: "#8695a0"
+devpost: https://build.devpost.com
 
 collections:
   sections:
@@ -18,8 +18,8 @@ timezone: America/Denver
 # Countdown Timer
 # Time format: "MONTH DAY YEAR HH:MM:SS TIMEZONE"
 timer_enable: true
-start_time: "February 23 2019 12:00:00 GMT-0700"
-end_time: "February 24 2019 12:00:00 GMT-0700"
+start_time: "December 7 2019 09:00:00 GMT-0700"
+end_time: "December 7 2019 21:00:00 GMT-0700"
 
 
 # need to delete all of the non-needed prizes, etc....
