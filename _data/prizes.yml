@@ -142,17 +142,24 @@
 - title: Most RANDOM hack
   type: hackathon
   description: To the most random hack. Get crazy to win! (safety first please)
-  award: Surprise super-random prize (won't be announced until closing ceremony)
+  award: Github Giftcards
 
 - title: "MLH: Best Open Source Project on Github"
   type: sponsor
   description: "GitHub and MLH believe in the power of Open Source. That’s why we’re awarding this prize to some of the top projects that are published on GitHub for others to learn from."
+  award: $25 GitHub Store Gift Code and $15 Microsoft Store Coupon Gift Code for the top 3 winning teams.
 
 - title: "MLH: Best Use of Microsoft Azure"
   type: sponsor
   description: "This prize will be awarded to some of the most amazing projects built using Microsoft Azure technologies. This could be as simple as hosting your project on the Azure Cloud or using one of the many powerful Azure Services like databases, computer vision, or functions!"
+  award: $25 GitHub Store Gift Code and $15 Microsoft Store Coupon Gift Code for the top 3 winning teams.
 
 - title: "Best .COM Domain Name from Verisign"
   type: sponsor
   description: "Every great project needs a great domain name. Sign up for a free .COM domain name on Name.com with a coupon from MLH & Verisign to enter this challenge. We’ll be awarding the prize to some of the most creative domain names we see! "
+  award: $25 GitHub Store Gift Code and $15 Microsoft Store Coupon Gift Code for the top 3 winning teams.
 
+- title: "Paper Airplane Contest"
+  type: hackathon
+  description: "Rule the skies."
+  award: Exploding kittens
