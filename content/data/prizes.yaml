@@ -1,0 +1,149 @@
+- title: 1st Prize
+  type: hackathon
+  description: Best hack of HackCU Episode V
+  award: Oculus Go + Topo Design Klettersack / teammate
+
+- title: 2nd Prize
+  type: hackathon
+  description: 2nd best hack of HackCU Episode V
+  award: Apple Airpods + Hydroflasks + Herschel backpack / teammate
+
+- title: 3rd Prize
+  type: hackathon
+  description: 3rd best hack of HackCU Episode V
+  award: Fitbit Versa + Hammock + GitHub Backpack / teammate
+
+- title: Best Beginner Hack
+  type: hackathon
+  description: Your team is eligible if more than half of your team is a first-timer during HackCU V.
+  award: Echo Dot / teammate
+
+
+- title: Best Hardware Hack
+  type: hackathon
+  description: Best hack using hardware.
+  award: Arduino Kit / teammate
+
+- title: Best User Interface/Experience
+  type: hackathon
+  description: Design the ultimate experience for your project to with this prize. 
+  award: Fujifilm Instax Camera + 10 films / teammate
+
+- title: Most RANDOM hack
+  type: hackathon
+  description: To the most random hack. Get crazy to win! (safety first please)
+  award: Surprise super-random prize (won't be announced until closing ceremony)
+
+- title: CatalyzeCU Golden Ticket
+  type: hackathon
+  description: "Do you have a great idea? Prepare your pitch and work on your prototype during HackCU for a chance to enter CU's accelerator program: CatalyzeCU"
+  award: Fast pass to final interview for CatalyzeCU
+
+- title: "Kids + Bikes = happier, more attentive students in the classroom"
+  type: sponsor
+  description: !markdown |
+    It’s a pretty simple formula: kids + bikes = happier, more attentive students in the classroom, and for the past few years, The Specialized Foundation has been helping this happen. We’re dedicated to giving both schools and children the tools to achieve academic, health, and social success. However, we believe this benefit increases when taken beyond the school and into the home.
+    
+    **The winner of this challenge will design a family based app or program that encourages kids to put down their phones & game consoles and throw a leg over their bike to experience the same wonders of the outdoors as we did. Your hack will be judged on its ability to extend the Riding For Focus program into the home, and extend it by adding elements not capable in a school setting. Make sure your solution gives parents the peace of mind that their kids (and their data) is safe.**
+  award: "Ambush Mountain Bike Helmet with ANGi sensor / teammate"
+  url: https://pages.hackcu.org/guide/5/track/specialized/
+
+- title: "Coolest Hack with Twilio"
+  type: sponsor
+  description: !markdown |
+    This prize goes out to the coolest hack with Twilio. Be it by combining various of our own APIs, use our APIs in ways we haven't seen before or by solving a great problem with them. Your creativity sets all the limits in this one. Documentation: [twilio.com/docs](https://twilio.com/docs). Check out Twilio Quest to learn Twilio APIs in a fun and interactive way (plus there will be credit and t-shirt awards): [twilio.com/quest](https://twilio.com/quest)
+  award: Sonos Play:1 / teammate
+  url: https://twilio.com/try-twilio
+
+- title: "Dish Device Tracker"
+  type: sponsor
+  description: "Track an object (thing) as it moves through any points on the CU Campus.  There are many beneficial use cases for such a solution. It’s also important to be able to visualize or display the data in a meaningful way.  Think about how your solution would  solve a consumer pain-point or create some additional value for society. Think outside the box and don’t feel limited by any technology solution or distance. Questions? Contact us at the #dish - HackCU slack channel"
+  award: "AirTV Player | 4K Media Streamer | for each team member. Winners will have the opportunity to demo their solutions at the Smart Spaces and Things Expo at Dish’s International HQ in Englewood, CO on Thursday May 23rd from 11-2 pm for both corporate executives and other Dish employees."
+
+- title: "Design, Build or Break Cyber Games for K-12 Education"
+  type: sponsor
+  description: "This challenge asks for your creative ideas in cybersecurity to K-12 students through the use of games. Topics may include encryption, authentication, code hacking, cyber risk, and network analysis and mapping - you are free to choose your own topic related to cybersecurity, as well as topics will be provided."
+  award: "First Place – choice of: 1) Free trip to the Pentagon (DoD Headquarters) with the TCP Program with paid airfare, lodging, and custom tour for 3 days, 2 nights, or 2) Nintendo Switch Game Consoles.  Second Place – choice of: 1) Circadence Project Ares Licenses, or 2) Google Home Minis - Smart Speakers with Google Assistant.  Third Place: Tile Mate Item Trackers (2/person).  All Participants: Pride and TCP SWAG."
+  url: https://pages.hackcu.org/guide/5/track/cyber/
+
+- title: "Splunk Challenge"
+  type: sponsor
+  description: "The team who processes and makes sense of the most unstructured data will win!"
+  award: "A Splunk gift bag full of sweet swag."
+
+- title: "Big Data Analytics: Non-Obvious Web Traffic"
+  type: sponsor
+  description: "Oppenheimerfunds.com gets many anonymous visitors to its website. Though we may not know exactly who each visitor is, we would like to
+observe their behavior and group them into clusters, so we can personalize their onsite experience. By analyzing our web behavioral data
+(clickstream) and finding natural-like groupings (clusters) amongst our visitors, we will be able to match the right web content to the right visitor at
+the right time."
+  award: "Bag of Swag with Mystery High Tech Goodies, and Presentation to SVP Marketing & Sales Data"
+  url: https://drive.google.com/open?id=1Bj988aDgtT6eLn54qnwHxvjOREeFsiVy
+
+- title: Best use of Twitter API
+  type: sponsor
+  description: Prize for the best use of the public Twitter API. Make sure to register using the form as soon as possible so you can get approved as a developer on the Twitter developer platform.
+  award: !markdown |
+    Per team member: Twitter Camelback, Twitter beanie, Twitter mug, Twitter notebook. Winning team will get to pitch their hack to management at the Twitter Boulder office over free lunch!
+  url: https://docs.google.com/forms/d/e/1FAIpQLSdmmOrSMWtqTfYfgndBNtVsQy-1-X967jWSGVXxV0CrbjRlZw/viewform
+
+- title: "Twisted Hackers"
+  type: sponsor
+  description: !markdown | 
+    Use your creativity and our APIs to bring even more features to Twist. Integrate Twist with apps you think will enhance the product experience or be creative and build new features of your own. API: [developer.twist.com](https://developer.twist.com)
+  award: "One Google Home + One Todoist lifetime account + $100 in Twist Unlimited credit for each team member"
+  url: https://developer.twist.com
+
+
+- title: Best use of Typeform APIs
+  type: sponsor
+  description: !markdown |
+    Use a Typeform in your hack, retrieve answers using webhooks or with the APIs create and modify forms on the fly.
+    The most original hack using Typeform will be awarded. Come to the API 101 workshop. Contact [Michael](https://twitter.com/michaelsolati) or [Nicolas](https://twitter.com/picsoung) if you have any question :)
+  award: "3 Makeymakey collector edition (1 per team member)"
+  url: http://bit.ly/TypeformHackCU
+
+- title: RapidAPI Best OctoAPI Hack
+  type: sponsor
+  description: !markdown | 
+    Don't worry, you don't have to use 8 APIs in your project to be in the running. To be eligible to win this prize is pretty simple. All you have to do is use 2 or more APIs through the RapidAPI platform. It can be any of the 8,000+ APIs on the marketplace, the more APIs you use the better! Bonus points for creating and exposing your API publicly or privately using RapidAPI to add authentication, billing, analytics, and more. Important URLS: [docs.rapidql.com](https://docs.rapidql.com), [docs.rapidapi.com](https://docs.rapidapi.com), [provider.rapidapi.com](https://provider.rapidapi.com).
+  url: https://bit.ly/rapid-hackcu
+  award: Sony WH-CH700N / teammate + Exclusive Stickers
+
+- title: Creating a Digital Academic Certificate
+  type: sponsor
+  description: Create a blockchain based digital academic certificate using smart contract technology.
+  award: "$500 for the whole team"
+  url: http://bit.ly/blockHackCU5
+
+- title: Best Smart contract usage
+  type: sponsor
+  description: Use smart contracts to be elegible for this prize.
+  award: TBA
+
+- title: "MLH: Best Use of Snap Kit"
+  type: sponsor
+  description: "Use Snap Kit's web or mobile SDK in your hack."
+  award: "Each winning team member will receive a pair of Spectacles by Snapchat or another awesome prize."
+  url: https://kit.snapchat.com/
+
+- title: "MLH: Best Use of Google Cloud Platform"
+  type: sponsor
+  description: !markdown | 
+    Use Google Cloud Platform in your hack. Find a full list of GCP products & services at: [cloud.google.com/products/](https://cloud.google.com/products/).
+  award: "Each winning team member will receive a Google Home Mini, max 4 per team."
+  url: https://cloud.google.com/?utm_source=MLH&utm_medium=print&utm_campaign=fall2018
+
+- title: "MLH: Best Domain Registered with Domain.com"
+  type: sponsor
+  description: "Register a domain using Domain.com during the weekend. Each team may submit one entry per person on the team."
+  award: "Each winning team member will receive a Raspberry Pi & PiHut Essential Kit."
+  url: https://www.domain.com/mlh
+
+- title: "MLH: Best IoT Hack using a Qualcomm Device"
+  type: sponsor
+  description: "Use a Qualcomm device, like the Dragonboard 410C, in your IoT project."
+  award: "Each winning team member will receive their own DragonBoard 410C."
+  url: https://hardware.mlh.io/
+
+
