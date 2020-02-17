@@ -54,6 +54,7 @@ module.exports = {
       }
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-preact`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`
     // this (optional) plugin enables Progressive Web App + Offline functionality
