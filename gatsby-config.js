@@ -9,7 +9,6 @@ module.exports = {
       facebook: 'https://www.facebook.com/HackCU',
       slack: 'https://slack.hackcu.org',
       devpost: 'https://hackcuv.devpost.com',
-      mentor: 'https://mentors.hackcu.org',
       hackerGuide: 'https://pages.hackcu.org/guide/hacker'
     },
     startingTime: '2019-12-16T08:00:00.000Z',

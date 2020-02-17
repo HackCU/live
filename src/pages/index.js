@@ -94,16 +94,6 @@ const IndexPage = () => {
             </InfoItem>
             <InfoItem>
               <b>
-                <FontAwesomeIcon icon={faQuestion} /> Mentor queue:{' '}
-                <OutsideLink href={social.mentor}>
-                  {removeHttps(social.mentor)}
-                </OutsideLink>
-              </b>
-              <br />
-              Request one of our mentors using our ticketing system.
-            </InfoItem>
-            <InfoItem>
-              <b>
                 <FontAwesomeIcon icon={faInfo} /> Hacker guide:{' '}
                 <OutsideLink href={social.hackerGuide}>
                   {removeHttps(social.hackerGuide)}
