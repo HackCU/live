@@ -163,7 +163,7 @@ const VerticalAlign = ({ children }) => (
   </div>
 );
 
-const Event = ({ startPos, height, item, onClick }) => (
+const Event = ({ startPos, height, item, onClick, index }) => (
   <li
     css={theme => css`
       flex-shrink: 0;
@@ -173,7 +173,9 @@ const Event = ({ startPos, height, item, onClick }) => (
       box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
       margin-right: 20px;
       transition: opacity 0.2s, background 0.2s;
-      background-color: ${theme.colors.secondary};
+      background-color: ${index % 2 === 0
+        ? theme.colors.secondary
+        : theme.colors.tertiary};
       color: ${theme.colors.text};
       margin: 5px auto;
       cursor: pointer;
@@ -300,7 +302,7 @@ export default ({
   }
 
   const createEvents = events =>
-    events.map(event => {
+    events.map((event, index) => {
       const startPos = !!event.startTime
         ? (event.startTime.hours() -
             calStart +
@@ -317,6 +319,7 @@ export default ({
       return (
         <Event
           key={event.title}
+          index={index}
           startPos={startPos}
           height={height}
           onClick={openEvent(event)}
