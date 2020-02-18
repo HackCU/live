@@ -32,6 +32,7 @@
     "gatsby-transformer-sharp": "^2.3.7",
     "gatsby-transformer-yaml-full": "^0.2.0",
     "gatsby-yaml-full-markdown": "^0.2.0",
+    "gh-pages": "^2.2.0",
     "materialize-css": "^1.0.0",
     "moment": "^2.24.0",
     "preact": "^10.3.2",
@@ -61,7 +62,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "surge public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

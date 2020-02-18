@@ -50,7 +50,6 @@ const IndexPage = () => {
             facebook
             slack
             devpost
-            mentor
             hackerGuide
           }
         }
