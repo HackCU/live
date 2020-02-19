@@ -6,7 +6,12 @@ import Header from './header';
 import { css, Global } from '@emotion/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-solid-svg-icons';
+import { config, dom } from '@fortawesome/fontawesome-svg-core';
 import OutsideLink from './outside-link';
+
+// Fixes large icons on load
+// https://github.com/FortAwesome/react-fontawesome/issues/284
+config.autoAddCss = false;
 
 const Layout = ({ title = null, children }) => {
   const data = useStaticQuery(graphql`
@@ -22,6 +27,7 @@ const Layout = ({ title = null, children }) => {
   return (
     <div
       css={css`
+        ${dom.css()}
         min-height: 100vh;
         display: flex;
         flex-direction: column;
