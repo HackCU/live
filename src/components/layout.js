@@ -11,7 +11,7 @@ import OutsideLink from './outside-link';
 
 // Fixes large icons on load
 // https://github.com/FortAwesome/react-fontawesome/issues/284
-config.autoAddCss = false;
+// config.autoAddCss = false;
 
 const Layout = ({ title = null, children }) => {
   const data = useStaticQuery(graphql`
