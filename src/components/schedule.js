@@ -250,7 +250,7 @@ export default ({
     }
     return 0;
   });
-  const minTime = Math.ceil(
+  const minTime = Math.floor(
     allEvents.reduce((min, event) => {
       if (
         !!event.startTime &&
@@ -261,7 +261,7 @@ export default ({
       return min;
     }, 24 * 60) / 60
   );
-  const maxTime = Math.floor(
+  const maxTime = Math.ceil(
     allEvents.reduce((max, event) => {
       if (
         !!event.endTime &&
