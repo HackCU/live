@@ -31,7 +31,7 @@ const Layout = ({ title = null, children }) => {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
       `}
     >
       <Header siteTitle={data.site.siteMetadata.title} />

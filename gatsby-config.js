@@ -1,18 +1,18 @@
 module.exports = {
   siteMetadata: {
     title: `HackCU VI`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Join us for HackCU on February 22, 2020 at the University of Colorado Boulder.`,
     author: `@HackCU`,
     social: {
       twitter: 'https://twitter.com/HackCU',
       instagram: 'https://www.instagram.com/hackcu',
       facebook: 'https://www.facebook.com/HackCU',
-      slack: 'https://slack.hackcu.org',
-      devpost: 'https://hackcuv.devpost.com',
+      slack: 'https://hackcu.slack.com',
+      devpost: 'https://hackcu-vi.devpost.com/',
       hackerGuide: 'https://pages.hackcu.org/guide/hacker'
     },
-    startingTime: '2019-12-16T08:00:00.000Z',
-    endingTime: '2019-12-16T23:00:00.000Z'
+    startingTime: '2020-02-22T05:00:00.000Z',
+    endingTime: '2020-02-23T05:00:00.000Z'
   },
   plugins: [
     {
@@ -30,8 +30,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#4285F4`,
+        theme_color: `#4285F4`,
         display: `minimal-ui`
         // icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }

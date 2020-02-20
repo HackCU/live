@@ -18,10 +18,6 @@
   description: "Looking for an internship in a big tech company? Listen to Alex experience as a Facebook intern and now a full-time Microsoft manager. "
   author: Alex Lacey
 
-# - title:  Arduino basics
-#   description: "Get started on the Arduino platform. Learn from scratch to do a small LED project with Arduino!"
-#   author: Jean-Christophe Owens
-
 - title: Building with the Decentralised Web
   description: Learn to build decentralised apps using IPFS and the Ethereum blockchain
   author: Scott Street

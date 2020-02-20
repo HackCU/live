@@ -107,7 +107,7 @@ const placeholderEvent = {
   end: '3:00 PM',
   startPos: 0,
   height: 100,
-  description: 'fkasdfl;aksd;f askd;fl aksd;lfkasd;l kfal;sdf k'
+  description: 'Loading event description...'
 };
 
 export default () => {
