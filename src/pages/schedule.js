@@ -7,8 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 import Portal from '../components/portal';
+import { Dropdown, Button } from 'react-materialize';
 
-const VerticalAlign = ({ children }) => (
+const VerticalAlign = ({ css: customCss, children }) => (
   <div
     css={css`
       display: flex;
@@ -17,6 +18,7 @@ const VerticalAlign = ({ children }) => (
   >
     <div
       css={css`
+        ${customCss}
         margin: auto;
         cursor: pointer;
       `}
@@ -110,33 +112,38 @@ const placeholderEvent = {
 
 export default () => {
   const [open, setOpen] = useState(false);
+  const [items, setItems] = useState({
+    day1: [
+      {
+        title: 'Idea Forge',
+        events: [
+          {
+            title: 'Loading 1...',
+            start: '1:00 PM',
+            end: '3:00 PM',
+            description: 'Free',
+            location: 'Idea Forge'
+          },
+          {
+            title: 'Loading 2...',
+            start: '9:00 AM',
+            end: '10:00 AM',
+            description: 'Free',
+            location: 'Idea Forge'
+          },
+          {
+            title: 'Loading 3...',
+            start: '3:00 PM',
+            end: '4:00 PM',
+            description: 'Free',
+            location: 'Idea Forge'
+          }
+        ]
+      }
+    ]
+  });
   const [current, setCurrent] = useState(placeholderEvent);
-  const [items, setItems] = useState([
-    {
-      title: 'Idea Forge',
-      events: [
-        {
-          title: 'Loading...',
-          start: '1:00 PM',
-          end: '3:00 PM',
-          description: 'Free',
-          location: 'Idea Forge'
-        },
-        {
-          title: 'Loading...',
-          start: '1:00 PM',
-          end: '3:00 PM',
-          description: 'fkasdfl;aksd;f askd;fl aksd;lfkasd;l kfal;sdf k'
-        },
-        {
-          title: 'Loading...',
-          start: '1:00 PM',
-          end: '3:00 PM',
-          description: 'fkasdfl;aksd;f askd;fl aksd;lfkasd;l kfal;sdf k'
-        }
-      ]
-    }
-  ]);
+  const [currentDay, setCurrentDay] = useState('day1');
   const openItem = item => () => {
     setCurrent(item);
     setOpen(true);
@@ -145,26 +152,33 @@ export default () => {
     fetch('https://api.hackcu.org/sheets/events.json')
       .then(res => res.json())
       .then(data => {
-        const groups = {};
-        for (let item of data.day1) {
-          const startTime = !!item.Start ? moment(item.Start, 'hh:mm a') : null;
-          const endTime = !!item.End ? moment(item.End, 'hh:mm a') : null;
+        const days = {};
+        for (let day of Object.keys(data)) {
+          const locations = {};
+          for (let item of data[day]) {
+            const startTime = !!item.Start
+              ? moment(item.Start, 'hh:mm a')
+              : null;
+            const endTime = !!item.End ? moment(item.End, 'hh:mm a') : null;
 
-          if (!(item.Location in groups)) {
-            groups[item.Location] = { title: item.Location, events: [] };
+            if (!(item.Location in locations)) {
+              locations[item.Location] = { title: item.Location, events: [] };
+            }
+
+            locations[item.Location].events.push({
+              start: item.Start,
+              end: item.End,
+              title: item.Name,
+              location: item.Location,
+              description: item.Description,
+              startTime,
+              endTime
+            });
           }
-
-          groups[item.Location].events.push({
-            start: item.Start,
-            end: item.End,
-            title: item.Name,
-            location: item.Location,
-            description: item.Description,
-            startTime,
-            endTime
-          });
+          days[day] = Object.values(locations);
         }
-        setItems(Object.values(groups));
+        setItems(days);
+        setCurrentDay(Object.keys(days)[0]);
       });
   }, []);
   // close modal on escape button press
@@ -205,42 +219,40 @@ export default () => {
           </p>
         )}
       </ScheduleModal>
+      {/* TODO: Day change to dynamic (not hard coded) */}
+      <VerticalAlign>
+        <h3>{currentDay === 'day1' ? 'Saturday' : 'Sunday'}</h3>
+        <VerticalAlign>
+          <Dropdown
+            trigger={
+              <Button
+                css={theme =>
+                  css`
+                    background-color: ${theme.colors.secondary};
+                  `
+                }
+                node="button"
+              >
+                Choose Day
+              </Button>
+            }
+          >
+            {Object.keys(items).map(item => (
+              <a onClick={() => setCurrentDay(item)}>
+                {/* TODO: Day change to dynamic (not hard coded) */}
+                {item === 'day1' ? 'Saturday' : 'Sunday'}
+              </a>
+            ))}
+          </Dropdown>
+        </VerticalAlign>
+      </VerticalAlign>
 
       <ScheduleCalendar
         autoTime
-        groups={items}
+        groups={items[currentDay]}
         hourHeight={200}
         openEvent={openItem}
       />
-
-      {/* TODO: mobile */}
-      {/* <ul>
-        {items.map(item => (
-          <VerticalAlign>
-            <li
-              onClick={openItem(item)}
-              css={theme => css`
-                cursor: pointer;
-                background-color: ${theme.colors.secondary};
-                margin-top: 0.5rem;
-                color: ${theme.colors.text};
-                height: 150px;
-                box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
-                padding-left: 2rem;
-                padding-right: 2rem;
-              `}
-            >
-              <VerticalAlign>
-                <span>
-                  {item.start} - {item.end}
-                </span>
-                <br />
-                <em>{item.title}</em>
-              </VerticalAlign>
-            </li>
-          </VerticalAlign>
-        ))}
-      </ul> */}
     </Layout>
   );
 };

@@ -131,6 +131,7 @@ const EventInfo = styled.div`
     // margin-bottom: 10px;
     font-weight: bold;
     padding: 10px;
+    text-align: center;
   }
 
   ${breakpoints.small} {
@@ -141,6 +142,7 @@ const EventInfo = styled.div`
       border-bottom: 1px solid #eaeaea;
       /* reset style */
       padding: 0;
+      // TODO better height sizing
     }
   }
 `;
@@ -208,7 +210,6 @@ const Event = ({ startPos, height, item, onClick, index }) => (
       >
         <span
           css={css`
-            font-size: 0.85rem;
             margin: 0 auto;
           `}
         >
@@ -217,7 +218,6 @@ const Event = ({ startPos, height, item, onClick, index }) => (
         <div
           css={css`
             ${breakpoints.small} {
-              font-size: 1.3rem;
               font-weight: 500;
               margin: 0 auto;
             }
@@ -341,6 +341,7 @@ export default ({
             <ScheduleContainer
               css={css`
                 ${breakpoints.small} {
+                  font-size: ${groups.length < 4 ? 1 : 0.75}em;
                   height: ${(calEnd - calStart) * 2 * (hourHeight / 2) +
                     hourHeight / 4}px;
                 }
@@ -358,7 +359,7 @@ export default ({
                 >
                   <UlEvents>
                     {groups.map(group => (
-                      <EventGroup>
+                      <EventGroup key={group.title}>
                         <EventInfo>
                           <span>{!!group.title ? group.title : 'Misc.'}</span>
                         </EventInfo>
