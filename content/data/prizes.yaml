@@ -51,22 +51,26 @@
 - title: Wolfram Alpha hack
   type: sponsor
   description: Awarded to the hack with the best use of Wolfram Alpha's products.
-  award: Github T-Shirts, Hammocks, Exploding Kittens
+  award: !markdown |
+            <b>For everyone</b>: Wolfram Alpha One for 30 days for ALL hackers | <b>For the winner</b>: Wolfram Alpha One and Wolfram Pro subscriptions for one year
 
-- title: Wolfram Alpha hack
+- title: Best Use of Adobe XD
   type: sponsor
-  description: Awarded to the hack with the best use of Wolfram Alpha's products.
-  award: Github T-Shirts, Hammocks, Exploding Kittens
-
-- title: Adobe
-  type: sponsor
-  description: Awarded to the hack with the best use of Adobe's products.
-  award: TBA
+  description: !markdown |
+              Use Adobe XD in any of the HackCU categories, showcasing your ideas best digital design solution and user experience! Questions? Contact us at the `#Adobe` - HackCU slack channel
+  award: Adobe Creative Cloud | 1- Year License | for each team member. Winners will have the opportunity to demo their solutions to Adobe professionals.
 
 - title: Most Creative Usage of Twitter API
   type: sponsor
   description: This prize aims to see how students can most creatively use Twitter. Winners will get a TwitterDev blunt umbrella.
   award: TwitterDev Blunt Umbrella
+
+- title: Best Use of TapWithUS SDK
+  type: sponsor
+  description: !markdown | 
+              Use TapWithUs SDKs to build a custom integration and control any device. Showcase your ideas, app or solution demonstrating a customized user experience! Details: [here](https://docs.google.com/document/d/1mXl0pPx5DI33wBwsGa3QrGlcsqivW82tKniGtaHqies/edit) Questions? Contact us at the `#TapWithUs` - HackCU slack channel
+  award: !markdown |
+              <b>1st</b> prize - Tap Strap For each team member | <b>2nd</b> Prize - Tap Hat for each team member | <b>3rd</b> prize - Tap t shirt for each team member. Winning hack will have the opportunity to be featured on all of our social channels and promoted to Tappers worldwide.
 
 - title: "MLH: Best Use of Google Cloud"
   type: sponsor
