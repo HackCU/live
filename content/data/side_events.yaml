@@ -2,22 +2,24 @@
   description: "Sharpen your frontend development skills with this activity, where you’ll be recreating a website in HTML/CSS using our code editor - all without previewing your code along the way."
 # - title: "Tech for good panel"
 #   description: "Learn about inicitatives in the tech space that aim to create a positive impact to the world. Non-profits and more in this open panel with several figures from the Boulder tech for good community."
-- title: Slideshare karaoke
-  description: Practice public speaking skills with a fun activity. Presenters are given a random slide deck and must deliver an improvised speech to their audience!
+- title: MLH Werewolf
+  description: One of MLH's workshops.
 
-- title: Women in Tech Panel/ Fireside Chat
+- title: Women in Tech Panel/ Fireside Chat'
   description: "Join us for this panel with leaders of the sector talking about the future of technology "
 
-- title: Amateur radio station KØH
-  description: "KØH is a special event amateur radio station commemorating the HackCU V hackathon. KØH is intended to introduce HackCU participants and visitors to the world of amateur radio."
-  url: https://pages.hackcu.org/guide/5/radio/
+- title: Collectibles Exhange
+  description: "Exchange Collectibles."
 
 - title: The Joy of MS Painting
   description: "Unleash your inner artist in this chill activity where we will be using the amazing, incredible, ultra-accurate Microsoft Paint to create a great artwork. Winners will have their artwork featured in a connor.fun t-shirt."
   url: https://jspaint.app/
 
-- title: Hackathon Organizers Meetup
-  description: "Join us to discuss and talk about the future of hackathons in the US and to help with tips to organize better hackathons."
+- title: Paper Airplane Contest
+  description: "This contest will see who can fly the highest of them all!"
+
+- title: Matt's Morning Run
+  description: "Start your day off right with a sunrise run."
 
 - title: Face masks
   description: "Relax a bit and catch your breath with this amazing face masks. Perfect for energizing before the night."

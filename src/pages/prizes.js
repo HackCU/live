@@ -44,11 +44,7 @@ const Prize = ({ title, description, award, url }) => (
         dangerouslySetInnerHTML={{ __html: award }}
       />
     </div>
-    {url !== null && (
-      <OutsideLink href={url}>
-        <FontAwesomeIcon icon={faPlus} /> More Info
-      </OutsideLink>
-    )}
+    
   </CollectionItem>
 );
 
@@ -63,7 +59,6 @@ export default () => {
             type
             description
             award
-            url
           }
         }
       }

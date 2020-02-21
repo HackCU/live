@@ -1,32 +1,35 @@
-- title: Intro to UI/UX
-  description: "Learn about how to design great user interfaces and user experience."
-  author: Kevin Cook
+- title: Adobe Workshop
+  description: "Learn about great ux/ui with a workshop from Adobe."
+  author: Adobe
 
-- title: API 101
-  description: "Learn how to use APIs for your project from scratch."
-  author: Nicolas Grenié
+- title: Data Science
+  description: "Learn about data science basics, from the ground up."
+  author: Sriram Sankaranarayanan
 
-- title: How to pitch your project
-  description: "Wondering what's the best way to pitch your project and make sure people understand its value as it is? Join to learn more on product pitching, elevator pitch and more."
-  author: Kyle Judah
+- title: How to Work the Industry 101
+  description: "How can you put yourself in a great position for a job?"
+  author: Tahmina, Aren, Kevin, Apara
 
-- title: Query APIs and Databases with a single querying language
-  description: "In this workshop we'll be using an open source querying language to learn how to querying multiple data sources such as databases and APIs. Data sources can be joined together [through merges or chained requests] into one simple query to combine and enrich data. As a maintainer of this open source technology, I'll also be diving into what it's like to work on open source and tips on making your first pull request."
-  author: Alex Walling
+- title: Ted Talk on Design
+  description: "Learn about how to focus on design elements for any of your work."
+  author: Matt Bethancourt
 
-- title: How to find a Tech Job/Internship
-  description: "Looking for an internship in a big tech company? Listen to Alex experience as a Facebook intern and now a full-time Microsoft manager. "
-  author: Alex Lacey
+- title: Intro to Git/Github
+  description: "Learn about one of the pinnacles of computer science."
+  author: Kyle Pfromer
 
-- title: Building with the Decentralised Web
-  description: Learn to build decentralised apps using IPFS and the Ethereum blockchain
+- title: Building a Chrome Extension
+  description: "Maximize your web browser with this workshop."
   author: Scott Street
 
-- title: Intro to git/GitHub
-  description: Learn more about git and how to use it to make your project successful.
-  author: Abdulhakim Ajetunmobi
+- title: DevOps
+  description: Discover how to use one of the most important developer tools
+  author: Parth Adroja
 
-- title: "Neutral Vehicle: Simulated Car Hacking"
-  description: "Hack this simulated vehicle to win the challenge. "
-  author: Cyber Security Club and CU TCP
-  url: https://pages.hackcu.org/guide/5/neutral/
+- title: VS Code Workshop
+  description: "A interactive overview of one of the great text editors."
+  author: Matt Strong
+
+- title: MLH Capture the Flag
+  description: "A fun cybersecurity game"
+  author: Mackenzie Lobato

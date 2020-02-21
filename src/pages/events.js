@@ -69,11 +69,7 @@ export default () => {
               {item.title}
             </h5>
             <p>{item.description}</p>
-            {item.url !== null && (
-              <OutsideLink href={item.url}>
-                <FontAwesomeIcon icon={faPlus} /> More info
-              </OutsideLink>
-            )}
+            
           </CollectionItem>
         ))}
       </Collection>
