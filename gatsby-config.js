@@ -32,8 +32,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#4285F4`,
         theme_color: `#4285F4`,
-        display: `minimal-ui`
-        // icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+        display: `minimal-ui`,
+        icon: `src/img/hackcu2020logo.png` // This path is relative to the root of the site.
       }
     },
     {
