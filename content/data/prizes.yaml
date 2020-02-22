@@ -43,7 +43,7 @@
   description: Awarded to the hack with the best UX/UI
   award: Rocketbooks, Design of Everyday Things
 
-- title: Most RANDOM hack
+- title: Most RANDOM Hack
   type: hackathon
   description: Awarded to the most random hack. Go bananas!
   award: Github T-Shirts, Hammocks, Exploding Kittens
@@ -64,6 +64,11 @@
   type: sponsor
   description: This prize aims to see how students can most creatively use Twitter. Winners will get a TwitterDev blunt umbrella.
   award: TwitterDev Blunt Umbrella
+
+- title: Dish Network Challenge
+  type: sponsor
+  description: Create a system to incentivize students to anonymously share a data value. Examples are mobile usage data, test scores or any other data set. Judging criteria - innovative use of technology, business value and impact, completeness of implementation, and clarity of presentation. Bonus points for use of zero knowledge technology!
+  award: $50 Sling gift card for each team member.
 
 - title: Best Use of TapWithUS SDK
   type: sponsor
