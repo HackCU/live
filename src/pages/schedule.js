@@ -45,7 +45,10 @@ const ScheduleModal = ({
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 3;
+        z-index: 10;
+        overflow: auto;
+        min-height: 100vh;
+        background-color: #fff;
         visibility: ${open ? 'visible' : 'hidden'};
         transform: translateX(100%);
         transition: transform 0.4s, visibility 0.4s;
@@ -77,7 +80,6 @@ const ScheduleModal = ({
             {startTime} - {endTime}
           </span>
         </div>
-        {/* TODO: icon */}
         {/* Spacing */}
         <div
           css={css`
@@ -91,7 +93,6 @@ const ScheduleModal = ({
       <div
         css={css`
           background-color: #fff;
-          height: 100%;
           padding: 1.4em 5%;
         `}
       >
@@ -147,6 +148,7 @@ export default () => {
   const openItem = item => () => {
     setCurrent(item);
     setOpen(true);
+    document.body.style.overflow = 'hidden';
   };
   useEffect(() => {
     fetch('https://api.hackcu.org/sheets/events.json')
@@ -187,6 +189,7 @@ export default () => {
       if (event.keyCode === 27) {
         // Escape key
         setOpen(false);
+        document.body.style.overflow = 'initial';
       }
     };
     document.addEventListener('keydown', escFunction);
@@ -197,7 +200,10 @@ export default () => {
     <Layout title="Schedule">
       <ScheduleModal
         open={open}
-        onClose={() => setOpen(false)}
+        onClose={() => {
+          document.body.style.overflow = 'initial';
+          setOpen(false);
+        }}
         title={current.title}
         startTime={current.start}
         endTime={current.end}
