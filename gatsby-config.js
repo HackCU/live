@@ -11,8 +11,8 @@ module.exports = {
       devpost: 'https://hackcu-vi.devpost.com/',
       hackerGuide: 'https://pages.hackcu.org/guide/hacker'
     },
-    startingTime: '2020-02-22T05:00:00.000Z',
-    endingTime: '2020-02-23T05:00:00.000Z'
+    startingTime: '2020-02-22T19:00:00.000Z',
+    endingTime: '2020-02-23T19:00:00.000Z'
   },
   plugins: [
     {
