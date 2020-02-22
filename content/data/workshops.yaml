@@ -19,11 +19,11 @@
   author: Kyle Pfromer
 
 - title: Building a Chrome Extension
-  description: "Maximize your web browser with this workshop."
-  author: Scott Street
+  description: 'Maximize your web browser with this workshop.'
+  author: Dhruv Patel
 
 - title: DevOps
-  description: Hands on session on building CI/CD pipeline with Jenkins
+  description: Hands on session on building CI/CD pipeline with Jenkins.
   author: Parth Adroja
 
 - title: VS Code Workshop
