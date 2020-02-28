@@ -22,7 +22,7 @@ Needs: npm
 ## Deploy
 
 1. Push changes to master
-2. There's no `2
+2. There's no `2`
 
 Deployment is done automatically by [Github Actions](https://github.com/HackCU/live/actions?query=workflow%3AMasterDeployCI) that will deploy to Github pages.
 
