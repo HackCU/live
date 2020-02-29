@@ -9,9 +9,11 @@
 
 # HackCU Live
 
+HackCU's live site with events, rules, prizes, and a **new** live schedule!
+
 # Run project
 
-Needs: npm
+Needs: `npm`
 
 ## Local 
 
