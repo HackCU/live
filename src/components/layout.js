@@ -34,34 +34,42 @@ const Layout = ({ title = null, children, ...props }) => {
       `}
     >
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Flex mx="auto" px={3} pb={4} flexDirection="column" sx={{ flexGrow: 1 }}>
-        <Box {...props} as="main" mt={4} mx="auto" maxWidth={1250}>
-          {title !== null && (
-            <Heading
-              as="h1"
-              fontSize={[6, 7]}
-              color="secondary"
-              textAlign="center"
-              mt={3}
-              mb={4}
-              fontWeight={400}
-            >
-              {title}
-            </Heading>
-          )}
-          {children}
-        </Box>
-
-        {/* Spacing element */}
-        <Box sx={{ flexGrow: 1 }} />
-
-        <Box as="footer" mt={4} mx="auto">
-          <FontAwesomeIcon icon={faCopyright} /> {new Date().getFullYear()},
-          Made with ❤️ by
-          {` `}
-          <OutsideLink href="https://team.hackcu.org/">HackCU</OutsideLink>
-        </Box>
+      <Flex
+        {...props}
+        as="main"
+        mt={4}
+        mx="auto"
+        px={3}
+        pb={4}
+        flexDirection="column"
+        width={1}
+        maxWidth={1000}
+      >
+        {title !== null && (
+          <Heading
+            as="h1"
+            fontSize={[6, 7]}
+            color="secondary"
+            textAlign="center"
+            mt={3}
+            mb={4}
+            fontWeight={400}
+          >
+            {title}
+          </Heading>
+        )}
+        {children}
       </Flex>
+
+      {/* Spacing element */}
+      <Box my="auto" />
+
+      <Box as="footer" py={3} mx="auto">
+        <FontAwesomeIcon icon={faCopyright} /> {new Date().getFullYear()}, Made
+        with ❤️ by
+        {` `}
+        <OutsideLink href="https://team.hackcu.org/">HackCU</OutsideLink>
+      </Box>
     </Flex>
   );
 };
