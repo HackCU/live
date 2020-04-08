@@ -1,34 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import Layout from '../components/layout';
-import { css } from '@emotion/core';
-import ScheduleCalendar from '../components/schedule';
+import Schedule from '../components/schedule';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 import Portal from '../components/portal';
-import { Dropdown, Button } from 'react-materialize';
+import { Flex, Box, Text, Heading } from 'rebass';
 
-const VerticalAlign = ({ css: customCss, children }) => (
-  <div
-    css={css`
-      display: flex;
-      height: 100%;
-    `}
-  >
-    <div
-      css={css`
-        ${customCss}
-        margin: auto;
-        cursor: pointer;
-      `}
-    >
-      {children}
-    </div>
-  </div>
-);
-
-// TODO:
 const ScheduleModal = ({
   title,
   startTime,
@@ -38,67 +16,43 @@ const ScheduleModal = ({
   open = false
 }) => (
   <Portal>
-    <div
-      css={css`
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
-        overflow: auto;
-        min-height: 100vh;
-        background-color: #fff;
-        visibility: ${open ? 'visible' : 'hidden'};
-        transform: translateX(100%);
-        transition: transform 0.4s, visibility 0.4s;
-
-        &.open {
-          transform: translateX(0);
-        }
-      `}
-      className={open ? 'open' : ''}
+    <Box
+      bg="white"
+      sx={{
+        zIndex: 10,
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        overflow: 'auto',
+        transform: open ? 'translateX(0)' : 'translateX(100%)',
+        visibility: open ? 'visible' : 'hidden',
+        transition: 'transform 0.4s, visibility 0.4s'
+      }}
     >
-      <div
-        css={theme => css`
-          background-color: ${theme.colors.secondary};
-          padding: 2.6em 5%;
-          // padding-top: 20px;
-          font-style: normal;
-          font-size: 30px;
-          color: ${theme.colors.text};
-          display: flex;
-        `}
-      >
-        <div>
-          <h3>{title}</h3>
-          <span
-            css={css`
-              font-size: 20px;
-            `}
-          >
-            {startTime} - {endTime}
-          </span>
-        </div>
+      <Flex color="white" bg="primary" px={2} py={3}>
+        <Box px={3} py={5}>
+          <Heading as="h3" fontSize={6}>
+            {title}
+          </Heading>
+          <Text>
+            {startTime}
+            {!!endTime ? ` - ${endTime}` : ''}
+          </Text>
+        </Box>
         {/* Spacing */}
-        <div
-          css={css`
-            flex-grow: 1;
-          `}
-        />
-        <VerticalAlign>
-          <FontAwesomeIcon icon={faTimes} onClick={onClose} />
-        </VerticalAlign>
-      </div>
-      <div
-        css={css`
-          background-color: #fff;
-          padding: 1.4em 5%;
-        `}
-      >
+        <Box mx="auto" />
+        <Flex>
+          <Box ml="auto" my="auto" mr={3} fontSize={4}>
+            <FontAwesomeIcon icon={faTimes} onClick={onClose} />
+          </Box>
+        </Flex>
+      </Flex>
+      <Box bg="white" px={4}>
         {children}
-      </div>
-    </div>
+      </Box>
+    </Box>
   </Portal>
 );
 
@@ -111,6 +65,8 @@ const placeholderEvent = {
   description: 'Loading event description...'
 };
 
+// todo: mobile view
+// multiple days
 export default () => {
   const [open, setOpen] = useState(false);
   const [items, setItems] = useState({
@@ -145,15 +101,15 @@ export default () => {
   });
   const [current, setCurrent] = useState(placeholderEvent);
   const [currentDay, setCurrentDay] = useState('day1');
-  const openItem = item => () => {
+  const openItem = (item) => {
     setCurrent(item);
     setOpen(true);
     document.body.style.overflow = 'hidden';
   };
   useEffect(() => {
     fetch('https://api.hackcu.org/sheets/events.json')
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         const days = {};
         for (let day of Object.keys(data)) {
           const locations = {};
@@ -185,7 +141,7 @@ export default () => {
   }, []);
   // close modal on escape button press
   useEffect(() => {
-    const escFunction = event => {
+    const escFunction = (event) => {
       if (event.keyCode === 27) {
         // Escape key
         setOpen(false);
@@ -196,69 +152,42 @@ export default () => {
     return () => document.removeEventListener('keydown', escFunction);
   }, []);
 
-  return (
-    <Layout title="Schedule">
-      <ScheduleModal
-        open={open}
-        onClose={() => {
-          document.body.style.overflow = 'initial';
-          setOpen(false);
-        }}
-        title={current.title}
-        startTime={current.start}
-        endTime={current.end}
-      >
-        <p
-          css={css`
-            font-size: 25px;
-          `}
-        >
-          <b>Description:</b> {current.description}
-        </p>
-        {!!current.location && (
-          <p
-            css={css`
-              font-size: 25px;
-            `}
-          >
-            <b>Location:</b> {current.location}
-          </p>
-        )}
-      </ScheduleModal>
-      {/* TODO: Day change to dynamic (not hard coded) */}
-      <VerticalAlign>
-        <h3>{currentDay === 'day1' ? 'Saturday' : 'Sunday'}</h3>
-        <VerticalAlign>
-          <Dropdown
-            trigger={
-              <Button
-                css={theme =>
-                  css`
-                    background-color: ${theme.colors.secondary};
-                  `
-                }
-                node="button"
-              >
-                Choose Day
-              </Button>
-            }
-          >
-            {Object.keys(items).map(item => (
-              <a onClick={() => setCurrentDay(item)}>
-                {/* TODO: Day change to dynamic (not hard coded) */}
-                {item === 'day1' ? 'Saturday' : 'Sunday'}
-              </a>
-            ))}
-          </Dropdown>
-        </VerticalAlign>
-      </VerticalAlign>
+  console.log(items);
+  let times = [];
+  for (let x = 8; x <= 18; ++x) {
+    times.push(x);
+  }
 
-      <ScheduleCalendar
-        autoTime
-        groups={items[currentDay]}
-        hourHeight={200}
-        openEvent={openItem}
-      />
-    </Layout>
+  return (
+    <>
+      <Layout title="Schedule">
+        <ScheduleModal
+          open={open}
+          onClose={() => {
+            document.body.style.overflow = 'initial';
+            setOpen(false);
+          }}
+          title={current.title}
+          startTime={current.start}
+          endTime={current.end}
+        >
+          <Text mt={3} fontSize={4}>
+            <Text as="b">Description:</Text> {current.description}
+          </Text>
+          {!!current.location && (
+            <Text mt={3} fontSize={4}>
+              <Text as="b">Location:</Text> {current.location}
+            </Text>
+          )}
+        </ScheduleModal>
+        <Schedule
+          autoTime
+          groups={items[currentDay]}
+          hourHeight={75}
+          openEvent={openItem}
+          items={items}
+        />
+      </Layout>
+    </>
   );
 };

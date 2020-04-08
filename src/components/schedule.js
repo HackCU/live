@@ -3,6 +3,9 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { breakpoints, breakpointsConfig } from '../util/breakpoints';
 import Media from 'react-media';
+import { Flex, Box, Text } from 'rebass';
+import moment from 'moment';
+import Dotdotdot from 'react-dotdotdot';
 
 const ScheduleContainer = styled.div`
   position: relative;
@@ -167,7 +170,7 @@ const VerticalAlign = ({ children }) => (
 
 const Event = ({ startPos, height, item, onClick, index }) => (
   <li
-    css={theme => css`
+    css={(theme) => css`
       flex-shrink: 0;
       height: 150px;
       width: 100%;
@@ -176,7 +179,7 @@ const Event = ({ startPos, height, item, onClick, index }) => (
       margin-right: 20px;
       transition: opacity 0.2s, background 0.2s;
       background-color: ${index % 2 === 0
-        ? theme.colors.secondary
+        ? theme.colors.primary
         : theme.colors.tertiary};
       color: ${theme.colors.text};
       margin: 5px auto;
@@ -236,10 +239,11 @@ export default ({
   endTime = 23,
   hourHeight = 200,
   groups,
-  openEvent
+  openEvent,
+  items
 }) => {
   // TODO: remove events that have already pasted in time?
-  const allEvents = groups.flatMap(group => group.events);
+  const allEvents = groups.flatMap((group) => group.events);
   const eventsInOrder = allEvents.sort((a, b) => {
     if (!!a.startTime && !!b.startTime) {
       const startDiff = a.startTime.diff(b.startTime);
@@ -283,6 +287,12 @@ export default ({
   const calEnd = autoTime ? maxTime : endTime;
   const timeline = [];
 
+  const times = [];
+
+  for (let i = calStart; i < calEnd; ++i) {
+    times.push(`${i === 12 ? 12 : i % 12}:00${i < 12 ? 'AM' : 'PM'}`);
+  }
+
   for (let i = 0; i < (calEnd - calStart) * 2; ++i) {
     const tweleveHourTime = i / 2 + calStart;
     timeline.push(
@@ -301,7 +311,7 @@ export default ({
     );
   }
 
-  const createEvents = events =>
+  const createEvents = (events) =>
     events.map((event, index) => {
       const startPos = !!event.startTime
         ? (event.startTime.hours() -
@@ -329,50 +339,133 @@ export default ({
     });
 
   return (
-    <Media
-      queries={{
-        desktop: `(min-width: ${breakpointsConfig.small}px)`
-      }}
-    >
-      {matches => (
-        <>
-          {!matches.desktop && <ul>{createEvents(eventsInOrder)}</ul>}
-          {matches.desktop && (
-            <ScheduleContainer
+    // <Media
+    //   queries={{
+    //     desktop: `(min-width: ${breakpointsConfig.small}px)`
+    //   }}
+    // >
+    //   {(matches) => (
+    //     <>
+    //       {!matches.desktop && <ul>{createEvents(eventsInOrder)}</ul>}
+    //       {matches.desktop && (
+    <Box>
+      <Flex sx={{ position: 'relative' }}>
+        {/* The hour lines */}
+        <Flex flexDirection="column" width={0}>
+          <Box height={hourHeight} />
+          {times.map((time) => (
+            <Box
+              key={time}
+              height={hourHeight}
               css={css`
-                ${breakpoints.small} {
-                  font-size: ${groups.length < 4 ? 1 : 0.75}em;
-                  height: ${(calEnd - calStart) * 2 * (hourHeight / 2) +
-                    hourHeight / 4}px;
+                &:after {
+                  content: '';
+                  border-bottom: #dadce0 1px solid;
+                  position: absolute;
+                  width: 100%;
+                  margin-left: 4px; // To hide some of it on the left side of the times
+                  pointer-events: none;
                 }
               `}
+            />
+          ))}
+        </Flex>
+
+        {/* The times */}
+        <Flex
+          flexDirection="column"
+          width={1 / (items.day1.length + 1)}
+          mx={1}
+          // cover over the timeline bar
+          bg="background"
+          sx={{ zIndex: 1 }}
+          // move times near bar
+          alignItems="flex-end"
+        >
+          {/* for title */}
+          <Box height={hourHeight} />
+          {times.map((time) => (
+            <Box key={time} height={hourHeight}>
+              <Text
+                bg="background"
+                // following options are to get the time right next to the bar
+                textAlign="right"
+                sx={{
+                  position: 'relative',
+                  top: '-12px',
+                  right: '10px'
+                }}
+              >
+                {time}
+              </Text>
+            </Box>
+          ))}
+        </Flex>
+
+        {/* The tabs with entries */}
+        {items.day1.map(({ title, events }, index, types) => {
+          return (
+            <Box
+              key={title}
+              width={1 / (types.length + 1)}
+              alignItems="center"
+              height={(times.length + 1) * hourHeight}
+              mx={1}
+              sx={{ position: 'relative' }}
             >
-              <Timeline>
-                <ul>{timeline}</ul>
-              </Timeline>
-              <Events>
-                <div
-                  css={css`
-                    display: relative;
-                    height: 100%;
-                  `}
-                >
-                  <UlEvents>
-                    {groups.map(group => (
-                      <EventGroup key={group.title}>
-                        <EventInfo>
-                          <span>{!!group.title ? group.title : 'Misc.'}</span>
-                        </EventInfo>
-                        <ul>{createEvents(group.events)}</ul>
-                      </EventGroup>
-                    ))}
-                  </UlEvents>
-                </div>
-              </Events>
-            </ScheduleContainer>
-          )}
-        </>
-      )}
-    </Media>
+              {/* Title */}
+              <Box height={hourHeight} textAlign="center">
+                <Text>{!!title ? title : 'Misc.'}</Text>
+              </Box>
+              {/* Items */}
+              {events.map(
+                ({ title: eventTitle, startTime, endTime }, index, list) => {
+                  const top = !!startTime
+                    ? (startTime.hours() +
+                        startTime.minutes() / 60 -
+                        calStart) *
+                        hourHeight +
+                      hourHeight
+                    : hourHeight;
+                  const height =
+                    !!startTime && !!endTime
+                      ? moment.duration(endTime.diff(startTime)).asHours() *
+                        hourHeight
+                      : hourHeight;
+                  return (
+                    <Flex
+                      height={hourHeight}
+                      textAlign="center"
+                      color="textDark"
+                      bg="primary"
+                      flexDirection="column"
+                      sx={{
+                        borderRadius: '5px',
+                        // Positioning
+                        position: 'absolute',
+                        top,
+                        height,
+                        left: 0,
+                        right: 0
+                      }}
+                      onClick={() => openEvent(list[index])}
+                    >
+                      <Text height={height} m="auto">
+                        {/* multiline ellipsis */}
+                        <Dotdotdot clamp="auto">{eventTitle}</Dotdotdot>
+                      </Text>
+                    </Flex>
+                  );
+                }
+              )}
+            </Box>
+          );
+        })}
+      </Flex>
+    </Box>
+    //       )}
+    //     </>
+    //   )}
+    // </Media>
   );
 };
