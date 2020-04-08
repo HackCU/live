@@ -1,237 +1,8 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { breakpoints, breakpointsConfig } from '../util/breakpoints';
-import Media from 'react-media';
 import { Flex, Box, Text } from 'rebass';
 import moment from 'moment';
 import Dotdotdot from 'react-dotdotdot';
-
-const ScheduleContainer = styled.div`
-  position: relative;
-  margin: 2em 0;
-
-  ${breakpoints.small} {
-    margin: 2em auto;
-    width: 100%;
-    // max-width: 1500px;
-
-    &:after {
-      clear: both;
-      content: '';
-      display: block;
-    }
-  }
-`;
-
-const Timeline = styled.div`
-  display: none;
-
-  ${breakpoints.small} {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    padding-top: 50px;
-  }
-`;
-
-const TimelineTime = styled.li`
-  ${breakpoints.small} {
-    position: relative;
-    // HEIGHT IS DEFINED BY PROGRAM
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: #eaeaea;
-    }
-
-    &:last-of-type:after {
-      display: none;
-    }
-
-    & span {
-      display: none;
-    }
-  }
-
-  ${breakpoints.regular} {
-    &:after {
-      width: calc(100% - 60px);
-      left: 60px;
-    }
-    span {
-      display: inline-block;
-      transform: translateY(-50%);
-    }
-    &:nth-of-type(2n) span {
-      display: none;
-    }
-  }
-`;
-
-const Events = styled.div`
-  position: relative;
-  z-index: 1;
-
-  ${breakpoints.small} {
-    float: left;
-    width: 100%;
-  }
-
-  ${breakpoints.regular} {
-    /* 60px is the .timeline element width */
-    width: calc(100% - 60px);
-    margin-left: 60px;
-  }
-`;
-
-const UlEvents = styled.ul`
-  ${breakpoints.small} {
-    display: flex;
-  }
-`;
-
-const EventGroup = styled.li`
-  margin-bottom: 0px;
-
-  & > ul {
-    position: relative;
-    padding: 0 5%;
-    /* force its children to stay on one line */
-    display: flex;
-    flex-direction: column;
-  }
-
-  ${breakpoints.small} {
-    width: 20%;
-    float: left;
-    border: 0px solid #eaeaea;
-    /* reset style */
-    margin-bottom: 0;
-    margin: auto;
-
-    & > ul {
-      height: 900px;
-      /* reset style */
-      display: block;
-      overflow: visible;
-      padding: 0;
-    }
-  }
-`;
-
-const EventInfo = styled.div`
-  & > span {
-    display: inline-block;
-    line-height: 1.2;
-    // margin-bottom: 10px;
-    font-weight: bold;
-    padding: 10px;
-    text-align: center;
-  }
-
-  ${breakpoints.small} {
-    & > span {
-      margin: 0 auto;
-      display: table;
-      height: 50px;
-      border-bottom: 1px solid #eaeaea;
-      /* reset style */
-      padding: 0;
-      // TODO better height sizing
-    }
-  }
-`;
-
-const VerticalAlign = ({ children }) => (
-  <div
-    css={css`
-      display: flex;
-      height: 100%;
-    `}
-  >
-    <div
-      css={css`
-        margin: auto;
-        cursor: pointer;
-      `}
-    >
-      {children}
-    </div>
-  </div>
-);
-
-const Event = ({ startPos, height, item, onClick, index }) => (
-  <li
-    css={(theme) => css`
-      flex-shrink: 0;
-      height: 150px;
-      width: 100%;
-      // max-width: 300px;
-      box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
-      margin-right: 20px;
-      transition: opacity 0.2s, background 0.2s;
-      background-color: ${index % 2 === 0
-        ? theme.colors.primary
-        : theme.colors.tertiary};
-      color: ${theme.colors.text};
-      margin: 5px auto;
-      cursor: pointer;
-      border-radius: 5px;
-
-      ${breakpoints.small} {
-        position: absolute;
-        z-index: 3;
-        width: calc(100% + 20px);
-        left: -1px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
-          inset 0 -3px 0 rgba(0, 0, 0, 0.2);
-        /* reset style */
-        flex-shrink: 1;
-        max-width: none;
-        margin: 0;
-        top: ${startPos}px;
-        height: ${height}px;
-      }
-    `}
-    onClick={onClick}
-  >
-    <VerticalAlign>
-      <div
-        css={css`
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-        `}
-      >
-        <span
-          css={css`
-            margin: 0 auto;
-          `}
-        >
-          {item.start} - {item.end}
-        </span>
-        <div
-          css={css`
-            ${breakpoints.small} {
-              font-weight: 500;
-              margin: 0 auto;
-            }
-          `}
-        >
-          {item.title}
-        </div>
-      </div>
-    </VerticalAlign>
-  </li>
-);
 
 export default ({
   autoTime = false, // Calulates the best start and end time to fit every item
@@ -285,69 +56,13 @@ export default ({
 
   const calStart = autoTime ? minTime : startTime;
   const calEnd = autoTime ? maxTime : endTime;
-  const timeline = [];
-
   const times = [];
 
   for (let i = calStart; i < calEnd; ++i) {
     times.push(`${i === 12 ? 12 : i % 12}:00${i < 12 ? 'AM' : 'PM'}`);
   }
 
-  for (let i = 0; i < (calEnd - calStart) * 2; ++i) {
-    const tweleveHourTime = i / 2 + calStart;
-    timeline.push(
-      <TimelineTime
-        css={css`
-          height: ${hourHeight / 2}px;
-        `}
-      >
-        <span>
-          {i % 2 === 0 &&
-            `${tweleveHourTime === 12 ? 12 : tweleveHourTime % 12}:00${
-              tweleveHourTime < 12 ? 'AM' : 'PM'
-            }`}
-        </span>
-      </TimelineTime>
-    );
-  }
-
-  const createEvents = (events) =>
-    events.map((event, index) => {
-      const startPos = !!event.startTime
-        ? (event.startTime.hours() -
-            calStart +
-            event.startTime.minutes() / 60) *
-          hourHeight
-        : 0;
-      const height =
-        !!event.startTime && !!event.endTime
-          ? (event.endTime.hours() -
-              event.startTime.hours() +
-              (event.endTime.minutes() - event.startTime.minutes()) / 60) *
-            hourHeight
-          : hourHeight / 2;
-      return (
-        <Event
-          key={event.title}
-          index={index}
-          startPos={startPos}
-          height={height}
-          onClick={openEvent(event)}
-          item={event}
-        />
-      );
-    });
-
   return (
-    // <Media
-    //   queries={{
-    //     desktop: `(min-width: ${breakpointsConfig.small}px)`
-    //   }}
-    // >
-    //   {(matches) => (
-    //     <>
-    //       {!matches.desktop && <ul>{createEvents(eventsInOrder)}</ul>}
-    //       {matches.desktop && (
     <Box>
       <Flex sx={{ position: 'relative' }}>
         {/* The hour lines */}
@@ -374,7 +89,6 @@ export default ({
         {/* The times */}
         <Flex
           flexDirection="column"
-          width={1 / (items.day1.length + 1)}
           mx={1}
           // cover over the timeline bar
           bg="background"
@@ -415,7 +129,9 @@ export default ({
             >
               {/* Title */}
               <Box height={hourHeight} textAlign="center">
-                <Text>{!!title ? title : 'Misc.'}</Text>
+                <Text sx={{ overflow: 'overlay' }}>
+                  {!!title ? title : 'Misc.'}
+                </Text>
               </Box>
               {/* Items */}
               {events.map(
@@ -450,7 +166,7 @@ export default ({
                       }}
                       onClick={() => openEvent(list[index])}
                     >
-                      <Text height={height} m="auto">
+                      <Text height={height} sx={{ overflow: 'hidden' }}>
                         {/* multiline ellipsis */}
                         <Dotdotdot clamp="auto">{eventTitle}</Dotdotdot>
                       </Text>
@@ -463,9 +179,5 @@ export default ({
         })}
       </Flex>
     </Box>
-    //       )}
-    //     </>
-    //   )}
-    // </Media>
   );
 };

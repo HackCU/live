@@ -159,35 +159,34 @@ export default () => {
   }
 
   return (
-    <>
-      <Layout title="Schedule">
-        <ScheduleModal
-          open={open}
-          onClose={() => {
-            document.body.style.overflow = 'initial';
-            setOpen(false);
-          }}
-          title={current.title}
-          startTime={current.start}
-          endTime={current.end}
-        >
+    <Layout title="Schedule">
+      <ScheduleModal
+        open={open}
+        onClose={() => {
+          document.body.style.overflow = 'initial';
+          setOpen(false);
+        }}
+        title={current.title}
+        startTime={current.start}
+        endTime={current.end}
+      >
+        <Text mt={4} fontSize={4}>
+          <Text as="b">Description:</Text> {current.description}
+        </Text>
+        {!!current.location && (
           <Text mt={3} fontSize={4}>
-            <Text as="b">Description:</Text> {current.description}
+            <Text as="b">Location:</Text> {current.location}
           </Text>
-          {!!current.location && (
-            <Text mt={3} fontSize={4}>
-              <Text as="b">Location:</Text> {current.location}
-            </Text>
-          )}
-        </ScheduleModal>
-        <Schedule
-          autoTime
-          groups={items[currentDay]}
-          hourHeight={75}
-          openEvent={openItem}
-          items={items}
-        />
-      </Layout>
-    </>
+        )}
+      </ScheduleModal>
+
+      <Schedule
+        autoTime
+        groups={items[currentDay]}
+        hourHeight={75}
+        openEvent={openItem}
+        items={items}
+      />
+    </Layout>
   );
 };
