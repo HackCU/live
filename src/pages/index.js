@@ -1,6 +1,4 @@
 import React from 'react';
-import { css } from '@emotion/core';
-import styled from '@emotion/styled';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,32 +9,18 @@ import {
 import {
   faChevronRight,
   faUpload,
-  faQuestion,
   faInfo,
   faWifi
 } from '@fortawesome/free-solid-svg-icons';
-import { Row, Col, Card } from 'react-materialize';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import OutsideLink from '../components/outside-link';
+import { Box, Text, Flex } from 'rebass';
 
 function removeHttps(string) {
   return string.replace('https://', '');
 }
-
-const InfoItem = ({ children }) => (
-  <>
-    <p>{children}</p>
-    <br />
-  </>
-);
-
-const SocialItem = styled.h4`
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 1.14rem 0 0.912rem 0;
-`;
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -60,101 +44,92 @@ const IndexPage = () => {
   return (
     <Layout title={`Welcome to ${title}!`}>
       <SEO title="Home" />
-      <Row>
-        <Col s={12} l={8}>
-          <Card
-            css={theme => css`
-              background-color: ${theme.colors.primary};
-              color: ${theme.colors.text};
-            `}
-            title="General Information"
-          >
-            <InfoItem>
-              <b>
+      <Flex flexDirection={['column', 'column', 'row']}>
+        <Box width={[1, 1, 2 / 3]} px={2}>
+          <Box variant="darkCard" color="textDark">
+            <Box>
+              <Text as="b">
                 <FontAwesomeIcon icon={faChevronRight} /> Slack:{' '}
                 <OutsideLink href={social.slack}>
                   {removeHttps(social.slack)}
                 </OutsideLink>
-              </b>
-              <br />
-              Join the HackCU Slack to talk with all the hackers attending our
-              event!
-            </InfoItem>
-            <InfoItem>
-              <b>
+              </Text>
+              <Text>
+                Join the HackCU Slack to talk with all the hackers attending our
+                event!
+              </Text>
+            </Box>
+
+            <Box mt={4}>
+              <Text as="b">
                 <FontAwesomeIcon icon={faUpload} /> Devpost:{' '}
                 <OutsideLink href={social.devpost}>
                   {removeHttps(social.devpost)}
                 </OutsideLink>
-              </b>
-              <br />
-              Register for HackCU on Devpost, and submit your hack here by 12:00
-              pm <b>(submit early, you can edit your submission!)</b>
-            </InfoItem>
-            <InfoItem>
-              <b>
+              </Text>
+              <Text>
+                Register for HackCU on Devpost, and submit your hack here by
+                12:00 pm{' '}
+                <Text as="b">
+                  (submit early, you can edit your submission!)
+                </Text>
+              </Text>
+            </Box>
+
+            <Box mt={4}>
+              <Text as="b">
                 <FontAwesomeIcon icon={faInfo} /> Hacker guide:{' '}
                 <OutsideLink href={social.hackerGuide}>
                   {removeHttps(social.hackerGuide)}
                 </OutsideLink>
-              </b>
-              <br />
-              Check out all the information that you need in this useful guide
-              we have written down for you!
-            </InfoItem>
-          </Card>
-        </Col>
-        <Col s={12} l={4}>
-          <Card
-            title="#HackCU"
-            css={theme => css`
-              background-color: ${theme.colors.primary};
-              color: ${theme.colors.text};
-            `}
-          >
-            <p>
+              </Text>
+              <Text>
+                Check out all the information that you need in this useful guide
+                we have written down for you!
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box width={[1, 1, 1 / 3]} mt={[2, 2, 0]} px={2}>
+          <Box variant="darkCard" color="textDark">
+            <Text fontSize={5}>#HackCU</Text>
+            <Text mt={2}>
               Get{' '}
               <OutsideLink href="https://twitter.com/search?src=typd&q=%23lhd">
                 #HackCU
               </OutsideLink>{' '}
               trending!
-            </p>
-            <SocialItem>
+            </Text>
+            <Text fontSize={3} fontWeight={700} mt={3}>
               <FontAwesomeIcon icon={faTwitter} />{' '}
               <OutsideLink href={social.twitter}>@HackCU</OutsideLink>
-            </SocialItem>
-            <SocialItem>
+            </Text>
+            <Text fontSize={3} fontWeight={700} mt={2}>
               <FontAwesomeIcon icon={faInstagram} />{' '}
               <OutsideLink href={social.instagram}>@HackCU</OutsideLink>
-            </SocialItem>
-            <SocialItem>
+            </Text>
+            <Text fontSize={3} fontWeight={700} mt={2}>
               <FontAwesomeIcon icon={faFacebook} />{' '}
               <OutsideLink href={social.facebook}>/HackCU</OutsideLink>
-            </SocialItem>
-          </Card>
-        </Col>
-        <Col s={12} l={4}>
-          <Card
-            title={
-              <>
-                <FontAwesomeIcon icon={faWifi} /> <b>Network: </b> UCB Guest
-              </>
-            }
-            css={theme => css`
-              background-color: ${theme.colors.primary};
-              color: ${theme.colors.text};
-            `}
-          >
-            <p>
+            </Text>
+          </Box>
+
+          <Box variant="darkCard" mt={2} color="textDark">
+            <Text fontSize={5}>
+              <FontAwesomeIcon icon={faWifi} /> <Text as="b">Network: </Text>{' '}
+              UCB Guest
+            </Text>
+            <Text mt={2}>
               Open your browser and go to{' '}
               <OutsideLink href="https://cuwireless.int/colorado.edu">
                 cuwireless.int.colorado.edu
               </OutsideLink>{' '}
               to accept the usage agreement.
-            </p>
-          </Card>
-        </Col>
-      </Row>
+            </Text>
+          </Box>
+        </Box>
+      </Flex>
     </Layout>
   );
 };
