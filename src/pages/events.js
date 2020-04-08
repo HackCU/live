@@ -1,11 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
 import { Link as ReactLink, useStaticQuery, graphql } from 'gatsby';
-import { CollectionItem, Collection } from 'react-materialize';
-import { css } from '@emotion/core';
-import OutsideLink from '../components/outside-link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Text, Heading, Flex, Box, Link } from 'rebass';
 
 export default () => {
