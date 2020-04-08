@@ -9,7 +9,6 @@ import OutsideLink from '../components/outside-link';
 
 const Prize = ({ title, description, award, url }) => (
   <Box
-    as="li"
     p={3}
     variant="outline"
     sx={{
@@ -52,7 +51,7 @@ export default () => {
   return (
     <Layout title="Prizes">
       <SEO title="Prizes" />
-      <Flex as="ul" flexDirection="column">
+      <Flex flexDirection="column">
         {prizes
           .filter((prize) => prize.type === 'hackathon')
           .map((prize) => (
@@ -65,7 +64,7 @@ export default () => {
         Sponsored Prizes
       </Heading>
 
-      <Flex as="ul" flexDirection="column">
+      <Flex flexDirection="column">
         {prizes
           .filter((prize) => prize.type === 'sponsor')
           .map((prize) => (

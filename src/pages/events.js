@@ -46,7 +46,6 @@ export default () => {
         {workshops.map((item) => (
           <Box
             key={item.id}
-            as="li"
             p={3}
             variant="outline"
             sx={{
@@ -56,8 +55,8 @@ export default () => {
             <Text as="h5" fontWeight={500}>
               {item.title}
             </Text>
-            <Text as="small">by {item.author}</Text>
-            <Text>{item.description}</Text>
+            <Text>by {item.author}</Text>
+            <Text fontSize={2}>{item.description}</Text>
           </Box>
         ))}
       </Flex>
@@ -69,7 +68,6 @@ export default () => {
         {sideEvents.map((item) => (
           <Box
             key={item.id}
-            as="li"
             p={3}
             variant="outline"
             sx={{
