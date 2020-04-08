@@ -1,18 +1,24 @@
 import React from 'react';
+import { Link } from 'rebass';
 
 export default ({ children, target = '_blank', ...props }) => {
   // Improve link security
   if (target === '_blank') {
     return (
-      <a {...props} target={target} rel="noopener noreferrer">
+      <Link
+        {...props}
+        color="primary"
+        target={target}
+        rel="noopener noreferrer"
+      >
         {children}
-      </a>
+      </Link>
     );
   }
 
   return (
-    <a {...props} target={target}>
+    <Link {...props} color="primary" target={target}>
       {children}
-    </a>
+    </Link>
   );
 };
