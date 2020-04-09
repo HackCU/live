@@ -15,9 +15,7 @@ const Prize = ({ title, description, award, url }) => (
       listStyle: 'none'
     }}
   >
-    <Heading as="h5" fontWeight={500}>
-      {title}
-    </Heading>
+    <Heading variant="cardTitle">{title}</Heading>
     <Text dangerouslySetInnerHTML={{ __html: description }} />
     <Box>
       <Text as="b">Award:</Text>
@@ -51,6 +49,11 @@ export default () => {
   return (
     <Layout title="Prizes">
       <SEO title="Prizes" />
+
+      <Heading as="h3" mt={1} mb={3} variant="subtitle">
+        General Prizes
+      </Heading>
+
       <Flex flexDirection="column">
         {prizes
           .filter((prize) => prize.type === 'hackathon')
@@ -59,8 +62,7 @@ export default () => {
           ))}
       </Flex>
 
-      {/* todo: large font size */}
-      <Heading as="h1" my={4}>
+      <Heading as="h3" my={4} variant="subtitle">
         Sponsored Prizes
       </Heading>
 

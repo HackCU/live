@@ -39,6 +39,17 @@ const theme = {
     outline: {
       border: '1px solid #e0e0e0'
     }
+  },
+  text: {
+    // Heading and Text variants
+    subtitle: {
+      as: 'h2',
+      fontSize: 5
+    },
+    cardTitle: {
+      as: 'h3',
+      fontWeight: 500
+    }
   }
 };
 

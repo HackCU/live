@@ -39,7 +39,7 @@ export default () => {
         </Link>{' '}
         to know when all these workshops and more are happening!
       </Text>
-      <Heading as="h4" my={3}>
+      <Heading as="h3" my={3} variant="subtitle">
         Workshops
       </Heading>
       <Flex flexDirection="column">
@@ -52,16 +52,14 @@ export default () => {
               listStyle: 'none'
             }}
           >
-            <Text as="h5" fontWeight={500}>
-              {item.title}
-            </Text>
+            <Heading variant="cardTitle">{item.title}</Heading>
             <Text>by {item.author}</Text>
             <Text fontSize={2}>{item.description}</Text>
           </Box>
         ))}
       </Flex>
 
-      <Heading as="h4" my={3}>
+      <Heading as="h3" my={3} variant="subtitle">
         Side Events
       </Heading>
       <Flex flexDirection="column">
@@ -74,9 +72,7 @@ export default () => {
               listStyle: 'none'
             }}
           >
-            <Text as="h5" fontWeight={500}>
-              {item.title}
-            </Text>
+            <Heading variant="cardTitle">{item.title}</Heading>
             <Text>{item.description}</Text>
           </Box>
         ))}

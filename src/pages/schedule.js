@@ -152,7 +152,6 @@ export default () => {
     return () => document.removeEventListener('keydown', escFunction);
   }, []);
 
-  console.log(items);
   let times = [];
   for (let x = 8; x <= 18; ++x) {
     times.push(x);
