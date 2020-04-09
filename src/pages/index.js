@@ -46,15 +46,18 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Flex flexDirection={['column', 'column', 'row']}>
         <Box width={[1, 1, 2 / 3]} px={2}>
-          <Box variant="darkCard" color="textDark">
+          <Box variant="darkCard" color="textDark" fontSize={3}>
             <Box>
+              <Text fontSize={5} mb={2}>
+                General Information
+              </Text>
               <Text as="b">
                 <FontAwesomeIcon icon={faChevronRight} /> Slack:{' '}
                 <OutsideLink href={social.slack}>
                   {removeHttps(social.slack)}
                 </OutsideLink>
               </Text>
-              <Text>
+              <Text mt={2}>
                 Join the HackCU Slack to talk with all the hackers attending our
                 event!
               </Text>
@@ -67,9 +70,9 @@ const IndexPage = () => {
                   {removeHttps(social.devpost)}
                 </OutsideLink>
               </Text>
-              <Text>
+              <Text mt={2}>
                 Register for HackCU on Devpost, and submit your hack here by
-                12:00 pm{' '}
+                12:00 pm
                 <Text as="b">
                   (submit early, you can edit your submission!)
                 </Text>
@@ -83,7 +86,7 @@ const IndexPage = () => {
                   {removeHttps(social.hackerGuide)}
                 </OutsideLink>
               </Text>
-              <Text>
+              <Text mt={2}>
                 Check out all the information that you need in this useful guide
                 we have written down for you!
               </Text>
@@ -92,7 +95,7 @@ const IndexPage = () => {
         </Box>
 
         <Box width={[1, 1, 1 / 3]} mt={[2, 2, 0]} px={2}>
-          <Box variant="darkCard" color="textDark">
+          <Box variant="darkCard" color="textDark" fontSize={3}>
             <Text fontSize={5}>#HackCU</Text>
             <Text mt={2}>
               Get{' '}
@@ -115,8 +118,8 @@ const IndexPage = () => {
             </Text>
           </Box>
 
-          <Box variant="darkCard" mt={2} color="textDark">
-            <Text fontSize={5}>
+          <Box variant="darkCard" mt={2} color="textDark" fontSize={3}>
+            <Text fontSize={4}>
               <FontAwesomeIcon icon={faWifi} /> <Text as="b">Network: </Text>{' '}
               UCB Guest
             </Text>
