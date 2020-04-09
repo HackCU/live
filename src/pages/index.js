@@ -12,8 +12,6 @@ import {
   faInfo,
   faWifi
 } from '@fortawesome/free-solid-svg-icons';
-
-import Layout from '../components/layout';
 import SEO from '../components/seo';
 import OutsideLink from '../components/outside-link';
 import { Box, Text, Flex } from 'rebass';

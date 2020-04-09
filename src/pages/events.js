@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../components/layout';
 import { Link as ReactLink, useStaticQuery, graphql } from 'gatsby';
 import { Text, Heading, Flex, Box, Link } from 'rebass';
 import Title from '../components/title';

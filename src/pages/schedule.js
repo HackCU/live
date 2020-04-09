@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Layout from '../components/layout';
 import Schedule from '../components/schedule';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 import Portal from '../components/portal';
 import { Flex, Box, Text, Heading } from 'rebass';
+import { Select } from '@rebass/forms';
 import Title from '../components/title';
 
 const ScheduleModal = ({
@@ -151,10 +151,15 @@ export default () => {
     return () => document.removeEventListener('keydown', escFunction);
   }, []);
 
-  let times = [];
-  for (let x = 8; x <= 18; ++x) {
-    times.push(x);
-  }
+  const dayToText = (day) => {
+    if (day === 'day1') {
+      return 'Day One';
+    } else if (day === 'day2') {
+      return 'Day Two';
+    } else {
+      throw new Error(`Invalid day "${day}".`);
+    }
+  };
 
   return (
     <>
@@ -179,12 +184,26 @@ export default () => {
         )}
       </ScheduleModal>
 
+      <Box mx="auto" mb={4}>
+        <Heading>{dayToText(currentDay)}</Heading>
+        <Select
+          name="day"
+          bg="background"
+          onClick={(event) => setCurrentDay(event.target.value)}
+        >
+          {Object.keys(items).map((day) => (
+            <option key={day} value={day}>
+              {dayToText(day)}
+            </option>
+          ))}
+        </Select>
+      </Box>
+
       <Schedule
         autoTime
-        groups={items[currentDay]}
+        events={items[currentDay]}
         hourHeight={75}
         openEvent={openItem}
-        items={items}
       />
     </>
   );

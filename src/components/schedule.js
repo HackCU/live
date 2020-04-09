@@ -9,12 +9,11 @@ export default ({
   startTime = 8, // TODO: change to 8
   endTime = 23,
   hourHeight = 200,
-  groups,
-  openEvent,
-  items
+  events,
+  openEvent
 }) => {
   // TODO: remove events that have already pasted in time?
-  const allEvents = groups.flatMap((group) => group.events);
+  const allEvents = events.flatMap((group) => group.events);
   const eventsInOrder = allEvents.sort((a, b) => {
     if (!!a.startTime && !!b.startTime) {
       const startDiff = a.startTime.diff(b.startTime);
@@ -117,7 +116,7 @@ export default ({
         </Flex>
 
         {/* The tabs with entries */}
-        {items.day1.map(({ title, events }, index, types) => {
+        {events.map(({ title, events: eventsAtLocation }, index, types) => {
           return (
             <Box
               key={title}
@@ -134,7 +133,7 @@ export default ({
                 </Text>
               </Box>
               {/* Items */}
-              {events.map(
+              {eventsAtLocation.map(
                 ({ title: eventTitle, startTime, endTime }, index, list) => {
                   const top = !!startTime
                     ? (startTime.hours() +
@@ -143,6 +142,7 @@ export default ({
                         hourHeight +
                       hourHeight
                     : hourHeight;
+                  // todo: height is not correct for 30 minute events
                   const height =
                     !!startTime && !!endTime
                       ? moment.duration(endTime.diff(startTime)).asHours() *
@@ -150,6 +150,7 @@ export default ({
                       : hourHeight;
                   return (
                     <Flex
+                      key={eventTitle}
                       height={hourHeight}
                       textAlign="center"
                       color="textDark"
