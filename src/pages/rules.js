@@ -4,6 +4,7 @@ import { css } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
 import SEO from '../components/seo';
 import { Box } from 'rebass';
+import Title from '../components/title';
 
 export default () => {
   // get the rule.md from data based on the frontmatter property `path: "rules"`
@@ -15,7 +16,8 @@ export default () => {
     }
   `);
   return (
-    <Layout title="Rules">
+    <>
+      <Title>Rules</Title>
       <SEO title="Rules" />
       <Box
         // TODO: Integrate with theme ui some how?
@@ -33,6 +35,6 @@ export default () => {
         `}
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
       />
-    </Layout>
+    </>
   );
 };

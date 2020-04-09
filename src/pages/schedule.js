@@ -6,6 +6,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 import Portal from '../components/portal';
 import { Flex, Box, Text, Heading } from 'rebass';
+import Title from '../components/title';
 
 const ScheduleModal = ({
   title,
@@ -17,7 +18,7 @@ const ScheduleModal = ({
 }) => (
   <Portal>
     <Box
-      bg="white"
+      bg="background"
       sx={{
         zIndex: 10,
         position: 'fixed',
@@ -49,9 +50,7 @@ const ScheduleModal = ({
           </Box>
         </Flex>
       </Flex>
-      <Box bg="white" px={4}>
-        {children}
-      </Box>
+      <Box px={4}>{children}</Box>
     </Box>
   </Portal>
 );
@@ -158,7 +157,8 @@ export default () => {
   }
 
   return (
-    <Layout title="Schedule">
+    <>
+      <Title>Schedule</Title>
       <ScheduleModal
         open={open}
         onClose={() => {
@@ -186,6 +186,6 @@ export default () => {
         openEvent={openItem}
         items={items}
       />
-    </Layout>
+    </>
   );
 };

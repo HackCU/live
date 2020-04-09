@@ -4,6 +4,8 @@ import presetTheme from '@rebass/preset';
 
 const theme = {
   ...presetTheme,
+  useCustomProperties: true,
+  initialColorMode: 'light',
   colors: {
     ...presetTheme.colors,
     text: '#000',
@@ -11,7 +13,15 @@ const theme = {
     background: '#fff',
     primary: '#4285F4',
     secondary: '#22292c',
-    tertiary: '#DB4437'
+    tertiary: '#DB4437',
+    modes: {
+      dark: {
+        text: '#fff',
+        textDark: '#0d0d0d',
+        background: '#353C51', // https://www.schemecolor.com/mojave-dark-mode-wallpaper.php,
+        secondary: '#ddd6d3'
+      }
+    }
   },
   fonts: {
     ...presetTheme.fonts,

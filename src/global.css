@@ -4,17 +4,17 @@
 /* Also look at layout in components for more globals */
 @font-face {
   font-family: Biko;
-  src: url('../../content/assets/fonts/Biko_Regular.otf');
+  src: url('../content/assets/fonts/Biko_Regular.otf');
 }
 
 @font-face {
   font-family: Biko;
-  src: url('../../content/assets/fonts/Biko_Bold.otf');
+  src: url('../content/assets/fonts/Biko_Bold.otf');
   font-weight: 500;
 }
 
 @font-face {
   font-family: Biko;
-  src: url('../../content/assets/fonts/Biko_Black.otf');
+  src: url('../content/assets/fonts/Biko_Black.otf');
   font-weight: bold;
 }

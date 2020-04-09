@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import { Link as ReactLink, useStaticQuery, graphql } from 'gatsby';
 import { Text, Heading, Flex, Box, Link } from 'rebass';
+import Title from '../components/title';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -31,7 +32,8 @@ export default () => {
   const workshops = data.allWorkshopsYaml.edges.map((val) => val.node);
   const sideEvents = data.allSideEventsYaml.edges.map((val) => val.node);
   return (
-    <Layout title="Events">
+    <>
+      <Title>Events</Title>
       <Text>
         Check out the{' '}
         <Link as={ReactLink} to="/schedule">
@@ -77,6 +79,6 @@ export default () => {
           </Box>
         ))}
       </Flex>
-    </Layout>
+    </>
   );
 };

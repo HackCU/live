@@ -17,6 +17,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import OutsideLink from '../components/outside-link';
 import { Box, Text, Flex } from 'rebass';
+import Title from '../components/title';
 
 function removeHttps(string) {
   return string.replace('https://', '');
@@ -42,7 +43,8 @@ const IndexPage = () => {
   `);
   const { title, social } = data.site.siteMetadata;
   return (
-    <Layout title={`Welcome to ${title}!`}>
+    <>
+      <Title>Welcome to {title}!</Title>
       <SEO title="Home" />
       <Flex flexDirection={['column', 'column', 'row']}>
         <Box width={[1, 1, 2 / 3]} px={2}>
@@ -133,7 +135,7 @@ const IndexPage = () => {
           </Box>
         </Box>
       </Flex>
-    </Layout>
+    </>
   );
 };
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from '../components/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useStaticQuery, graphql } from 'gatsby';
 import SEO from '../components/seo';
 import { Heading, Box, Text, Flex } from 'rebass';
 import OutsideLink from '../components/outside-link';
+import Title from '../components/title';
 
 const Prize = ({ title, description, award, url }) => (
   <Box
@@ -47,7 +47,8 @@ export default () => {
   `);
   const prizes = data.allPrizesYaml.edges.map((val) => val.node);
   return (
-    <Layout title="Prizes">
+    <>
+      <Title>Prizes</Title>
       <SEO title="Prizes" />
 
       <Heading as="h3" mt={1} mb={3} variant="subtitle">
@@ -73,6 +74,6 @@ export default () => {
             <Prize key={prize.id} {...prize} />
           ))}
       </Flex>
-    </Layout>
+    </>
   );
 };

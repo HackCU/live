@@ -4,9 +4,12 @@ import Countdown from './countdown';
 import { Box, Flex, Text, Link } from 'rebass';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useColorMode } from 'theme-ui';
+import DarkModeToggle from 'react-dark-mode-toggle';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [colorMode, setColorMode] = useColorMode();
   return (
     <Box mb={5}>
       <Flex
@@ -27,7 +30,7 @@ const Header = () => {
           ml={2}
           py={3}
           display={['inherit', 'inherit', 'none']}
-          color="white"
+          color="textDark"
           onClick={() => setOpen(true)}
           sx={{ cursor: 'pointer' }}
         >
@@ -38,7 +41,7 @@ const Header = () => {
           display={['inherit', 'inherit', 'none']}
           py={1}
           flexDirection="column"
-          bg="white"
+          bg="background"
           sx={{
             zIndex: 10,
             position: 'fixed',
@@ -50,19 +53,54 @@ const Header = () => {
             transition: 'transform .1s ease-in-out'
           }}
         >
-          <Link as={ReactLink} ml={2} p={3} color="text" to="/">
+          <Link
+            as={ReactLink}
+            ml={2}
+            p={3}
+            color="text"
+            to="/"
+            onClick={() => setOpen(false)}
+          >
             Home
           </Link>
-          <Link as={ReactLink} ml={2} p={3} color="text" to="/events">
+          <Link
+            as={ReactLink}
+            ml={2}
+            p={3}
+            color="text"
+            to="/events"
+            onClick={() => setOpen(false)}
+          >
             Events
           </Link>
-          <Link as={ReactLink} ml={2} p={3} color="text" to="/rules">
+          <Link
+            as={ReactLink}
+            ml={2}
+            p={3}
+            color="text"
+            to="/rules"
+            onClick={() => setOpen(false)}
+          >
             Rules
           </Link>
-          <Link as={ReactLink} ml={2} p={3} color="text" to="/prizes">
+          <Link
+            as={ReactLink}
+            ml={2}
+            p={3}
+            color="text"
+            to="/prizes"
+            onClick={() => setOpen(false)}
+          >
             Prizes
           </Link>
-          <Link as={ReactLink} ml={2} p={3} color="text" to="/schedule">
+          <Link
+            as={ReactLink}
+            ml={2}
+            p={3}
+            color="text"
+            to="/schedule"
+            onClick={() => setOpen(false)}
+          >
             Schedule
           </Link>
         </Flex>
@@ -106,7 +144,7 @@ const Header = () => {
 
         {/* <Box mx="auto" /> */}
         <Flex
-          color="textDark"
+          color="white"
           bg="primary"
           sx={{
             position: 'absolute',
@@ -123,6 +161,26 @@ const Header = () => {
             <Countdown />
           </Box>
         </Flex>
+
+        {/* colorMode */}
+
+        <Box ml="auto" my="auto" mr={2}>
+          <DarkModeToggle
+            onChange={() =>
+              setColorMode(colorMode === 'default' ? 'dark' : 'default')
+            }
+            checked={colorMode !== 'default'}
+            size={60}
+          />
+        </Box>
+
+        {/* <button
+          onClick={(e) => {
+            setColorMode(colorMode === 'default' ? 'dark' : 'default');
+          }}
+        >
+          Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
+        </button> */}
       </Flex>
     </Box>
   );

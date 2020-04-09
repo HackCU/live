@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-solid-svg-icons';
 import { dom } from '@fortawesome/fontawesome-svg-core';
 import OutsideLink from './outside-link';
-import { Heading, Box, Flex } from 'rebass';
+import { Box, Flex } from 'rebass';
 
 // Fixes large icons on load
 // https://github.com/FortAwesome/react-fontawesome/issues/284
@@ -45,19 +45,6 @@ const Layout = ({ title = null, children, ...props }) => {
         width={1}
         maxWidth={1000}
       >
-        {title !== null && (
-          <Heading
-            as="h1"
-            fontSize={[6, 7]}
-            color="secondary"
-            textAlign="center"
-            mt={3}
-            mb={4}
-            fontWeight={400}
-          >
-            {title}
-          </Heading>
-        )}
         {children}
       </Flex>
 
@@ -75,8 +62,11 @@ const Layout = ({ title = null, children, ...props }) => {
 };
 
 Layout.propTypes = {
-  title: PropTypes.string,
   children: PropTypes.node.isRequired
 };
 
 export default Layout;
+
+export const wrapPageElement = ({ element, props }) => (
+  <Layout {...props}>{element}</Layout>
+);
