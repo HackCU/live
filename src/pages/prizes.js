@@ -1,51 +1,32 @@
 import React from 'react';
-import Layout from '../components/layout';
-// import prizes from "../../content/data/prizes.yaml"
-import { Collection, CollectionItem } from 'react-materialize';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useStaticQuery, graphql } from 'gatsby';
-import { css } from '@emotion/core';
 import SEO from '../components/seo';
+import { Heading, Box, Text, Flex } from 'rebass';
 import OutsideLink from '../components/outside-link';
-
-// - title: "Coolest Hack with Twilio"
-//   type: sponsor
-//   description: "This prize goes out to the coolest hack with Twilio. Be it by combining various of our own APIs, use our APIs in ways we haven't seen before or by solving a great problem with them. Your creativity sets all the limits in this one. Documentation: [twilio.com/docs](https://twilio.com/docs). Check out Twilio Quest to learn Twilio APIs in a fun and interactive way (plus there will be credit and t-shirt awards): [twilio.com/quest](https://twilio.com/quest)"
-//   award: Sonos Play:1 / teammate
-//   url: https://twilio.com/try-twilio
+import Title from '../components/title';
 
 const Prize = ({ title, description, award, url }) => (
-  <CollectionItem>
-    <h5
-      css={css`
-        font-weight: 500;
-      `}
-    >
-      {title}
-    </h5>
-    <br />
-    {/* __html is need for some reason by react:
-      https://reactjs.org/docs/dom-elements.html
-    */}
-    <div
-      css={css`
-        line-height: 2em;
-      `}
-      dangerouslySetInnerHTML={{ __html: description }}
-    />
-    <br />
-    <div>
-      <b>Award: </b>
-      <div
-        css={css`
-          line-height: 2em;
-        `}
-        dangerouslySetInnerHTML={{ __html: award }}
-      />
-    </div>
-    
-  </CollectionItem>
+  <Box
+    p={3}
+    variant="outline"
+    sx={{
+      listStyle: 'none'
+    }}
+  >
+    <Heading variant="cardTitle">{title}</Heading>
+    <Text dangerouslySetInnerHTML={{ __html: description }} />
+    <Box>
+      <Text as="b">Award:</Text>
+      <Text dangerouslySetInnerHTML={{ __html: award }} />
+    </Box>
+    {!!url && (
+      <OutsideLink href={url}>
+        <FontAwesomeIcon icon={faPlus} /> More Info
+      </OutsideLink>
+    )}
+  </Box>
 );
 
 export default () => {
@@ -64,26 +45,35 @@ export default () => {
       }
     }
   `);
-  const prizes = data.allPrizesYaml.edges.map(val => val.node);
+  const prizes = data.allPrizesYaml.edges.map((val) => val.node);
   return (
-    <Layout title="Prizes">
+    <>
+      <Title>Prizes</Title>
       <SEO title="Prizes" />
-      <Collection>
-        {prizes
-          .filter(prize => prize.type === 'hackathon')
-          .map(prize => (
-            <Prize key={prize.id} {...prize} />
-          ))}
-      </Collection>
 
-      <h1>Sponsored Prizes</h1>
-      <Collection>
+      <Heading as="h3" mt={1} mb={3} variant="subtitle">
+        General Prizes
+      </Heading>
+
+      <Flex flexDirection="column">
         {prizes
-          .filter(prize => prize.type === 'sponsor')
-          .map(prize => (
+          .filter((prize) => prize.type === 'hackathon')
+          .map((prize) => (
             <Prize key={prize.id} {...prize} />
           ))}
-      </Collection>
-    </Layout>
+      </Flex>
+
+      <Heading as="h3" my={4} variant="subtitle">
+        Sponsored Prizes
+      </Heading>
+
+      <Flex flexDirection="column">
+        {prizes
+          .filter((prize) => prize.type === 'sponsor')
+          .map((prize) => (
+            <Prize key={prize.id} {...prize} />
+          ))}
+      </Flex>
+    </>
   );
 };

@@ -1,11 +1,8 @@
-
 <br>
 <p align="center">
   <img alt="HackCU IV" src="https://raw.githubusercontent.com/HackCU/HackCU/master/assets/images/hackcu2020logo.png" width="200"/>
 </p>
 <br>
-
-
 
 # HackCU Live
 
@@ -15,7 +12,7 @@ HackCU's live site with events, rules, prizes, and a **new** live schedule!
 
 Needs: `npm`
 
-## Local 
+## Local
 
 1. `git clone https://github.com/hackcu/live && cd live`
 2. `npm install`
@@ -31,4 +28,3 @@ Deployment is done automatically by [Github Actions](https://github.com/HackCU/l
 ## Want to contribute?
 
 Please read our [Code of Conduct](.github/CODE_OF_CONDUCT.md), then follow these [guidelines](.github/CONTRIBUTING.md)
-

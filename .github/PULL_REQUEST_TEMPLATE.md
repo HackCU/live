@@ -7,11 +7,13 @@
 A few sentences describing the overall goals of the pull request's commits.
 
 ## Related Issues
+
 <!--(optional) Fixes #<issue number>(, fixes #<issue_number>, ...) format, will close the issue(s) when PR gets merged)-->
 
 Fixes #
 
 ## Some questions
+
 <!-- You can leave this and check them once the PR has been created. -->
 
 - [ ] I have read the contributing guidelines

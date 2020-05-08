@@ -1,6 +1,7 @@
 // Used for custom site theme
-import './src/gatsby-plugin-theme-ui/global.css';
-
-// Include javascript and css for react-materilize
-import './node_modules/materialize-css/dist/css/materialize.min.css';
-import './node_modules/materialize-css/dist/js/materialize.min.js';
+import './src/global.css';
+export { wrapRootElement } from './src/utils/theme';
+// prevent layout unmount for dark mode switch to not constant change state
+// in other words it fixes transitions
+// read more here https://www.gatsbyjs.org/docs/layout-components/#how-to-prevent-layout-components-from-unmounting
+export { wrapPageElement } from './src/components/layout';
