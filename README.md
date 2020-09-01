@@ -10,13 +10,13 @@ HackCU's live site with events, rules, prizes, and a **new** live schedule!
 
 # Run project
 
-Needs: `npm`
+Needs: `yarn`
 
 ## Local
 
 1. `git clone https://github.com/hackcu/live && cd live`
-2. `npm install`
-3. `npm run start`
+2. `yarn install`
+3. `yarn start`
 
 ## Deploy
 

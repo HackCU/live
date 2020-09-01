@@ -35,6 +35,7 @@
     "gh-pages": "^2.2.0",
     "materialize-css": "^1.0.0",
     "moment": "^2.24.0",
+    "number-to-words": "^1.2.4",
     "preact": "^10.3.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -51,6 +52,7 @@
     "typography-theme-funston": "^0.16.19"
   },
   "devDependencies": {
+    "@types/number-to-words": "^1.2.0",
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
     "prettier": "^2.0.1",
@@ -61,7 +63,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
@@ -72,7 +74,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "lint-staged": {
-    "*.{js,jsx,json,md}": "npm run format"
+    "*.{js,jsx,json,md}": "yarn format"
   },
   "husky": {
     "hooks": {

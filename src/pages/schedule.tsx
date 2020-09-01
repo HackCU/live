@@ -2,11 +2,32 @@ import React, { useState, useEffect } from 'react';
 import Schedule from '../components/schedule';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import moment from 'moment';
+import moment, { Moment } from 'moment';
 import Portal from '../components/portal';
 import { Flex, Box, Text, Heading } from 'rebass';
 import { Select } from '@rebass/forms';
 import Title from '../components/title';
+import { toWords } from 'number-to-words';
+
+interface Event {
+  title: string;
+  // "1:00 PM"
+  start: string;
+  end: string;
+  description: string;
+  location: string;
+  startTime: Moment;
+  endTime: Moment;
+}
+
+interface EventGroup {
+  title: string;
+  events: Event[];
+}
+
+interface Days {
+  [dayName: string]: EventGroup[];
+}
 
 const ScheduleModal = ({
   title,
@@ -55,20 +76,21 @@ const ScheduleModal = ({
   </Portal>
 );
 
-const placeholderEvent = {
+const placeholderEvent: Event = {
   title: 'Loading...',
   start: '1:00 PM',
   end: '3:00 PM',
-  startPos: 0,
-  height: 100,
-  description: 'Loading event description...'
+  description: 'Free',
+  location: 'Idea Forge',
+  startTime: moment('1:00 PM', 'h:mm a'),
+  endTime: moment('3:00 PM', 'h:mm a')
 };
 
 // todo: mobile view
 // multiple days
 export default () => {
   const [open, setOpen] = useState(false);
-  const [items, setItems] = useState({
+  const [items, setItems] = useState<Days>({
     day1: [
       {
         title: 'Idea Forge',
@@ -78,29 +100,35 @@ export default () => {
             start: '1:00 PM',
             end: '3:00 PM',
             description: 'Free',
-            location: 'Idea Forge'
+            location: 'Idea Forge',
+            startTime: moment('1:00 PM', 'h:mm a'),
+            endTime: moment('3:00 PM', 'h:mm a')
           },
           {
             title: 'Loading 2...',
             start: '9:00 AM',
             end: '10:00 AM',
             description: 'Free',
-            location: 'Idea Forge'
+            location: 'Idea Forge',
+            startTime: moment('9:00 AM', 'h:mm a'),
+            endTime: moment('10:00 AM', 'h:mm a')
           },
           {
             title: 'Loading 3...',
             start: '3:00 PM',
             end: '4:00 PM',
             description: 'Free',
-            location: 'Idea Forge'
+            location: 'Idea Forge',
+            startTime: moment('3:00 PM', 'h:mm a'),
+            endTime: moment('4:00 PM', 'h:mm a')
           }
         ]
       }
     ]
   });
-  const [current, setCurrent] = useState(placeholderEvent);
+  const [current, setCurrent] = useState<Event>(placeholderEvent);
   const [currentDay, setCurrentDay] = useState('day1');
-  const openItem = (item) => {
+  const openItem = (item: Event) => {
     setCurrent(item);
     setOpen(true);
     document.body.style.overflow = 'hidden';
@@ -151,14 +179,16 @@ export default () => {
     return () => document.removeEventListener('keydown', escFunction);
   }, []);
 
-  const dayToText = (day) => {
-    if (day === 'day1') {
-      return 'Day One';
-    } else if (day === 'day2') {
-      return 'Day Two';
-    } else {
-      throw new Error(`Invalid day "${day}".`);
-    }
+  /**
+   * Returns a human readable form of day key
+   * @param dayKey The day string in form of "day2"
+   */
+  const dayToText = (dayKey: string): string => {
+    const dayCount = parseInt(dayKey.replace('day', ''));
+    const captalizedWords = toWords(dayCount).replace(/\b\w/g, (wordLetter) =>
+      wordLetter.toUpperCase()
+    );
+    return `Day ${captalizedWords}`;
   };
 
   return (
