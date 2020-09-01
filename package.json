@@ -63,7 +63,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
@@ -74,7 +74,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "lint-staged": {
-    "*.{js,jsx,json,md}": "npm run format"
+    "*.{js,jsx,json,md}": "yarn format"
   },
   "husky": {
     "hooks": {
