@@ -1,35 +1,47 @@
-- title: Adobe Workshop
-  description: "Learn about great ux/ui with a workshop from Adobe."
-  author: Adobe
+# - title: Adobe Workshop
+#   description: "Learn about great ux/ui with a workshop from Adobe."
+#   author: Adobe
 
-- title: Data Science
-  description: "Learn about data science basics, from the ground up."
-  author: Sriram Sankaranarayanan
+# - title: Data Science
+#   description: "Learn about data science basics, from the ground up."
+#   author: Sriram Sankaranarayanan
 
-- title: How to Work the Industry 101
-  description: "How can you put yourself in a great position for a job?"
-  author: Tahmina, Aren, Kevin, Apara
+# - title: How to Work the Industry 101
+#   description: "How can you put yourself in a great position for a job?"
+#   author: Tahmina, Aren, Kevin, Apara
 
-- title: Ted Talk on Design
-  description: "Learn about how to focus on design elements for any of your work."
-  author: Matt Bethancourt
+# - title: Ted Talk on Design
+#   description: "Learn about how to focus on design elements for any of your work."
+#   author: Matt Bethancourt
+
+- title: Intro to Robotics
+  description: "An introduction to the broad world of robotics."
+  author: Matt Strong
+
+  - title: Intro to Project Managment
+  description: "Learn about the foundation of of what makes projects suceed and fail."
+  author: Tanvi Gopalabhatla and Divya Bhat
+
+  - title: Intro to Bioinformatics and Genomics
+  description: "This workshop will focus on the basics of single cell RNA-sequencing analysis and how to make sense of complex biological data through visualization techniques. We will primarily cover advanced data science techniques principal component analysis, basic dimensionality reduction, and uniform manifold approximation and projection to help in our visualizations."
+  author: Sidhant Puntambekar
 
 - title: Intro to Git/Github
   description: "Learn about one of the pinnacles of computer science."
-  author: Kyle Pfromer
+  author: Jacob Unger
 
-- title: Building a Chrome Extension
-  description: 'Maximize your web browser with this workshop.'
-  author: Dhruv Patel
+# - title: Building a Chrome Extension
+#   description: 'Maximize your web browser with this workshop.'
+#   author: Dhruv Patel
 
-- title: DevOps
-  description: Hands on session on building CI/CD pipeline with Jenkins.
-  author: Parth Adroja
+# - title: DevOps
+#   description: Hands on session on building CI/CD pipeline with Jenkins.
+#   author: Parth Adroja
 
-- title: VS Code Workshop
-  description: "A interactive overview of one of the great text editors."
-  author: Matt Strong
+# - title: VS Code Workshop
+#   description: "A interactive overview of one of the great text editors."
+#   author: Matt Strong
 
-- title: MLH Capture the Flag
-  description: "A fun cybersecurity game"
-  author: Mackenzie Lobato
+# - title: MLH Capture the Flag
+#   description: "A fun cybersecurity game"
+#   author: Mackenzie Lobato

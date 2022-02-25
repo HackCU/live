@@ -1,25 +1,37 @@
-- title: "!Light"
-  description: "Sharpen your frontend development skills with this activity, where you’ll be recreating a website in HTML/CSS using our code editor - all without previewing your code along the way."
-# - title: "Tech for good panel"
-#   description: "Learn about inicitatives in the tech space that aim to create a positive impact to the world. Non-profits and more in this open panel with several figures from the Boulder tech for good community."
-- title: MLH Werewolf
-  description: One of MLH's workshops.
+# - title: "!Light"
+#   description: "Sharpen your frontend development skills with this activity, where you’ll be recreating a website in HTML/CSS using our code editor - all without previewing your code along the way."
 
-- title: Women in Tech Panel/ Fireside Chat'
-  description: "Join us for this panel with leaders of the sector talking about the future of technology "
+# # - title: "Tech for good panel"
+# #   description: "Learn about inicitatives in the tech space that aim to create a positive impact to the world. Non-profits and more in this open panel with several figures from the Boulder tech for good community."
 
-- title: Collectibles Exhange
-  description: "Exchange Collectibles."
+# - title: MLH Werewolf
+#   description: One of MLH's workshops.
 
-- title: The Joy of MS Painting
-  description: "Unleash your inner artist in this chill activity where we will be using the amazing, incredible, ultra-accurate Microsoft Paint to create a great artwork. Winners will have their artwork featured in a connor.fun t-shirt."
-  url: https://jspaint.app/
+# - title: Women in Tech Panel/ Fireside Chat'
+#   description: "Join us for this panel with leaders of the sector talking about the future of technology "
 
-- title: Paper Airplane Contest
-  description: "This contest will see who can fly the highest of them all!"
+# - title: Collectibles Exhange
+#   description: "Exchange Collectibles."
 
-- title: Matt's Morning Run
-  description: "Start your day off right with a sunrise run."
+# - title: The Joy of MS Painting
+#   description: "Unleash your inner artist in this chill activity where we will be using the amazing, incredible, ultra-accurate Microsoft Paint to create a great artwork. Winners will have their artwork featured in a connor.fun t-shirt."
+#   url: https://jspaint.app/
 
-- title: Face masks
+# - title: Paper Airplane Contest
+#   description: "This contest will see who can fly the highest of them all!"
+
+- title: Candy Station
+  description: "Get some snacks and code hard!"
+
+- title: Harry Potter Trivia
+  description: "How much do you know about the wonderful world of wizarding? Put it to the test with Harry Potter Trivia!"
+
+- title: Face masks and Yoga
   description: "Relax a bit and catch your breath with this amazing face masks. Perfect for energizing before the night."
+
+- title: Harry Potter and the Sorcerer's Stone
+  description: "Enjoy the 1st movie in the Harry Potter Story."
+
+- title: Sid's Morning Run
+  description: "Get the blood pumping and start your day off right with a sunrise run."
+
