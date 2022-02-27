@@ -19,7 +19,7 @@
   author: Matt Strong
 
   - title: Intro to Project Managment
-  description: "Learn about the foundation of of what makes projects suceed and fail."
+  description: "Want to learn about the exciting world of product management? Join this workshop as we delve into the fundamentals of PM, how to tackle PM questions in job interviews, real-life business cases, educational resources, and more. As product management is becoming an increasingly popular career path, companies across various industries are looking for young leaders to take on these roles! We are also raffling off a Cracking the PM Interview book!"
   author: Tanvi Gopalabhatla and Divya Bhat
 
   - title: Intro to Bioinformatics and Genomics
@@ -27,7 +27,7 @@
   author: Sidhant Puntambekar
 
 - title: Intro to Git/Github
-  description: "Learn about one of the pinnacles of computer science."
+  description: "Version Control is a vital aspect of software development. Learn how to utilize this powerful tool to make workflow and sharing code easier!"
   author: Jacob Unger
 
 # - title: Building a Chrome Extension
